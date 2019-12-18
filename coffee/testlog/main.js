@@ -1,32 +1,47 @@
-window.onload=function () {
-    render();
-  };
-  function render() {
-      window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
-      recaptchaVerifier.render();
-  }
-  function phoneAuth() {
-      //get the number
-      var number=document.getElementById('number').value;
-      //phone number authentication function of firebase
-      //it takes two parameter first one is number,,,second one is recaptcha
-      firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
-          //s is in lowercase
-          window.confirmationResult=confirmationResult;
-          coderesult=confirmationResult;
-          console.log(coderesult);
-          alert("Message sent");
-      }).catch(function (error) {
-          alert(error.message);
-      });
-  }
-  function codeverify() {
-      var code=document.getElementById('verificationCode').value;
-      coderesult.confirm(code).then(function (result) {
-          alert("Successfully registered");
-          var user=result.user;
-          console.log(user);
-      }).catch(function (error) {
-          alert(error.message);
-      });
-  }
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyA6r1hF8uK9ipnHb-5Uzm5-hAGCFoITfeY",
+    authDomain: "form-1ebd8.firebaseapp.com",
+    databaseURL: "https://form-1ebd8.firebaseio.com",
+    projectId: "form-1ebd8",
+    storageBucket: "form-1ebd8.appspot.com",
+    messagingSenderId: "210067598066",
+    appId: "1:210067598066:web:7d0844496d37acc5bebe6b"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+
+function signUp() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    const promise = auth.createUserWithEmailAndPassword(email, password);
+    promise.catch(e => alert(e.message));
+    alert("Sign Up")
+}
+function signIn() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    const promise = auth.signInWithEmailAndPassword(email, password);
+    promise.catch(e => alert(e.message));
+    alert("Sign In")
+}
+function signOut() {
+    auth.signOut();
+    alert("Sign Out");
+}
+
+auth.onAuthStateChanged(function(user) {
+    if (user) {
+        var email = user.email;
+        alert("Active User " + email);
+
+    } else {
+        
+        alert("No Active User");
+
+    }
+});

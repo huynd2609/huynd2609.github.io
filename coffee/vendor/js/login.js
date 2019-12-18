@@ -1,24 +1,31 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyA6r1hF8uK9ipnHb-5Uzm5-hAGCFoITfeY",
+    authDomain: "form-1ebd8.firebaseapp.com",
+    databaseURL: "https://form-1ebd8.firebaseio.com",
+    projectId: "form-1ebd8",
+    storageBucket: "form-1ebd8.appspot.com",
+    messagingSenderId: "210067598066",
+    appId: "1:210067598066:web:7d0844496d37acc5bebe6b"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
+const auth = firebase.auth();
 
 function login() {
     var userEmail = $('#email_field').val();
     var userPass = $('#password_field').val();
     
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-
-        alert('Error: ' + errorMessage);
-        // ...
-    });
+    const promise = auth.signInWithEmailAndPassword(email, password);
+    promise.catch(e => alert(e.message));
 };
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        alert('Thành công!');
         $('html').load('index.html');
-        $('.login-form').css("display", "none");
+        var email = user.email;
+        alert("Active User " + email);
     } else {
-        $('.login-form').css("display", "block");
+        alert("No Active User");
     }
 });

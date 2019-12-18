@@ -19,6 +19,9 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="vendor/css/animate.css" />
 		<link rel="stylesheet" href="vendor/css/main.css" />
+		<!--The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
 	</head>
 
 	<body>
@@ -62,31 +65,6 @@
 		</div>
 
 		<!-- JS -->
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
-
-		<!-- TODO: Add SDKs for Firebase products that you want to use
-    	https://firebase.google.com/docs/web/setup#available-libraries -->
-		<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
-		<!-- Add Firebase products that you want to use -->
-		<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
-
-		<script>
-			// Your web app's Firebase configuration
-			var firebaseConfig = {
-				apiKey: "AIzaSyDhf_W56Xrx6mUYX2_dyqeDEeHgBOpbZMM",
-				authDomain: "shopping-df0ba.firebaseapp.com",
-				databaseURL: "https://shopping-df0ba.firebaseio.com",
-				projectId: "shopping-df0ba",
-				storageBucket: "shopping-df0ba.appspot.com",
-				messagingSenderId: "400061121144",
-				appId: "1:400061121144:web:77fa9121d60a7f3d26a38d",
-				measurementId: "G-0HJJG3H0HR"
-			};
-			// Initialize Firebase
-			firebase.initializeApp(firebaseConfig);
-			firebase.analytics();
-		</script>
 		<script type="text/javascript" src="vendor/js/login.js"></script>
 	</body>
 </html>
