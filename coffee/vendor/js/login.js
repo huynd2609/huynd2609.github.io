@@ -13,16 +13,22 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
-function login() {
+function signIn() {
     var userEmail = $('#email_field').val();
     var userPass = $('#password_field').val();
     
-    const promise = auth.signInWithEmailAndPassword(email, password);
+    const promise = auth.signInWithEmailAndPassword(userEmail, userPass);
     promise.catch(e => alert(e.message));
 };
-firebase.auth().onAuthStateChanged(function(user) {
+
+function signOut() {
+    auth.signOut();
+    $('html').load('index.html');
+};
+
+auth.onAuthStateChanged(function(user) {
     if (user) {
-        $('html').load('index.html');
+        $('html').load('index2.html');
         var email = user.email;
         alert("Active User " + email);
     } else {

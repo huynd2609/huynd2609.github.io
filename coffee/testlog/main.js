@@ -27,7 +27,6 @@ function signIn() {
 
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(e => alert(e.message));
-    alert("Sign In")
 }
 function signOut() {
     auth.signOut();
