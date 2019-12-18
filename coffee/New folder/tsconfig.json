@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "strict": false,
+    "esModuleInterop": true,
+    "outDir": "js",
+    "watch": true
+  },
+  "exclude": ["css", "images", "lib", "js"]
+}

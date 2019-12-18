@@ -1,0 +1,23 @@
+p,
+li {
+  color: orange;
+  background-color: teal;
+  width: 500px;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+p {
+  padding: 20px;
+  border: 5px solid orange;
+  margin: 80px;
+}
+
+em,
+strong {
+  display: block;
+  background-color: white;
+}

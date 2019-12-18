@@ -1,0 +1,65 @@
+@mixin reset {
+    margin: 0, padding 0;
+}
+* {
+  @include reset();
+}
+
+html,
+body {
+  width: 100%;
+  background: rgba(128, 128, 128, 0.05) !important;
+  font-family: segoe ui;
+}
+
+header .menu-top {
+  width: 100%;
+  min-height: 120px;
+  background: url(../images/menuTop.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#giohang {
+  .card {
+    border: none;
+  }
+
+  #product {
+    .product-title {
+      color: black;
+
+      &:hover {
+        text-decoration: none;
+        color: #007bff;
+      }
+    }
+  }
+
+  #price {
+    font-weight: 600;
+  }
+}
+#other-products {
+  #product {
+    color: black;
+    margin-right: 10px;
+    .card-footer {
+      background: none;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 17px -7px gray;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+  #show-products button {
+    cursor: pointer;
+  }
+}
+#charge {
+    .col-sm-4 {
+        padding-right: 0;
+    }
+}

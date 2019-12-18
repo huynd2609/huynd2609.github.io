@@ -1,0 +1,524 @@
+$color01: #ffffff;
+$color02: #f91e53;
+$color03: #4bd3d4;
+$color04: #f3f3f3;
+$color05: #282828;
+$color06: #dc8068;
+$color07: #c7a298;
+
+$fontFamily01: 'Srisakdi',
+cursive;
+$fontFamily02: "Montserrat",
+sans-serif;
+$fontSize00: 19px;
+
+@mixin reset {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html,
+body {
+    @include reset();
+    width: 100%;
+    height: 100%;
+    background: #1c0026;
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding: 0;
+    font-family: $fontFamily02 !important;
+    font-size: $fontSize00 !important;
+    color: white !important;
+    ul {
+        list-style: none;
+        @include reset();
+    }
+    .lsc {
+        list-style: circle;
+    }
+    .ct {
+        color: $color02;
+    }
+    .cl3 {
+        color: $color03!important;
+    }
+    .fw500 {
+        font-weight: 500;
+    }
+    .fw600 {
+        font-weight: 600;
+    }
+    .ttXY-50 {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .ttX-50 {
+        transform: translateX(-50%);
+    }
+    .ttY-50 {
+        transform: translateY(-50%);
+    }
+    .fww {
+        flex-wrap: wrap;
+    }
+    #header {
+        background: url(../../images/banner.jpg) no-repeat;
+        background-size: cover;
+        #top-bar {
+            li a {
+                color: $color01;
+            }
+            li a:hover {
+                color: $color02;
+            }
+            li.nav-active a {
+                color: $color02;
+            }
+            .closeMenu {
+                display: none;
+            }
+            #menuMobile {
+                display: none;
+            }
+        }
+        .bgr-banner {
+            width: 50%;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            .img1 {
+                animation: lenxuong1 3s infinite;
+            }
+            .img2 {
+                left: 130px;
+                animation: lenxuong2 3s infinite;
+                top: -20px;
+            }
+            .img3 {
+                left: 290px;
+                animation: lenxuong1 3s infinite;
+            }
+            .img4 {
+                left: 470px;
+                animation: lenxuong2 3s infinite;
+            }
+            @keyframes lenxuong1 {
+                0% { top: -20px;}
+                50% {top: 0;}
+                100% {top: -20px;}
+            }
+            @keyframes lenxuong2 {
+                0% { top: 0;}
+                50% {top: -20px;}
+                100% {top: 0;}
+            }
+            .logo-b {
+                top: 250px;
+            }
+            .btn-eve {
+                width: 100%;
+                top: 370px;
+                left: 0;
+                a {
+                    border-radius: 50px;
+                    transition: background-color .3s linear;
+                }
+                a.event {
+                    background: $color02;
+                    &:hover {
+                        background: rgb(230, 68, 125);
+                    }
+                }
+                a.ticket {
+                    background: $color01;
+                    color: $color02;
+                    &:hover {
+                        background: lightgray;
+                    }
+                }
+            }
+        }
+    }
+    #main-lineUp{
+        .line-up {
+            .line1 {
+                background: url(../../images/line-up/day.png) no-repeat;
+                background-size: contain;
+                z-index: 1;
+                perspective: 700px;
+                .img-km, .nap {
+                    width: 93%;
+                    height: 93%;
+                    top: 3%;
+                    left: 3%;
+                }
+                .img-km {
+                    z-index: 2;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .nap {
+                    background: url(../../images/line-up/nap.png) no-repeat;
+                    background-size: contain;
+                    z-index: 3;
+                    transform-origin: 0 0;
+                    transition: all .5s linear;
+                }
+                .name-line {
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    transition: all .5s linear;
+                }
+                &:hover {
+                    .nap {
+                        transform: rotateX(120deg);
+                    }
+                    .name-line {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    #menu {
+        .info {
+            h1 {
+            color: $color03;
+            }
+            p {
+                color: $color01;
+            }
+        }
+    }
+    #video {
+        .header {
+            h1::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                right: 0;
+                width: 150px;
+                height: 12px;
+                background: $color02;
+            }
+        }
+        .video {
+            height: 600px;
+            z-index: 1;
+            video {
+                object-fit: cover;
+            }
+        }
+    }
+    #event {
+        .event p.fs09 {
+            color: $color03;
+        }
+    }
+    #ticket {
+        .w30 {
+            background: $color03;
+            box-shadow: 0 0 10.32px 1.68px rgba(0, 0, 0, .2);
+            border-radius: 10px;
+        }
+        .svip {
+            background: $color02;
+            h1 {
+                color: $color03;
+            }
+            a {
+                background: $color03!important;
+            }
+        }
+        a.btn-ticket {
+            color: white;
+            border-radius: 50px;
+            background: $color02;
+        }
+    }
+    #gallery {
+        background: url(../../images/hinhanh/photo/bg_recent_events.jpg) no-repeat;
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 150px;
+            height: 12px;
+            background: $color02;
+        }
+        .photo {
+            .gi {
+                &::after {
+                    content: "+";
+                    cursor: pointer;
+                    font-size: 5em;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform-origin: 0 0;
+                    transform: rotate(0) translateX(-50%) translateY(-50%);
+                    z-index: 12;
+                    opacity: 0;
+                    transition: all .3s linear;
+                }
+                img {
+                    cursor: pointer;
+                    filter: grayscale(100%);
+                    transition: filter .3s linear;
+                }
+                &:hover {
+                    img {
+                        filter: grayscale(0);
+                    }
+                    &::after {
+                        opacity: 1;
+                        transform: rotate(360deg) translateX(-50%) translateY(-50%);
+                    }
+                }
+            }
+        }
+        
+    }
+    #count-day {
+        &>span {
+            color: $color03;
+            display: inline-block;
+            p {
+                color: $color01;
+            }
+        }
+    }
+    #footer {
+        i:hover {
+            cursor: pointer;
+            color: $color03;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    #wrapper {
+        max-width: 100%;
+        #header {
+            height: 50%;
+            .w45 {
+                width: 50%;
+            }
+            .bgr-banner {
+                width: 75%;
+            }
+        }
+        #video, #gallery {
+            height: 650px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #wrapper {
+        max-width: 100%;
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        #header {
+            .banner-right {
+                width: 70%;
+            }
+            .img-banner {
+                display: none;
+            }
+            .logo-b {
+                top: 0!important;
+            }
+            .btn-eve {
+                top: 100px!important;
+            }
+        }
+        .line1.w30 {
+            width: 30%!important;
+            height: 200px;
+            .img-km {
+                width: 90%!important;
+            }
+            .name-line {
+                width: 100%;
+            }
+        }
+        .event .w20{
+            width: 45%;
+            padding-bottom: 50px;
+        }
+        .menu, .ticket {
+            .w30 {
+                width: 45%;
+                margin-bottom: 50px;
+            }
+        }
+        #gallery {
+            height: 850px;
+            .photo .w25 {
+                width: 33%;
+            }
+        }
+        .footer-detail {
+            .w75, .w20 {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #wrapper {
+        max-width: 100%;
+
+        #header {
+            height: 100%;
+            #top-bar .banner-right {
+                #home-text {
+                    width: 300px;
+                    height: 100%;
+                    background: $color02;
+                    position: fixed;
+                    top: 0px;
+                    right: 0px;
+                    z-index: 10;
+                    transition: 0.7s;
+                    padding: 30px 0;
+                    transform: translateX(120%);
+
+                    ul {
+                        display: block !important;
+                        text-align: left !important;
+
+                        li {
+                            padding: 20px 30px !important;
+                            border-bottom: 1px solid $color05;
+                            a:after {
+                                display: none;
+                            }
+                        }
+                        li.nav-active a {
+                            color: $color03;
+                        }
+                    }
+
+                    .closeMenu {
+                        display: block;
+                        position: absolute;
+                        top: 20px;
+                        left: calc(100% - 50px);
+                        width: 20px;
+                        height: 20px;
+                        z-index: 100;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                #home-text.visibleMenu {
+                    transform: translateX(0) !important;
+                }
+
+                div#menuMobile {
+                    float: right;
+                    display: block;
+
+                    img {
+                        width: 80%;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .bgr-banner {
+                top: 100px;
+            }
+        }
+        .line-up .w30 {
+            height: 175px; 
+            .img-km {
+                width: 93%!important;
+            }
+        }
+        #main-lineUp {
+            padding-top: 50px!important;
+        }
+        section, .container {
+            padding-top: 0;
+        }
+        #gallery {
+            height: 750px;
+            .photo {
+                margin-top: 75px;
+            }
+        }
+        #countdown .container {
+            padding-top: 50px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #wrapper {
+        max-width: 100%;
+        #header {
+            height: 50%;
+            #home-text {
+                width: 250px!important;
+            }
+            .btn-eve {
+                top: 50px!important;
+            }
+        }
+        .header {
+            h1.fs2 {
+                font-size: 1.3em;
+            }
+            h1.fs5 {
+                font-size: 2em;
+                &::after {
+                    width: 100px!important;
+                    height: 6px!important;
+                }
+            }
+        }
+        section {
+            padding-bottom: 0;
+        }
+        .line-up {
+            justify-content: center;
+            .w30 {
+                width: 200px!important;
+                height: 200px!important;
+                margin-bottom: 50px;
+            }
+        }
+        .w20, .w30 {
+            width: 100%!important;
+        }
+        #gallery {
+            height: 800px;
+            .photo {
+                margin-top: 50px;
+                .w25 {
+                    width: 50%;
+                    padding: 10px;
+                }
+            }
+        }
+        #count-day .plr35 {
+            padding: 0 10px;
+            font-size: 1em;
+        } 
+    }
+}

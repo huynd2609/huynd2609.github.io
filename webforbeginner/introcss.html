@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>WEB BEGINNER</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Google Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Lora:400,600,700|Montserrat:400,500,600,700,800&display=swap&subset=vietnamese"
+		rel="stylesheet" />
+
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="vendor/js/jquery-3.4.1.js"></script>
+	<script src="vendor/js/popper.min.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="vendor/css/animate.css" />
+	<link rel="stylesheet" href="vendor/css/main.css" />
+</head>
+
+<body>
+	<div class="container-fluid" id="wrapper">
+		<!-- Header -->
+		<header id="header" class="">
+			<div id="sidebar" class="sidebar">
+				<div class="banner">
+					<div class="container">
+						<a class="logo-top" href="index.html"><img src="images/logo-top.png" alt=""/></a>
+						<div id="navbar"><img src="images/icon/navbar.png" alt="" /></div>
+						</div>
+					</div>
+				</div>
+		</header>
+		<!-- Header /-->
+		<!-- Main -->
+		<main id="main" class="main-content">
+			<div class="row-fluid title">
+				<div class="container">
+					<div class="title-header text-center">
+						<h1>LÀM QUEN VỚI CSS</h1>
+						<p><em>Hướng dẫn cơ bản để xây dựng giao diện đẹp hơn một chút</em></p>
+					</div>
+				</div>
+			</div>
+			<!-- row-fluid / -->
+			<div class="row-fluid">
+				<div class="container">
+					<div class="text-item bd1">
+						<p>CSS (Cascading Style Sheets) là mã bạn sử dụng để tạo kiểu cho trang web của mình. CSS Cơ bản
+							sẽ đưa bạn qua những gì bạn cần để bắt đầu. Chúng tôi sẽ trả lời các câu hỏi như: Làm cách
+							nào để tạo văn bản màu đen hoặc đỏ? Làm cách nào để hiển thị nội dung của tôi ở một nơi như
+							vậy trên màn hình? Làm cách nào để trang trí trang web của tôi với hình nền và màu sắc?</p>
+					</div>
+					<div class="text-item">
+						<h3>CSS thật sự là gì?</h3>
+						<p>Trong phần trước chúng ta tập trung hoàn toàn vào HTML. Bây giờ, đã đến lúc làm cho mọi thứ
+							trở nên đẹp hơn (sắp xếp) với Cascading Style Sheets (CSS). Bạn có thể nghĩ về CSS như định
+							nghĩa thiết kế của người dùng trong một trang web. Nó xác định những thứ như kích thước
+							phông chữ, lề và màu sắc bằng ngôn ngữ hoàn toàn tách biệt với HTML.</p>
+						<p>Tại sao nó là một ngôn ngữ riêng biệt? Vâng, nó phục vụ một mục đích hoàn toàn khác. HTML đại
+							diện cho nội dung trang web của bạn, trong khi CSS xác định cách trình bày nội dung đó cho
+							người dùng. Đây là một sự khác biệt cơ bản để phát triển web hiện đại.</p>
+						<img src="images/css/css-vs-html.png" alt="">
+						<p>Trong chương này, chúng ta sẽ khám phá cú pháp cơ bản của CSS, cũng như cách kết nối nó với
+							các tài liệu HTML của chúng ta. Mục tiêu không phải là để trở thành một chuyên gia CSS hoặc
+							ghi nhớ tất cả các kiểu có sẵn, mà là để hiểu cách CSS và HTML tương tác.</p>
+					</div>
+					<div class="text-item">
+						<h3>Thiết lập và định kiểu CSS</h3>
+						<p>Đầu tiên, chúng ta tạo một tập tin mới với định dạng
+							<span style="overflow: hidden">style.css</span> trong cùng thư mục với thư mục
+							<span style="overflow: hidden">basics.html</span> mà chúng ta đã tạo với phần trước.</p>
+						<p>Bây giờ, hãy thêm đoạn CSS sau vào tệp <span style="overflow: hidden">style.css</span> để xem
+							nó
+							có được kết nối đúng với trang
+							HTML hay không</p>
+						<div
+							style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div><span style="color: #e06c75;">p</span> {</div>
+							<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">color</span>:
+								<span style="color: #d19a66;">orange</span>;</div>
+							<div>}</div>
+						</div>
+						<p>Trước khi áp dụng CSS, chúng ta luôn luôn xác định các phần tử HTML mà nó áp dụng. Trong
+							trường hợp này, chúng ta đang cố gắng tạo kiểu cho phần tử
+							<span style="overflow: hidden">&lt;p&gt;</span>. Sau khi chọn phần tử tác động, chúng ta sẽ
+							khai
+							báo các thuộc tính ở bên trong cặp dấu ngoặc nhọn. Bất kỳ thuộc tính nào mà chúng ta đặt ở
+							đây sẽ ảnh hưởng đến phần tử
+							<span style="overflow: hidden">&lt;p&gt;</span> này.</p>
+						<img src="images/css/css-rule.png" alt="">
+						<p><span style="overflow: hidden">Color</span> là một thuộc tính xác định màu văn bản của bất kỳ
+							thành phần HTML nào đã được chọn. Nó
+							chấp nhận một giá trị tên màu đại diện cho một màu.
+							<span style="overflow: hidden">Orange</span>
+							có nghĩa là màu cam.</p>
+						<p>Bây giờ, nếu bạn thử load lại trang HTML trong trình duyệt, bạn sẽ không thấy định kiểu trong
+							CSS hoạt động. Đó là vởi vì chúng ta chưa liên kết chúng lại với nhau. Đây là những gì mà
+							thẻ <span style="overflow: hidden">&lt;link/&gt;</span> trong HTML cần phải thực hiện. Trong
+							tệp
+							<span style="overflow: hidden">basics.html</span>, chúng ta cần thay đổi
+							<span style="overflow: hidden">&lt;head&gt;</span> như sau:
+						</p>
+						<div
+							style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">meta</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">charset</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"UTF-8"</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>Web
+								Basics<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">link</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">rel</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"stylesheet"</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">href</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"style.css"</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+						</div>
+						<p>Bây giờ, khi bạn load lại trang, bạn sẽ thấy màu cam ở nhiều nơi trên trang web.</p>
+						<img src="images/css/property.jpg" alt="">
+						<ul>
+							<li>
+								<h4>Thêm nhiều giá trị thuộc tính</h4>
+								<p>Trong mỗi bộ quy tắc, bạn phải sử dụng dấu chấm phẩy (;) để phân biệt cho mỗi bộ quy
+									tắc khai báo kế tiếp như sau:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span> {</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">color</span>:
+										<span style="color: #d19a66;">orange</span>;</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">background-color</span>:
+										<span style="color: #d19a66;">teal</span>;</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">width</span>:
+										<span style="color: #d19a66;">500px</span>;</div>
+									<div>}</div>
+								</div>
+							</li>
+							<li>
+								<h4>Các phần tử khác nhau</h4>
+								<p>Bạn cũng có thể áp dụng các kiểu cho các yếu tố khác
+									<span style="overflow: hidden">&lt;p&gt;</span>. Đối với điều đó, chỉ cần thêm nhiều
+									quy
+									tắc CSS với các bộ chọn khác nhau. Chúng ta có thể thay đổi kích thước và kiểu phông
+									chữ của
+									các thẻ tiêu đề <span style="overflow: hidden">&lt;h1&gt;</span> của chúng ta như
+									sau:
+								</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span> {</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">color</span>:
+										<span style="color: #d19a66;">orange</span>;</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">background-color</span>:
+										<span style="color: #d19a66;">teal</span>;</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">width</span>:
+										<span style="color: #d19a66;">500px</span>;</div>
+									<div>}</div><br>
+									<div><span style="color: #e06c75;">h1</span> {</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">font-size</span>:
+										<span style="color: #d19a66;">24px</span>;</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">font-family</span>:
+										<span style="color: #98c379;">"Segoe UI"</span>,
+										<span style="color: #d19a66;">Tahoma</span>,
+										<span style="color: #d19a66;">sans-serif</span>;</div>
+									<div>}</div>
+								</div>
+							</li>
+							<li>
+								<h4>Chọn nhiều phần tử</h4>
+								<p>Bạn cũng có thể chọn nhiều kiểu phần tử và áp dụng một quy tắc duy nhất được đặt cho
+									tất cả các yếu tố đó. Bao gồm nhiều bộ chọn được phân biệt bởi dấu phẩy (,). Ví dụ:
+								</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #e06c75;">p</span><span style="color: #c678dd;">, </span><span style="color: #e06c75;">li</span>
+										{</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">color</span>:
+										<span style="color: #d19a66;">orange</span>;</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">background-color</span>:
+										<span style="color: #d19a66;">teal</span>;</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">width</span>:
+										<span style="color: #d19a66;">500px</span>;</div>
+									<div>}</div><br>
+									<div><span style="color: #e06c75;">h1</span> {</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">font-size</span>:
+										<span style="color: #d19a66;">24px</span>;</div>
+									<div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">font-family</span>:
+										<span style="color: #98c379;">"Segoe UI"</span>,
+										<span style="color: #d19a66;">Tahoma</span>,
+										<span style="color: #d19a66;">sans-serif</span>;</div>
+									<div>}</div>
+								</div>
+								<p>Bây giờ trang web của bạn sẽ trông như sau:</p>
+								<img src="images/css/text-change.jpg" alt="">
+							</li>
+							<li>
+								<h4>Các loại bộ chọn</h4>
+								<table border="1" cellpadding="10px">
+									<tr>
+										<th>Tên bộ chọn</th>
+										<th>Thành phần tác dụng</th>
+										<th>Ví dụ</th>
+									</tr>
+									<tr>
+										<td>Bộ chọn phần tử (đôi khi được gọi là thẻ hoặc loại bộ chọn)</td>
+										<td>Tất cả (các) thành phần HTML của loại được chỉ định.</td>
+										<td>p <br>
+											Chọn <span style="overflow: hidden">&lt;p&gt;</span>
+											<p>
+										</td>
+									</tr>
+									<tr>
+										<td>Bộ chọn ID</td>
+										<td>Phần tử trên trang có ID được chỉ định. (Trên một trang HTML nhất định, bạn
+											chỉ được phép một phần tử cho mỗi ID, và tất nhiên là mỗi ID cho mỗi phần
+											tử).</td>
+										<td>#my-id <br>
+												Chọn <span style="overflow: hidden">&lt;p id="my-id"&gt;</span> hoặc
+											<span style="overflow: hidden">&lt;a id="my-id"&gt;</span></td>
+									</tr>
+									<tr>
+										<td>Bộ chọn Class</td>
+										<td>(Các) Thành phần trên trang có lớp (class) được chỉ định (lớp có thể xuất
+											hiện nhiều lần trên một trang).</td>
+										<td>.my-class <br>
+												Chọn <span style="overflow: hidden">&lt;p class="my-class"&gt;</span> và
+											<span style="overflow: hidden">&lt;a class="my-class"&gt;</span></td>
+									</tr>
+									<tr>
+										<td>Bộ chọn thuộc tính</td>
+										<td>(Các) thành phần trên trang có thuộc tính được chọn.</td>
+										<td>img[src] <br>
+												Chọn <span style="overflow: hidden">&lt;img src="myimage.png"&gt;</span> </td>
+									</tr>
+									<tr>
+										<td>Bộ chọn Pseudo-class</td>
+										<td>(Các) thành phần được chỉ định, nhưng chỉ khi ở trạng thái được chỉ định, ví
+											dụ: rê chuột</td>
+										<td>a:hover <br>
+												Chọn <span style="overflow: hidden">&lt;a&gt;</span>, nhưng chỉ khi con trỏ chuột đang di chuột qua liên kết.
+										</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div>
+					<div class="text-item">
+						<h3>Mô hình hộp CSS</h3>
+						<p>Mô hình hộp CSS là một tập hợp các thuộc tính CSS nhằm xác định kích thước của mọi thành phần
+							trong trang web. Nó cung cấp cho mỗi hộp bốn thuộc tính: </p>
+						<ul>
+							<li><span>
+								<em>Nội dung - </em>Văn bản, hình ảnh hoặc nội dung phương tiện khác trong thành phần.	
+							</span></li>
+							<li><span>
+								<em>Padding (vùng đệm) - </em>Khoảng cách giữa nội dung và đường viền của nó (không gian xung quanh nội dung).
+							</span></li>
+							<li><span>
+								<em>Border (đường viền) - </em>Đường giữa đệm và lề của hộp.	
+							</span></li>
+							<li><span>
+								<em>Margin (lề) - </em>Khoảng cách xung quanh bên ngoài của phần tử	
+							</span></li>
+						</ul>
+						<img src="images/css/box-model.png" alt="">
+						<ul>
+							<li>
+								<h4>Padding</h4>
+								<p>Hãy bắt đầu từ trong ra ngoài. Chúng ta đã làm việc với nội dung ở trên, bây giờ
+									hãy tìm hiểu cách định nghĩa padding cho các phần tử.</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">padding</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>}</div>
+								</div>
+								<p>Sau khi thêm thuộc tính, bây giờ mỗi bên của thẻ
+									<span style="overflow: hidden">&lt;p&gt;</span> sẽ thêm 20px. Bạn có thể để ý
+									màu
+									nền được mở rộng để lấp đầy khoảng không gian mở rộng này. Đây là
+									trường hợp để padding vì nó ở bên trong đường viền.</p>
+								<img src="images/css/padding.jpg" alt="">
+								<p>Đôi khi bạn chỉ muộn tác động vào một mặt nào đó của phần tử. Do đó,
+									CSS cung cấp các cách viết và thuộc tính như sau:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">padding-top</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">padding-left</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">padding-right</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">padding-bottom</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>}</div>
+								</div>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">padding</span>:&nbsp;<span style="color: #d19a66;">20px</span>&nbsp;<span style="color: #d19a66;">20px</span>;&nbsp;<span style="color: #5c6370;font-style: italic;">/*&nbsp;dọc&nbsp;-&nbsp;ngang&nbsp;*/</span>
+									</div>
+									<div>}</div>
+								</div>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">padding</span>:&nbsp;<span style="color: #d19a66;">20px</span>&nbsp;<span style="color: #d19a66;">20px</span>&nbsp;<span style="color: #d19a66;">20px</span>&nbsp;<span style="color: #d19a66;">20px</span>;&nbsp;<span style="color: #5c6370;font-style: italic;">/*&nbsp;trên&nbsp;-&nbsp;phải&nbsp;-&nbsp;dưới&nbsp;-&nbsp;trái&nbsp;*/</span>
+									</div>
+									<div>}</div>
+								</div>
+							</li>
+							<li>
+								<h4>Border</h4>
+								<p>Đây là một đường được vẽ xung quanh nội dung và phần đệm của một phần tử. Thuộc
+									tính <span style="overflow: hidden;">border</span> sẽ có một cú pháp mới để xác
+									định. Đầu tiên, chúng ta xác định chiều rộng nét của đường viền, sau đó là kiểu của
+									nó, tiếp theo là màu của nó.</p>
+								<p>Hãy thử thêm một đường viền xung quanh thẻ
+									<span style="overflow: hidden">&lt;p&gt;</span> bằng cách cập nhật quy tắc trong
+									style.css:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">padding</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">border</span>:&nbsp;<span style="color: #d19a66;">5px</span>&nbsp;<span style="overflow: hidden;">solid</span>&nbsp;<span style="color: #d19a66;">orange</span>;
+									</div>
+									<div>}</div>
+								</div>
+								<p>Điều này chỉ đơn giản là thiết lập một đường viền nét liền màu cam, rộng 5 điểm
+									ảnh (px) trên tất cả các cạnh của body.</p>
+								<p>Cũng giống như <span style="overflow: hidden;">padding</span>, thuộc tính
+									<span style="overflow: hidden;">border</span> cũng có thể viết riêng cho từng
+									mặt
+									riêng biệt như sau:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">padding</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">border-top</span>:&nbsp;<span style="color: #d19a66;">5px</span>&nbsp;<span style="overflow: hidden;">solid</span>&nbsp;<span style="color: #d19a66;">orange</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">border-left</span>:&nbsp;<span style="color: #d19a66;">5px</span>&nbsp;<span style="overflow: hidden;">solid</span>&nbsp;<span style="color: #d19a66;">orange</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">border-right</span>:&nbsp;<span style="color: #d19a66;">5px</span>&nbsp;<span style="overflow: hidden;">solid</span>&nbsp;<span style="color: #d19a66;">orange</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">border-bottom</span>:&nbsp;<span style="color: #d19a66;">5px</span>&nbsp;<span style="overflow: hidden;">solid</span>&nbsp;<span style="color: #d19a66;">orange</span>;
+									</div>
+									<div>}</div>
+								</div>
+							</li>
+							<li>
+								<h4>Margin</h4>
+								<p>Thuộc tính này xác định không gian bên ngoài đường viền của một phần tử. Hay nói
+									đúng hơn là khoảng trống giữa một hộp và các hộp xung quanh nó. Chúng ta hãy thêm
+									một số khoảng trống vào phần tử:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div><span style="color: #e06c75;">p</span>&nbsp;{</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">padding</span>:&nbsp;<span style="color: #d19a66;">20px</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">border</span>:&nbsp;<span style="color: #d19a66;">5px</span>&nbsp;<span style="overflow: hidden;">solid</span>&nbsp;<span style="color: #d19a66;">orange</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">margin</span>:&nbsp;<span style="color: #d19a66;">80px</span>;
+									</div>
+									<div>}</div>
+								</div>
+								<p>Và đây là điều chúng ta mong đợi:</p>
+								<img src="images/css/margin.jpg" alt="">
+								<p>CSS cũng cung cấp các cách viết và thuộc tính cho
+									<span style="overflow: hidden;">margin</span> giống với thuộc tính
+									<span style="overflow: hidden;">padding</span>.</p>
+							</li>
+							<li>
+								<h4>Yếu tố khối và yếu tố nội tuyến</h4>
+								<p>Với mỗi phần tử HTML được hiển thị trên màn hình là một hộp và chúng có hai loại:
+									hộp cấp khối và hộp cấp tuyến. Chẳng hạn,
+									<span style="overflow: hidden;">&lt;p&gt;</span> là các phần tử mức khối, trong khi
+									<span style="overflow: hidden;">&lt;em&gt;</span> và
+									<span style="overflow: hidden;">&lt;strong&gt;</span> là
+									các phần tử nội tuyến. Hãy xem xét kỹ hơn các hộp bằng cách thêm
+									mục sau style.css:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #e06c75;">em</span><span style="color: #c678dd;">,&nbsp;</span><span style="color: #e06c75;">strong</span>&nbsp;{
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">background-color</span>:&nbsp;<span style="color: #d19a66;">white</span>;
+									</div>
+									<div>}</div>
+								</div>
+								<p>Sau khi thêm background-color cho phần tử phần tử lựa chọn, các đoạn văn của
+									chúng ta có nền màu xanh, trong khi đó các yếu tố nhấn mạnh có nền màu
+									trắng.</p>
+								<img src="images/css/box.jpg" alt="">
+								<p>Những điều cần lưu ý với hộp và khối nội tuyến: </p>
+								<ul>
+									<li><span><strong>Hộp khối</strong> luôn xuất hiện <strong>bên dưới</strong> phần tử khối trước đó.</span>
+									</li>
+									<li><span><strong>Các chiều rộng của hộp khối</strong> được thiết lập tự động dựa trên chiều rộng của thùng chứa mẹ. Trong trường hợp này, các khối luôn có chiều rộng của cửa sổ trình duyệt.</span>
+									</li>
+									<li><span><strong>Chiều cao</strong> mặc định của <strong>hộp khối</strong> dựa trên nội dung chứa trong đó.</span>
+									</li>
+									<li><span><strong>Hộp nội tuyến</strong> không ảnh hưởng đến <strong>khoảng cách dọc</strong>. Chúng không phải để xác định bố cục, chúng dành cho các kiểu dáng bên trong một khối.</span>
+									</li>
+									<li><span><strong>Độ rộng của hộp nội tuyến</strong> dựa trên nội dung mà nó chứa, không phải chiều rộng của phần tử cha.</span>
+									</li>
+								</ul>
+								<p>Bây giờ, nếu chúng ta muốn tạo các khối
+									<span style="overflow: hidden;">&lt;em&gt;</span> và
+									<span style="overflow: hidden;">&lt;strong&gt;</span> thay vì là các phần tử
+									nội
+									tuyến, chúng ta sử dụng thuộc tính
+									<span style="overflow: hidden;">&lt;display&gt;</span> của CSS như sau:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #e06c75;">em</span><span style="color: #c678dd;">,&nbsp;</span><span style="color: #e06c75;">strong</span>&nbsp;{
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">display</span>:&nbsp;<span style="overflow: hidden;">block</span>;
+									</div>
+									<div>
+										&nbsp;&nbsp;<span style="overflow: hidden;">background-color</span>:&nbsp;<span style="color: #d19a66;">white</span>;
+									</div>
+									<div>}</div>
+								</div>
+								<p>Bây giờ, các yếu tố này hoạt động giống như các tiêu đề và đoạn văn, chúng bắt đầu
+									trên dòng riêng và chúng lấp đầy toàn bộ chiều rộng của trình duyệt.</p>
+								<img src="images/css/box-block.jpg" alt="">
+							</li>
+						</ul>
+					</div>
+					<div class="text-item">
+						<h3>Kết luận</h3>
+						<p>Chúng ta sẽ tìm hiểu thêm về các ứng dụng thực tế của các thuộc tính và mô hình hộp CSS khi
+							chúng ta tìm hiểu sâu hơn về việc xây dựng các trang web phức tạp. Hiện tại, hãy nghĩ về nó
+							như một công cụ mới trong hộp công cụ CSS của bạn. Với một vài khái niệm chính cơ bản, bạn
+							sẽ cảm thấy được trang bị nhiều hơn để chuyển đổi một mockup thiết kế thành một trang web
+							thực tế.</p>
+						<p>Và nếu bạn đã làm theo tất cả các hướng dẫn trong bài viết này, bạn sẽ kết thúc với một trang
+							trông giống như thế này: </p>
+						<p class="codepen" data-height="600" data-theme-id="38146" data-default-tab="result"
+							data-user="huynd2609" data-slug-hash="ExxGedd"
+							style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+							data-pen-title="ExxGedd">
+							<span>See the Pen <a href="https://codepen.io/huynd2609/pen/ExxGedd">
+								ExxGedd</a> by Nguyễn Đình Huy (<a href="https://codepen.io/huynd2609">@huynd2609</a>)
+								on <a href="https://codepen.io">CodePen</a>.</span>
+						</p>
+						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					</div>
+				</div>
+			</div>
+			<!-- row-fluid / -->
+		</main>
+		<!-- Main /-->
+	</div>
+	<div id="layout_black" class="layout-black"></div>
+	<div id="open-menu" class="open-menu">
+		<div id="sidebar-menu" class="sidebar-menu to-left">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="index.html">Trang chủ</a>
+				</li>
+				<li class="list-group-item"><a href="introhtml.html">Giới thiệu HTML</a></li>
+				<li class="list-group-item active"><a href="introcss.html">Làm quen với CSS</a></li>
+				<li class="list-group-item"><a href="introjs.html">JavaScript là gì?</a></li>
+			</ul>
+			<div class="icon-close"></div>
+		</div>
+	</div>
+	<!-- JS -->
+	<script type="text/javascript" src="vendor/js/main.js"></script>
+</body>
+
+</html>

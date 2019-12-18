@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Coffee Place</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Google Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Lora:400,600,700|Montserrat:400,500,600,700,800|Srisakdi:400,700&display=swap&subset=vietnamese"
+		rel="stylesheet" />
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="vendor/js/jquery-3.4.1.js"></script>
+	<script src="vendor/js/popper.min.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+	<script src="vendor/js/isotope.pkgd.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="vendor/css/inevn.css" />
+	<link rel="stylesheet" href="vendor/css/animate.css" />
+	<link rel="stylesheet" href="vendor/css/main.css" />
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous"
+		src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=2063468643756016&autoLogAppEvents=1"></script>
+	<div class="container-fluid blog" id="wrapper">
+		<!-- Header -->
+		<header id="header">
+			<div id="top-bar" class="top-bar">
+				<div class="container-fluid">
+					<div class="banner-left">
+						<a id="logo" href="index.html" title="Trở về trang chủ"><img src="images/logo-top.png" alt=""></a>
+					</div>
+					<div class="banner-right">
+						<div id="menu">
+							<div id="home-text">
+								<nav id="navigation" class="sort-pages">
+									<ul>
+										<li>
+											<a href="index.html">Trang chủ</a>
+										</li>
+										<li>
+											<a href="about.html">Về chúng tôi</a>
+										</li>
+										<li>
+											<a href="menu.html">Thực đơn</a>
+										</li>
+										<li class="nav-active">
+											<a href="news.html">Tin tức</a>
+										</li>
+										<li>
+											<a href="contact.html">Liên hệ</a>
+										</li>
+										<li>
+											<a href="cart.html">Giỏ hàng <i class="fa fa-shopping-cart"></i></a>
+										</li>
+										<li>
+											<a href="login.html">Đăng nhập</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="closeMenu"></div>
+							</div>
+							<div id="menuMobile">
+								<img src="images/navbar.png" alt="">
+							</div>
+								<div class="layoutBlack"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="banner" class="banner">
+					<div class="container">
+						<div class="banner-detail">
+							<h1>Tin tức</h1>
+						</div>
+					</div>
+
+				</div>
+		</header>
+		<!-- Header /-->
+		<!-- Section -->
+		<section id="blog" class="mt50 mb50">
+			<div class="container df jcsb">
+				<div class="blogDetail w70 bsbb pr25">
+					<div class="title-detail">
+						<h5 class="fwn mb15">December 11, 2019</h5>
+						<h2 class="fs2 mb15">LÀM SAO ĐỂ BIẾT THÊM NHIỀU HƯƠNG VỊ CÀ PHÊ?</h2>
+						<div class="blogger">
+							<a href=""><img src="images/blog/blogger-icon.png" alt=""></a>
+							<span class="ml15">Thiên An, <b>Việt Nam</b></span>
+						</div>
+					</div>
+					<div class="img-detail mt50">
+						<img class="w1" src="images/blog/nhan-biet-cafe.jpg" alt="">
+						<div class="tags mt15">
+							<span class="pr15"><b>Tags:</b> <a href="">food,</a><a href=""> travel,</a><a href=""> lifestyle,</a><a href="">  health</a></span>
+							| <span class="pl15 pr15">Likes: <i class="fa fa-heart pl10"></i> 80</span>
+							| <span class="pl15">Comment: <i class="fa fa-comment pl10"></i> 30</span>
+						</div>
+					</div>
+					<div class="content-detail mt50 lh15">
+						<p>Đây là một chủ đề khó, khó với bản thân tôi và những người yêu thích specialty coffee, và cũng
+							khó để giải thích với người mới bắt đầu. Tuy nhiên, chúng ta vẫn cần phải viết ra, thảo luận về
+							nó và hy vọng rằng, sau một thời gian nữa, mọi thứ sẽ sáng tỏ hơn. Bài viết này dựa trên kinh
+							nghiệm cá nhân của tôi, cũng như dựa vào những phản hồi của các bạn barista, coffee
+							trainer..v.v.. mà tôi đã cố gắng học hỏi từ họ cũng như rèn luyện kỹ năng sensory của mình.</p>
+						<div class="img tac mt25 mb25">
+							<img class="w40" src="images/blog/nhan-biet-cafe1.jpg" alt="">
+							<p class="fs08 mt10">Cupping ngay tại quán Embankment Coffee – Osaka. Ảnh: Justiamo</p>
+						</div>
+						<h5 class="mb15">Ai cũng có kỹ năng sensory</h5>
+						<p class="mb15">Đầu tiên, thành thật mà nói, những kỹ năng tasting cũng như sensory của tôi không
+							bắt nguồn từ cà
+							phê mà là từ… whishky. Đó là sự thật. Tôi yêu whishky, đặc biệt là scotch whishky. Tôi từng trải
+							qua đủ các buổi tasting, experienced night hàng năm với Macallan, Johnny Walker… cho đến tận
+							Noel năm ngoái, tôi vẫn ngồi ở văn phòng JW Việt Nam (lúc đó, họ là khách hàng digital campaign
+							của tôi), taste đủ loại từ King George V, Blue label, Green label, Cardhu, Black label,
+							Lagavulin 12… Từ cách đọc thông số trên vỏ chai, hiểu về tuổi rượu, về cách ủ của từng loại
+							whishky, về hình dạng chai, single malt tới blended scotch cho đến các chủng loại smoky, sour
+							whishky, sweet, sea melt… rồi đến tasting protocol, những khác biệt của vùng Highland, Lowland,
+							Islay, Speyside, Campbeltown..v.v.. Có những tháng ngày, thứ 6 tuần nào tôi cũng ra đại lý, cầm
+							về một chai Single malt để uống cùng mọi người, miễn là loại đó tôi chưa thử… May mà chưa nghiện
+							rượu :D, nhưng có lẽ từ đó, tôi có khả năng “ngửi” và “nếm” các mùi vị hoa quả tốt hơn.</p>
+						<p class="mb15">Nói dông dài như vậy để bạn thấy rằng, ai trong chúng ta cũng có thể có khả năng
+							nhận ra được mùi
+							vị, và theo năm tháng, nó sẽ thành kỹ năng của bạn. Có người đi từ bếp bánh, có người đi từ bếp
+							Á, bếp Âu thì khả năng nhận ra những thứ thuộc về “gia vị” của họ sẽ tốt hơn tôi rất nhiều. Thêm
+							nữa, không có sách nào viết về coffee tasting một cách bài bản, cụ thể, cho nên các kiến thức
+							tương đối chuyên sâu về tasting của tôi lại học từ các sách dạy tasting whishky, beer và đặc
+							biệt là rượu vang.</p>
+						<p class="mb15">Tóm lại, ai cũng có một cái mũi và một cái lưỡi, một bộ não, và đều có thể nhận biết
+							các mùi vị
+							cơ bản trong đồ ăn, thức uống hàng ngày. Cái khó là, làm sao mang nó vào trong suy nghĩ, nhận
+							thức để rồi phân loại, định nghĩa mùi và vị mà bạn cảm nhận được khi uống cà phê. Ở khuôn khổ
+							bài viết này, tôi sẽ không đi sâu vào kỹ thuật tasting, mà sẽ nói về cách đơn giản nhất để bạn
+							có thể rèn luyện (mà không cần uống rượu :D), hy vọng theo thời gian, bạn sẽ nhận biết được
+							nhiều hương vị cà phê hơn.</p>
+						<div class="img tac mt25 mb25">
+							<img class="w70" src="images/blog/nhan-biet-cafe2.png" alt="">
+							<p class="fs08 mt10">Mô hình cảm nhận các vị cơ bản của lưỡi mà ai cũng có, còn gọi là tongue
+								map – nguồn: Tasting beer, master guide book</p>
+						</div>
+						<h5 class="mb15">Nhưng phải bắt đầu từ đâu?</h5>
+						<p class="mb15">Đây là câu hỏi mà rất nhiều người “inbox” hỏi tôi trong năm 2018, thậm chí có những
+							bạn đi học về rượu vang về và cũng hỏi tôi “làm sao để biết thêm nhiều mùi vị hơn?” bởi câu trả
+							lời họ thường hay nhận được là “cứ uống nhiều thì sẽ biết”. Điều này cũng giống như những người
+							uống beer, uống whishky và hút thuốc lá, cigar lâu năm, họ phân biệt được đâu là đồ ngon, đâu là
+							đồ dở… nhưng rất ít khi có thể giải thích được tại sao và càng không thể nói cho người khác là
+							làm thế nào để nhận biết được điều đó.</p>
+						<p class="mb15">Tôi may mắn hiểu được (một phần) tại sao, bởi tôi học và làm về experience design.
+							Nghĩa là lĩnh vực liên quan đến cognitive science (tạm dịch là khoa học nhận thức, trải nghiệm),
+							liên quan đến bộ não con người, cách thức ghi nhận những trải nghiệm và định nghĩa nó, may thay,
+							nó cũng áp dụng với thực phẩm và tasting. Người ta thường không giải thích được (nếu không phải
+							là chuyên gia trong ngành) bởi con người dùng cả 02 bán cầu não (trái và phải) để xử lý những
+							cảm nhận từ giác quan (ngũ giác) cho đến cảm nhận về mùi vị. Và đặc biệt hơn, bạn chỉ có thể
+							giải thích mùi vị đó nếu bạn đã từng:</p>
+						<ul>
+							<li>
+								<p>Trải nghiệm với mùi hoặc vị đó (ngửi hoặc nếm)</p>
+							</li>
+							<li>
+								<p>Ghi nhận chính xác tên gọi và đặc tính của mùi hoặc vị đó.</p>
+							</li>
+						</ul>
+						<p class="mb15">Ví dụ, bạn có thể nhận định cốc nước bạn uống vào có vị chua, vì đó là vị cơ bản mà
+							lưỡi và vị giác có thể nhận biết nhanh chóng, nhưng bạn cần có sự trải nghiệm trong cuộc sống để
+							có thể định nghĩa đó là vị chua của quả xanh trên cây, hay là vị chua của quả chín? Đó là vị
+							chua của chanh hay cam? của bưởi hay việt quất? vị chua của cà chua khác với vị chua của chanh
+							như thế nào? Thậm chí, giữa chanh xanh (lime) và chanh vàng (lemon) có vị khác nhau như thế nào?
+						</p>
+						<div class="img tac mt25 mb25">
+							<img class="w70" src="images/blog/nhan-biet-cafe3.png" alt="">
+							<p class="fs08 mt10">Ảnh: Cảm nhận mùi vị của não người – Nguồn: Mouth Feel book.</p>
+						</div>
+						<p class="mb15">Chính vì vậy, đầu tiên, bạn phải bắt đầu với việc tập ghi nhớ và phân loại sự khác
+							biệt của các
+							loại mùi và vị mà bạn gặp trong cuộc sống. Đa số các mùi vị phổ biến, bạn đều đã gặp rồi, chỉ
+							là, chưa chú tâm ghi nhớ mà thôi. Trong whishky hoặc wine sensory, người ta gọi đó là “brain
+							perception training” (tạm dịch là rèn luyện ghi nhớ nhận thức cho não).</p>
+						<p class="mb15">Trong các sách vở về tasting, tất cả tác giả đều có một lời khuyên rằng: “Bạn hãy
+							đến các cửa
+							hàng gia vị, dành nhiều thời gian ở đó, hít hà cái không gian đó, ngửi đi ngửi lại các loại gia
+							vị khô như thanh vanilla, dark chocolate, brown sugar, cũng như các loại lá khô..v.v…” và rồi
+							bạn cũng nên mua về mỗi loại 1 ít để từ từ cảm nhận mùi vị của chúng. Đây là cách dễ thực hành
+							nhất, và ở Hà Nội, tôi thường đến L’s Place ở Hàng Vôi, lên tầng 3 và thẩm định những kiểu gia
+							vị ở đây. Tất nhiên, bạn có thể tìm thấy ở rất nhiều cửa hàng khác. Ngoài cửa hàng gia vị, bạn
+							có thể đến các cửa hàng bán tinh dầu để làm quen với các mùi “floral” tại đây.</p>
+						<p class="mb15">Bên cạnh đó, tôi có một số lời khuyên cho bạn, những lời khuyên này rút ra từ kinh
+							nghiệm của bản
+							thân và cũng là những điều tôi đã nói với nhiều người khi họ hỏi tôi qua
+							<span style="color: #dc8068;">Instagram</span> hoặc
+							<span style="color: #dc8068;">Facebook</span>, cụ thể như sau:</p>
+						<ol class="mb15 pl50">
+							<li>
+								<p><b>Hãy ăn hoa quả chậm lại.</b> Phần lớn người Việt chúng ta ăn quá nhanh, ăn món tráng
+									miệng
+									đôi khi còn nhanh hơn món chính. Đây là lý do mà suốt một thời gian dài, chúng ta không
+									để tâm ghi nhớ, phân biệt các vị khác nhau của hoa và quả. Khi bạn ăn chậm lại, bạn sẽ
+									dần dần phân biệt được vị của các loại hoa quả, và cảm nhận được hầu hết các vị khác
+									nữa. Ví dụ, đối với bưởi, bạn sẽ thấy vị ngọt dịu xen lẫn chua thanh, nhưng rồi sau đó
+									sẽ có vị đắng và 1 chút cay cay. Phần xốp trắng ở vỏ bưởi đôi khi có vị chua và đắng, và
+									lớp vỏ ngoài cùng có tinh dầu thơm nhẹ đặc trưng.</p>
+							</li>
+							<li>
+								<p><b>Hãy ngửi một chút, trước khi ăn.</b> Ban nên biết rằng, khứu giác chiếm 80% khả năng
+									cảm thụ,
+									nhận thức về mùi vị của một đồ ăn hay thức uống nào đó. Bạn có thể thử nghiệm bằng cách
+									bịt mũi lại, và uống cà phê, nước hoa quả hoặc trong lúc ăn một món ăn bất kỳ, gần như
+									ngay lập tức, bạn sẽ thấy độ “ngon” của món ăn, thức uống đó giảm rõ rệt. Vì vậy, lần
+									tới, trước khi ăn món gì, uống thứ gì, hãy dành ít giây phút để… ngửi nó. Cà phê có
+									nhiều mùi hương trải rộng từ mùi của rau, của quả ngọt, của thảo mộc cho đến chocolate,
+									kẹo bơ..v.v.. Và tất cả những mùi hương này đều đến từ những thực phẩm khác.</p>
+							</li>
+							<li>
+								<p><b>Tập phân biệt mùi vị ở những mức nhiệt độ khác nhau.</b> Đa phần chúng ta thích ăn đồ
+									ăn nóng
+									hổi và đồ uống mát lạnh. Tuy nhiên, với đồ ăn hay đồ uống, bạn nên thử ở nhiều nhiệt độ
+									khác nhau. Với cà phê, hãy uống lúc nóng, lúc còn ấm, và lúc nguội dần để cảm nhận được
+									sự biến đổi về mùi vị của loại cà phê đó.</p>
+							</li>
+						</ol>
+						<p class="mb15">Nhiều người sẽ thấy thật phức tạp khi phải làm như vậy, và có quá nhiều thứ phải ghi
+							nhớ. Đúng là như vậy, nhưng may mắn là, việc nếm và ngửi đồ ăn thức uống vẫn diễn ra hàng ngày
+							trong cuộc sống của bạn, chỉ là bạn có muốn ghi nhớ nó hay không mà thôi.</p>
+						<div class="img tac mt25 mb25">
+							<img class="w70" src="images/blog/nhan-biet-cafe4.jpg" alt="">
+							<p class="fs08 mt10">Thử aroma của các loại cà phê trong buổi cupping ở Embankment coffee. Ảnh:
+								Justiamo</p>
+						</div>
+						<h5 class="mb15">Hãy mở lòng, lắng nghe và trao đổi</h5>
+						<p class="mb15">Đối với cà phê, hiện có khoảng 800 – 1000 mùi vị khác nhau được tìm thấy từ các loại
+							cà phê khắp nơi trên thế giới và người ta vẫn đang tiếp tục phát triển các qui trình xử lý, sơ
+							chế, rang, và cách thức pha chế để có thể tìm ra thêm các mùi vị mới. Mỗi người trong chúng ta
+							có thể cảm nhận 05 vị chính (như hình phía trên) bao gồm: chua (sour), đắng (bitter), mặn
+							(salty), ngọt (sweet) và vị mì chính (umami – người Châu Á cảm nhận vị này tốt hơn). Vẫn biết là
+							như vậy nhưng 05 vị này không bao giờ tách biệt rõ ràng để bạn có thể định nghĩa và khẩu vị mỗi
+							người sẽ có nhận thức, trải nghiệm khác nhau. Do đó, tôi thường xuyên cupping với các bạn
+							barista và trao đổi với họ về mùi và vị mà mỗi người chúng tôi cảm thấy lúc uống một loại cà phê
+							nào đó, để rồi, tôi có thể ghi nhớ lại những ý kiến khác nhau, học hỏi và phát triển kỹ năng
+							tasting của mình.</p>
+						<p class="mb15">Một điểm cần đáng lưu ý nữa là sự kiên nhẫn. Khi bạn cùng uống cà phê với một
+							barista có thâm niên trong ngành specialty coffee, mọi thứ sẽ thật dễ dàng. Nhưng nếu bạn uống
+							cà phê với người ở độ tuổi 50-60 tuổi hoặc một người chưa bao giờ uống specialty coffee, họ sẽ
+							không hiểu bạn nói gì, họ sẽ chưa thể chấp nhận sự khác biệt ngoài vị đắng và ngọt của sữa trong
+							tâm trí của họ. Và bạn, cũng như tôi, cần kiên nhẫn để chấp nhận sự khác biệt đó.</p>
+						<blockquote class="mb15 ml50">
+							<p class="ml40">Because coffee grows on tree, be patient, and respectful</p>
+						</blockquote>
+						<p class="mb15">Sau cùng, cà phê cũng là hạt của một loại quả mọng mọc trên cây, vì thế, nó sẽ có
+							đầy đủ quá trình sinh trưởng, đơm hoa, kết trái như những giống cây khác. Với lượng đường có sẵn
+							trong thịt quả… và quá trình lên men khác nhau của người sơ chế mà hạt cà phê có thể ẩn chứa
+							trong mình những hương vị phong phú chứ không chỉ có vị đắng như nhiều người vẫn lầm tưởng. Hãy
+							chấp nhận sự đa dạng của cà phê, một loại hạt mà đồ uống làm từ nó lại có thể chứa đựng rất
+							nhiều hương vị của các loại cỏ cây, hoa lá, và hoa quả trên đời. Đó phần nào là sự kỳ diệu của
+							thức uống này.</p>
+						<p class="mb15"><b><i>P.S:</i></b> Bài viết này chỉ để trả lời câu hỏi bước đầu tìm hiểu về mùi vị
+							cà phê. Tôi sẽ viết chi tiết hơn về cảm nhận vị giác cũng như các cách thức taste cà phê trong
+							các bài tiếp theo.</p>
+						<p class="mb15"><b><i>P.S:</i></b> Ngày xưa, bố mẹ chúng ta thường khuyên nên ăn hoa quả trước khi
+							ăn bánh kẹo, nếu không, hoa quả sẽ nhạt thếch. Điều đó đúng, nhưng mãi sau này, khi học về
+							tasting, tôi mới biết có những vị này sẽ ảnh hưởng đến vị kia, và tôi sẽ hệ thống để viết một
+							bài blog riêng cho điều đó.</p>
+						<p>Hà Nội, tháng 12/2019</p>
+						<p>Merry Christmas!!!</p>
+					</div>
+					<div class="comment-fb mt50">
+						<div class="fb-comments" data-href="https://huynd2609.github.io/coffee" data-width="500px"
+							data-numposts="5"></div>
+					</div>
+				</div>
+				<div class="blogSuggest w30 ptb35 bsbb pl25 bl1 bss">
+					<div class="blogDiff">
+						<div class="bdtt">
+							<h3 class="fs2">Bài viết khác</h3>
+						</div>
+						<div class="bdc">
+							<ul class="lsc lh15">
+								<li class="ptb10 fs09 lha"><a href="">SAO CỨ PHẢI VIẾT VỀ CÀ PHÊ</a></li>
+								<li class="ptb10 fs09 lha"><a href="">SỰ KHÁC BIỆT TRONG VIỆC DÙNG GIẤY LỌC PHA CHẾ POUR OVER Ở NHẬT</a></li>
+								<li class="ptb10 fs09 lha"><a href="">CÁCH ĐỌC THÔNG TIN TRÊN GÓI CÀ PHÊ</a></li>
+								<li class="ptb10 fs09 lha"><a href="">REVIEW SÁCH “DISCOVER YOUR COFFEE WITH TORCH DRIPPER”</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="blogPhoto mt25">
+						<div class="bptt">
+							<h3 class="fs2">Gallery</h3>
+						</div>
+						<div class="bpc mt15">
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img1.jpg" alt="">
+							</div>
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img2.jpg" alt="">
+							</div>
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img3.jpg" alt="">
+							</div>
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img4.jpg" alt="">
+							</div>
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img5.jpg" alt="">
+							</div>
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img6.jpg" alt="">
+							</div>
+							<div class="gi w50 bsbb pr10 pb10 imgz">
+								<img src="images/blog/detail/img7.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section /-->
+		<section id="contact">
+			<div class="container">
+				<div>
+					<div class="section-number">
+						<span>05</span>
+					</div>
+					<div class="section-heading">
+						<h1><span>Liên hệ</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="contact-detail">
+				<div class="contact-detail-intro">
+					<div class="contact-address">
+						<div class="intro-text">
+							<img src="images/logo-top.png" alt="">
+							<h4 class="fs15 mb10" style="font-weight: 500">Tầng 20, tòa M3-M4</h4>
+							<h4 class="fs15 mb10" style="font-weight: 500">91 Nguyễn Chí Thanh, Đống Đa, Hà Nội</h4>
+							<h6 class="fwn mb10">Phone: (+84) 987.654.321</h6>
+							<h6 class="fwn">Mail: info@coffeeplace.vn</h6>
+						</div>
+					</div>
+				</div>
+				<div class="contact-map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862.1577284116427!2d105.80770359374152!3d21.020060174338564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab6656c04e41%3A0x141424964bdf618a!2zQ2h1bmcgY8awIE0zLU00LCBOZ3V54buFbiBDaMOtIFRoYW5oLCBUaMOgbmggQ8O0bmcsIMSQ4buRbmcgxJBhLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1574498123250!5m2!1svi!2s"
+						width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				</div>
+			</div>
+		</section>
+		<!-- Section /-->
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="footer-detail">
+					<h1>Hãy đến với chúng tôi ngay hôm nay</h1>
+					<img src="images/logo-top.png" alt="">
+					<br>
+					<a href="" class="order-now"><span data-text="ĐẶT CÀ PHÊ NGAY!">ĐẶT CÀ PHÊ NGAY!</span></a>
+					<div id="footer-text">
+						<nav id="navigation" class="sort-pages">
+							<ul>
+								<li>
+									<a href="index.html">Trang chủ</a>
+								</li>
+								<li>
+									<a href="#">Thực đơn</a>
+								</li>
+								<li>
+									<a href="#">Tin tức</a>
+								</li>
+								<li>
+									<a href="#">Liên hệ</a>
+								</li>
+								<li>
+									<a href="#">Giỏ hàng</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</div>
+			<div class="reserved text-center">
+				<span>Copyright © 2019 Coffee Place. All rights reserved.</span>
+				<div class="back-top">
+					<i class="fa fa-angle-up"></i>
+				</div>
+
+			</div>
+		</footer>
+		<!-- Footer /-->
+	</div>
+	<!-- JS -->
+	<script type="text/javascript" src="vendor/js/main.js"></script>
+</body>
+
+</html>

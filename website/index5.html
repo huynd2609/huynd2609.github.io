@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Website Book</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lora:400,400i,700|Montserrat:400,700|Open+Sans:400,700,800&display=swap&subset=vietnamese"
+			rel="stylesheet"
+		/>
+		<!-- Font-Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery-3.4.1.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="container-fluid" id="wrapper">
+			<div id="wrapper-content">
+				<div id="menu">
+					<div id="logo">
+						<a href="index.html"><img src="images/logo-top.png" alt="" /></a>
+						<div id="menuMobile">
+							<button class="menu-toggle" type="button">
+								<i class="fa fa-bars"></i>
+							</button>
+						</div>
+					</div>
+					<div id="menu-list">
+						<ul>
+							<li>
+								<a href="index1.html" class="nav-link">
+									<span><img src="images/icon-menu/history.png" alt="" /> Lịch sử phát triển</span>
+								</a>
+							</li>
+							<li>
+								<a href="index2.html" class="nav-link">
+									<span><img src="images/icon-menu/role.png" alt="" /> Vai trò của website</span>
+								</a>
+							</li>
+							<li>
+								<a href="index3.html" class="nav-link"
+									><span><img src="images/icon-menu/structure.png" alt="" /> Thành phần cấu tạo</span>
+								</a>
+							</li>
+							<li>
+								<a href="index4.html" class="nav-link"
+									><span><img src="images/icon-menu/systems.png" alt="" /> Design Systems</span>
+								</a>
+							</li>
+							<li>
+								<a href="index5.html" class="nav-link active">
+									<span><img src="images/icon-menu/application.png" alt="" /> Ứng dụng thực tế</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<main id="main-content">
+					<div id="main-content-title">
+						<h2>Phân tích đánh giá thiết kế UX/UI trong lĩnh vực OTA (Online Travel Agent)</h2>
+						<img src="images/index5/banner1.jpg" alt="" />
+					</div>
+					<div id="main-content-body">
+						<div class="main-content-body-intro">
+							<p>
+								Trong thời đại công nghệ thông tin phát triển bùng nổ và dần chi phối phần lớn cuộc sống con người như hiện nay,
+								ứng dụng công nghệ và kinh tế chia sẻ trở thành một xu hướng chiến lược trong kinh doanh. Uber hay Grab là những
+								minh chứng dễ hiểu. Không những vậy, xu hướng này còn dần được áp dụng phổ biến trong ngành Khách sạn và dịch vụ
+								Homestay. Đây cũng là tiền đề để các website về đặt phòng online ra đời. Đây là mô hình kết nối người cần thuê
+								nhà, thuê phòng nghỉ với những người có phòng cho thuê qua các website hoặc ứng dụng di động.
+							</p>
+							<p>
+								Ở bài viết này, chúng ta sẽ phân tích, đánh giá về thiết kế của 2 trang web <b>luxstay.com</b> và
+								<b>homestay.com</b>. Đây là 2 trang web về đặt lịch phòng homestay, chúng ta sẽ phân tích xem với cùng một lĩnh
+								vực, trang web giữa Việt Nam và thế giới có những điểm gì khác nhau. Các kết luận, đánh giá trong bài viết này
+								là theo góc nhìn, trải nghiệm thiết kế là cá nhân.
+							</p>
+						</div>
+						<hr />
+						<div class="main-content-body-text">
+							<div class="main-content-body-text-title">
+								<h4>UX (User Experiance)</h4>
+							</div>
+							<div class="main-content-body-text-body">
+								<p>
+									Rõ ràng, sản phẩm thuộc lĩnh vực OTA (Online Travel Agent) là một dạng sản phẩm <i>resource booking</i>,
+									và vì thế chúng ta quan tâm nhất 2 thứ là <b>“Đặt lịch”</b> và <b>“Quản lý đặt lịch”</b>, ở bài viết này
+									chúng ta tạm thời chỉ xét đến <b>đặt lịch</b>. Tuy nhiên, có nhiều ngữ cảnh khác nhau để tiếp cận sản
+									phẩm, vì thế để công bằng, chúng ta sẽ đưa ra 3 kịch bản người dùng khi bắt đầu với 2 trang web này, và
+									chỉ xét đến tập khách hàng tìm phòng/địa điểm phòng.
+								</p>
+								<p>
+									• <b>Ngữ cảnh 1:</b> người dùng biết điểm đến và thời gian của chuyến đi
+									<br />
+									• <b>Ngữ cảnh 2:</b> người dùng biết điểm đến nhưng chưa xác định thời gian.
+									<br />
+									• <b>Ngữ cảnh 3:</b> người dùng biết thời gian những chưa biết điểm đến cần đi
+								</p>
+								<img src="images/index5/user-choose.png" alt="" />
+								<ul>
+									<li>
+										<span>Trang chủ</span>
+										<p>
+											Mục tiêu khi người dùng truy cập vào trang web đó là tìm cho mình một gợi ý và thực hiện việc
+											đặt lịch - tương tự người đi mua sắm là đi tìm một item phù hợp theo mục tiêu ban đầu khi bước
+											vào store.
+										</p>
+										<img class="mg0" src="images/index5/luxstay-index1.jpg" alt="" />
+										<figure class="name_img">Trang chủ hiện tại của luxstay.com</figure>
+										<p>
+											Ngay ở [Trang chủ] của <b>Luxstay.com</b>, điểm nhấn đầu tiên, người dùng dành sự tập trung
+											cho slider/banner, tiếp đến mới là phần [Tìm kiếm]. Sự dẫn lối này tạo cho người dùng thiên
+											hướng về tìm hiểu sản phẩm hơn thay vì sử dụng sản phẩm.
+										</p>
+										<img class="mg0" src="images/index5/homestay-index1.jpg" alt="" />
+										<figure class="name_img">Trang chủ hiện tại của homestay.com</figure>
+										<p>
+											Mặt khác, khi vào [Trang chủ] của <b>homestay.com</b>, người dùng sẽ chú ý đến ô [Tìm kiếm]
+											đầu tiên, tiếp đến là mục đánh giá, v.v . Điều này trực tiếp dẫn người dùng đến mục đích là sử
+											dụng sản phẩm để tìm kiếm.
+										</p>
+									</li>
+									<li>
+										<span>Chức năng tìm kiếm, đặt lịch</span>
+										<p>
+											Cả 2 trang web đều tập trung vào đối tượng khách hàng chính là những người tìm địa điểm để
+											thuê phòng.
+										</p>
+										<p>Về giao diện của ô [Tìm kiếm]:</p>
+										<img class="mg0" src="images/index5/box-search-homestay.jpg" alt="" />
+										<figure class="name_img">Ô [Tìm kiếm] hiện tại ở trang chủ homestay.com</figure>
+										<img class="mg0" src="images/index5/box-search-homestay2.jpg" alt="" />
+										<figure class="name_img">Ô [Tìm kiếm] hiện tại ở trang kết quả tìm kiếm của homestay.com</figure>
+										<p>
+											Ô [Tìm kiếm] trên trang [kết quả] của <b>homestay</b>, các ô text input bây giờ đang chứa lựa
+											chọn tìm kiếm, như ảnh trên người dùng bây giờ không rõ ô (28 Oct 2019) và (30 Oct 2019) là
+											nhận phòng hay trả phòng. Việc người dùng phải ghi nhớ hay click vào ô nhập để biết nó là gì
+											gây tốn thời gian, làm giảm hiệu quả “tiến trình giao dịch”.
+										</p>
+										<p>
+											Bất cập tiếp theo là ô [Tìm kiếm] ở [Trang chủ] cũng không thể tìm kiếm khi chưa nhập địa điểm
+											muốn đến.
+										</p>
+										<p>
+											Với trang <b>luxstay</b>, ô [Tìm kiếm] sử dụng <i>Time range picker</i>, người dùng sẽ không
+											cần phải xem ô nhập nào là nhận phòng, ô nào là trả phòng. Thuận tiện cho người sử dụng trong
+											việc thay đổi linh hoạt khi không phải ghi nhớ và click nhiều.
+										</p>
+										<img class="mg0" src="images/index5/box-search-luxstay.jpg" alt="" />
+										<figure class="name_img">Ô [Tìm kiếm] hiện tại ở trang chủ của luxstay.com</figure>
+										<img class="mg0" src="images/index5/box-search-luxstay2.jpg" alt="" />
+										<figure class="name_img">Ô [Tìm kiếm] hiện tại ở trang kết quả tìm kiếm của luxstay.com</figure>
+
+										<p>
+											<b>Kết luận: </b>Như đã nêu ở trên, chúng ta đưa ra 3 ngữ cảnh người dùng, cho nên user flow
+											cần đáp ứng được cho cả 3 tình huống trên. Thực tế là ở ngữ cảnh 1, cho dù người dùng biết
+											điểm đến của mình và khoảng thời gian để đi, thì sau khi tìm kiếm các kết quả, 2 yếu tố trên
+											hoàn toàn có thể thay đổi do: hết phòng, thời gian phòng trống, thay đổi tiêu chí chọn phòng,…
+											Vì thế người dùng hoàn toàn có thể từ ngữ cảnh 1 chuyển sang ngữ cảnh 2 hoặc 3, do đo tính
+											năng [Tìm kiếm] cần linh hoạt ở mọi nơi, “trong suốt” trong mọi quá trình của người dùng. Từ
+											đó, có thể thấy trang <b>luxstay</b> làm tốt hơn trang <b>homestay</b> ở điểm này.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="main-content-body-text">
+							<div class="main-content-body-text-title">
+								<h4>CẤU TRÚC THÔNG TIN</h4>
+							</div>
+							<div class="main-content-body-text-body">
+								<p>
+									Dưới góc nhìn cảm quan giao diện, trang chủ của <b>luxstay</b> là sự kết hợp các thành phần của một trang
+									<i>landing page</i>, vừa kết hợp của một page sản phẩm. Điều này lý giải được vì sao ở [Trang chủ] có
+									slider với mục đích quảng cáo, các thông tin với mục tiêu thu hút người dùng mới mang nhiều mục đích kết
+									hợp giữa quảng bá và cung cấp sản phẩm kết hợp với bên thứ ba.
+								</p>
+								<img src="images/index5/luxstay-index.jpg" alt="" />
+								<p>Còn với <b>homestay</b>, nội dung [Trang chủ] tập trung đưa ra các tính năng của sản phẩm chính.</p>
+								<img src="images/index5/homestay-index.jpg" alt="" />
+								<p>
+									[Trang chủ] được phân chia thành nhiều card/block, tùy vào mục đích sử dụng khác nhau mà vị trí và cách
+									thể hiện khác nhau. Tuy nhiên, các phần người dùng thực sự cần ở đây là những card/block màu xanh lá cây.
+								</p>
+								<p>
+									<b>Kết luận:</b> Dưới góc độ thiết kế sản phẩm, [Trang chủ] luôn là nơi đưa ra những tính năng “hot” nhất
+									và là key của sản phẩm, các tính năng giá trị gia tăng sẽ ở vị trí tạo ra điểm nhấn thu hút và luôn bố trí
+									riêng biệt. Hạn chế trình bày hoặc đưa ra những tính năng gây sao lãng, làm vuột mất tầm nhìn của người
+									dùng khỏi thứ mà họ cần.
+								</p>
+							</div>
+						</div>
+						<div class="main-content-body-text">
+							<div class="main-content-body-text-title">
+								<h4>KẾT LUẬN CHUNG</h4>
+							</div>
+							<div class="main-content-body-text-body">
+								<p>
+									Cả 2 trang web đều có những ưu và nhược điểm riêng đối với trải nghiệm người dùng. Rất khó để đánh giá
+									xem trải nghiệm trang web nào tốt hơn. Để xác định tính hiệu quả của 2 trang web cần kiểm thử theo vị
+									trí địa lý và các tiêu chí: số trải nghiệm người dùng, các con số tỷ lệ, v.v…
+								</p>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<!-- JS -->
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

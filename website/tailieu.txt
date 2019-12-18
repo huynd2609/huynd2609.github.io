@@ -1,0 +1,16 @@
+VAI TRÒ CỦA WEBSITE TRONG CÁCH MẠNG SỐ VÀ ỨNG DỤNG
+1. Lịch sử
+2. Vai trò
+3. Sơ đồ cấu tạo
+4. Tầm quan trọng của System Design
+5. So sánh 2 web giữa VN và thế giới
+
+font: Lora - Open Sans - Montserrat
+size: 8 12 13 19 21 40
+color: #333
+	#f2f4f6
+	#ebebeb
+	#f2f6f9
+	#769ac1
+	#4f7cac
+	#85868b

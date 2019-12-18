@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>WEB BEGINNER</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Google Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Lora:400,600,700|Montserrat:400,500,600,700,800&display=swap&subset=vietnamese"
+		rel="stylesheet" />
+
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="vendor/js/jquery-3.4.1.js"></script>
+	<script src="vendor/js/popper.min.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="vendor/css/animate.css" />
+	<link rel="stylesheet" href="vendor/css/main.css" />
+</head>
+
+<body>
+	<div class="container-fluid" id="wrapper">
+		<!-- Header -->
+		<header id="header" class="">
+			<div id="sidebar" class="sidebar">
+				<div class="banner">
+					<div class="container">
+						<a class="logo-top" href="index.html"><img src="images/logo-top.png" alt=""/></a>
+						<div id="navbar"><img src="images/icon/navbar.png" alt="" /></div>
+						</div>
+					</div>
+				</div>
+		</header>
+		<!-- Header /-->
+		<!-- Main -->
+		<main id="main" class="main-content">
+			<div class="row-fluid title">
+				<div class="container">
+					<div class="title-header text-center">
+						<h1>JAVASCRIPT CƠ BẢN</h1>
+						<p>Tạo một hiệu ứng với JavaScript</p>
+					</div>
+				</div>
+			</div>
+			<!-- row-fluid / -->
+			<div class="row-fluid">
+				<div class="container">
+					<div class="text-item bd1">
+						<p>JavaScript là một ngôn ngữ gia thêm khả năng tương tác cho website của bạn (ví dụ: trò chơi,
+							các phản hồi khi các nút được nhấn hoặc nhập dữ liệu trên form, kiểu động, hoạt họa). Bài
+							viết này sẽ giúp bạn khởi động với ngôn ngữ thú vị này và cho bạn ý tưởng về những gì có thể
+							xảy ra.</p>
+					</div>
+					<div class="text-item">
+						<h3>JavaScript thật sự là gì?</h3>
+						<p>JavaScript (viết tắt là "js") là một ngôn ngữ lập trình mang đầy đủ tính năng của một ngôn
+							ngữ lập trình động mà khi nó được áp dụng vào một tài liệu HTML, nó có thể đem lại khả năng
+							tương tác động trên các trang web.</p>
+						<p>JavaScript thật sự rất linh hoạt. Bạn có thể bắt đầu với các bước nhỏ, với thư viện ảnh, bố
+							cục
+							có tính thay đổi và phản hồi đến các nút nhấn. Khi có nhiều kinh nghiệm hơn, bạn có thể tạo
+							ra các trò chơi, hoạt họa 2 chiều hoặc 3 chiều, ứng dụng cơ sở dữ liệu toàn diện và nhiều
+							thứ khác!</p>
+						<p>Bài viết này, tôi sẽ hướng dẫn các bạn những cú pháp Javascript cơ bản, để làm bước đệm cho
+							việc học Javascript sau này.</p>
+					</div>
+					<div class="text-item">
+						<h3>Cú pháp JavaScript cơ bản</h3>
+						<ol>
+							<li>
+								<h4>Cách đặt tên biến, hàm</h4>
+								<p>Trong Javascript, định danh (identifiers) được sử dụng để đặt tên biến, từ khóa, hàm
+									và labels.</p>
+								<p>Việc định danh nói chung là theo quy tắc sau:</p>
+								<ul>
+									<li><span>Ký tự đầu tiên của định danh phải là chữ cái ( a-z, A-Z) hoặc ký tự $ hoặc dấu gạch dưới (_)</span>
+									</li>
+									<li><span>Không được sử dụng chữ số làm ký tự đầu tiên của định danh.</span></li>
+								</ul>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>ten;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;Đúng</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>_ten;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;Đúng</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>__ten;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;Đúng</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>ten1;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;Đúng</span>
+									</div>
+									<div>&nbsp;</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;10<span>ten;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;Sai</span>
+									</div>
+								</div>
+								<p>Ngoài ra, các định danh có phân biệt chữ hoa với chữ thường nhé.</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #5c6370;font-style: italic;">//&nbsp;Đây&nbsp;là&nbsp;2&nbsp;biến&nbsp;hoàn&nbsp;toàn&nbsp;khác&nbsp;nhau.</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>Ten</span>&nbsp;<span >=</span>&nbsp;<span style="color: #98c379;">"Huy"</span><span >;</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span >ten</span>&nbsp;<span >=</span>&nbsp;<span style="color: #98c379;">"Bang"</span><span >;</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h4>Cách khai báo biến</h4>
+								<p>Javascript hỗ trợ 3 cách để khai báo một biến, đó là sử dụng các từ khóa: let, var và
+									const</p>
+								<p>Trong đó:</p>
+								<ul>
+									<li>
+										<p><em>const</em>: được dùng để khai báo hằng số, giá trị của nó không thay đổi
+											trong suốt chương trình. Nó giống với từ khóa final của Java vậy.</p>
+									</li>
+									<li>
+										<p><em>var</em>: biến được khai báo với từ khóa var sẽ được truy cập ở bất kể
+											đâu trong chương trình.</p>
+									</li>
+									<li>
+										<p><em>let</em>: từ khóa này giúp cho biến chỉ có thể được truy xuất bên trong
+											phạm vi block quanh nó (block được định nghĩa bởi dấu ngoặc nhọn {} ).</p>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h4>Kiểu dữ liệu của biến</h4>
+								<p>Với Javascript, kiểu dữ liệu sẽ được xác định một cách tự động khi chương trình thực
+									thi. Điều này có nghĩa là một biến có thể có nhiều kiểu dữ liệu ở những thời điểm
+									khác nhau.</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">myTest</span>&nbsp;<span >=</span>&nbsp;<span style="color: #d19a66;">123</span>&nbsp;<span >;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;myTest&nbsp;là&nbsp;một&nbsp;số</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>myTest</span>&nbsp;<span>=</span>&nbsp;<span style="color: #98c379;">"Xin&nbsp;chào&nbsp;tất&nbsp;cả&nbsp;các&nbsp;bạn!"</span><span >;</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//myTest&nbsp;là&nbsp;một&nbsp;string/text</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span>myTest</span>&nbsp;<span>=</span>&nbsp;<span style="color: #d19a66;">false</span><span >;</span>&nbsp;&nbsp;<span style="color: #5c6370;font-style: italic;">//&nbsp;myTest&nbsp;là&nbsp;một&nbsp;boolean</span>
+									</div>
+								</div>
+								<p>Có 5 kiểu dữ liệu cơ bản</p>
+								<table border="1" cellpadding="10px">
+									<tr>
+										<th>Biến</th>
+										<th>Giải thích</th>
+										<th>Ví dụ</th>
+									</tr>
+									<tr>
+										<td>String</td>
+										<td>Một chuỗi các ký tự hay còn gọi là xâu. Để thông báo giá trị nào đó là xâu,
+											bạn nên đặt nó trong dấu nháy.</td>
+										<td>var myVariable = 'Bob'; hoặc var myVariable = "Bob";
+										</td>
+									</tr>
+									<tr>
+										<td>Number</td>
+										<td>Số. Không đặt số trong dấu nháy.</td>
+										<td>var myVariable = 10;</td>
+									</tr>
+									<tr>
+										<td>Boolean</td>
+										<td>Giá trị True/False. true và false là các từ khoá đặc biệt trong JS, và không
+											cần tới dấu nháy.</td>
+										<td>var myVariable = true;</td>
+									</tr>
+									<tr>
+										<td>Array</td>
+										<td> Cấu trúc cho phép bạn lưu trữ nhiều giá trị trong một tham chiếu đơn.</td>
+										<td>var myVariable = [1,'Bob','Steve',10]; <br>
+											Trỏ vào mỗi phần tử của mảng theo cách sau:
+											myVariable[0], myVariable[1], v.v...</td>
+									</tr>
+									<tr>
+										<td>Oject</td>
+										<td>Về cơ bản là bất cứ thứ gì. Mọi thứ trong JavaScript đều là object, và có
+											thể lưu trữ trong biến. Hãy ghi nhớ điều này trong lúc học.</td>
+										<td>var myVariable = document.querySelector('h1');</td>
+									</tr>
+								</table>
+								<br>
+							</li>
+							<li>
+								<h4>Toán tử trong Javascript</h4>
+								<p>Để định nghĩa toán tử là gì thì thật là khó. Để mình lấy một ví dụ cụ thể cho dễ hiểu
+									nhé:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #5c6370;font-style: italic;">//&nbsp;Ta&nbsp;có&nbsp;phép&nbsp;tính&nbsp;như&nbsp;sau:</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">const</span>&nbsp;<span style="color: #d19a66;">a</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #d19a66;">5</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">const</span>&nbsp;<span style="color: #d19a66;">b</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #d19a66;">6</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">c</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="overflow: hidden;">a</span>&nbsp;<span style="color: #56b6c2;">+</span>&nbsp;<span style="overflow: hidden;">b</span>
+									</div>
+									<div>
+										<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"c&nbsp;=&nbsp;"</span>&nbsp;<span style="color: #56b6c2;">+</span>&nbsp;<span style="overflow: hidden;">c)</span>&nbsp;<span style="color: #5c6370;font-style: italic;">//màn&nbsp;hình&nbsp;console&nbsp;sẽ&nbsp;in&nbsp;ra:&nbsp;c&nbsp;=&nbsp;11</span>
+									</div>
+								</div>
+								<p>Trong ví dụ trên, ta thấy phép tính a + b, thì phép tính cộng ấy được gọi là toán tử
+									(operator).</p>
+								<p>Dưới đây là bảng tất cả các toán tử được hỗ trợ:</p>
+								<img src="images/js/toan-tu.png" alt="">
+								</br>
+							</li>
+						</ol>
+					</div>
+					<div class="text-item">
+						<h3>Cấu trúc điều khiển</h3>
+						<ul>
+							<li>
+								<h5>Câu lệnh if và if..else</h5>
+								<p>Câu lệnh <span style="overflow: hidden;">if</span> bao gồm một biểu thức điều kiện và
+									đoạn
+									mã sẽ được thực thi khi điều kiện
+									đó nhận giá trị là <span style="overflow: hidden;">true</span>.</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">a</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #d19a66;">10</span><span style="overflow: hidden;">;</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">if</span>&nbsp;<span style="overflow: hidden;">(a</span>&nbsp;<span style="color: #56b6c2;">&gt;</span>&nbsp;<span style="color: #d19a66;">5</span><span style="overflow: hidden;">)</span>&nbsp;<span style="overflow: hidden;">{</span>
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"a&nbsp;lớn&nbsp;hơn&nbsp;5"</span><span style="overflow: hidden;">);</span>
+									</div>
+									<div><span style="overflow: hidden;">}</span></div>
+								</div>
+								<p>Câu lệnh <span style="overflow: hidden;">if...else</span> sẽ bổ sung thêm đoạn code
+									sẽ
+									được thực hiện nếu biểu thức điều
+									kiện của câu lệnh <span style="overflow: hidden;">if</span> trước đó trả về
+									<span style="overflow: hidden;">false</span>.</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">a</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #d19a66;">10</span><span style="overflow: hidden;">;</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">if</span>&nbsp;<span style="overflow: hidden;">(a</span>&nbsp;<span style="color: #56b6c2;">&gt;</span>&nbsp;<span style="color: #d19a66;">5</span><span style="overflow: hidden;">)</span>&nbsp;<span style="overflow: hidden;">{</span>
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"a&nbsp;lớn&nbsp;hơn&nbsp;5"</span><span style="overflow: hidden;">);</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">}</span>&nbsp;<span style="color: #c678dd;">else</span>&nbsp;<span style="overflow: hidden;">{</span>
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"a&nbsp;nhỏ&nbsp;hơn&nbsp;5"</span><span style="overflow: hidden;">);</span>
+									</div>
+									<div><span style="overflow: hidden;">}</span></div>
+								</div>
+							</li>
+							<li>
+								<h5>Vòng lặp for</h5>
+								<p>Với vòng lặp này thì chúng ta sẽ cần tới 3 biểu thức trước để vòng lặp:</p>
+								<ul>
+									<li><span>Biều thức đầu dùng gán giá trị cho biến đếm, biểu thức này chỉ chạy trước vòng lặp đầu tiên.</span>
+									</li>
+									<li><span>Biểu thức điều kiện dùng kiểm tra giá trị của biến đếm với giá trị cho trước, nếu việc kiểm tra này trả về true thì code trong vòng lặp sẽ được chạy.</span>
+									</li>
+									<li><span>Một biểu thức thứ 3 sẽ được chạy ở cuối mỗi vòng lặp.</span></li>
+								</ul>
+								<p>Ví dụ: </p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #c678dd;">for</span>&nbsp;<span style="overflow: hidden;">(</span><span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">i</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #d19a66;">0</span><span style="overflow: hidden;">;</span>&nbsp;<span style="overflow: hidden;">i</span>&nbsp;<span style="color: #56b6c2;">&lt;</span>&nbsp;<span style="color: #d19a66;">10</span><span style="overflow: hidden;">;</span>&nbsp;<span style="overflow: hidden;">i</span><span style="color: #56b6c2;">++</span><span style="overflow: hidden;">)</span>&nbsp;<span style="overflow: hidden;">{</span>
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Hello&nbsp;World!"</span><span style="overflow: hidden;">);</span>
+									</div>
+									<div><span style="overflow: hidden;">}</span></div>
+								</div>
+							</li>
+							<li>
+								<h5>Vòng lặp while</h5>
+								<p>Với vòng lặp <span style="overflow: hidden;">while</span> thì code bên trong vòng lặp
+									được
+									chạy lặp lại nếu một biểu thức cho trước trả về giá trị
+									<span style="overflow: hidden;">true</span>:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">a</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #d19a66;">0</span><span style="overflow: hidden;">;</span>
+									</div>
+									<div>
+										<span style="color: #c678dd;">while</span>&nbsp;<span style="overflow: hidden;">(a</span>&nbsp;<span style="color: #56b6c2;">&lt;</span>&nbsp;<span style="color: #d19a66;">10</span><span style="overflow: hidden;">)</span>&nbsp;<span style="overflow: hidden;">{</span>
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Hello&nbsp;World!"</span><span style="overflow: hidden;">);</span>
+									</div>
+									<div>
+										&nbsp;&nbsp;&nbsp;&nbsp;<span style="overflow: hidden;">a</span><span style="color: #56b6c2;">++</span><span style="overflow: hidden;">;</span>
+									</div>
+									<div><span style="overflow: hidden;">}</span></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="text-item">
+						<h3>Hàm (Function)</h3>
+						<p>Hàm là một cách để đóng gói tính năng mà bạn muốn tái sử dụng. Khi cần thực thi thủ tục nào
+							đó, bạn chỉ cần gọi hàm, với tên hàm là đủ, thay vì phải viết lại cả đoạn code loằng ngoằng.
+						</p>
+						<p>Ví dụ: </p>
+						<div
+							style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #c678dd;">function</span>&nbsp;<span style="color: #61afef;">sayHello</span><span style="overflow: hidden;">()</span>&nbsp;<span style="overflow: hidden;">{</span>
+							</div>
+							<div>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Hello&nbsp;World!"</span><span style="overflow: hidden;">);</span>
+							</div>
+							<div><span style="overflow: hidden;">}</span></div>
+						</div>
+						<p>Với một số hàm thường có đối số — dữ liệu phục vụ cho hàm. Chúng thường nằm trong ngoặc tròn,
+							ngăn cách
+							với nhau bởi dấu phẩy nếu có nhiều hơn một đối số.</p>
+						<p>Ví dụ, ta sẽ viết một hàm đơn giản nhận giá trị kiểu string làm đối số và hiển thị chúng ra:
+						</p>
+						<div
+							style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #c678dd;">function</span>&nbsp;<span style="color: #61afef;">sayHello</span><span style="overflow: hidden;">(name)</span>&nbsp;<span style="overflow: hidden;">{</span>
+							</div>
+							<div>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e5c07b;">console</span><span style="overflow: hidden;">.</span><span style="color: #56b6c2;">log</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Hello&nbsp;"</span>&nbsp;<span style="color: #56b6c2;">+</span>&nbsp;<span style="overflow: hidden;">name</span>&nbsp;<span style="color: #56b6c2;">+</span>&nbsp;<span style="color: #98c379;">"!"</span><span style="overflow: hidden;">);</span>
+							</div>
+							<div><span style="overflow: hidden;">}</span></div>
+						</div>
+						<p>Thử chạy hàm trên trong console, và thử với vài đối số. Chẳng hạn:</p>
+						<div
+							style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #61afef;">sayHello</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Huy"</span><span style="overflow: hidden;">)</span>
+							</div>
+							<div>
+								<span style="color: #61afef;">sayHello</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Bang"</span><span style="overflow: hidden;">)</span>
+							</div>
+							<div>
+								<span style="color: #61afef;">sayHello</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"Khanh"</span><span style="overflow: hidden;">)</span>
+							</div>
+						</div>
+					</div>
+					<div class="text-item">
+						<h3>Sự kiện</h3>
+						<p>Tương tác thực trên website cần sự kiện. Đây là những cấu trúc mã nguồn lắng nghe những thứ
+							xảy ra trong trình duyệt và chạy mã tương ứng. Ví dụ gần gũi nhất là sự kiện click, sẽ nổ ra
+							trên trình duyệt khi bạn bấm vào gì đó bằng con chuột của mình. Để dễ hiểu, nhập đoạn code
+							sau vào console của bạn, rồi click vào trang đang mở:</p>
+						<div
+							style="overflow: hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #e06c75;">document</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">querySelector</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">'html'</span><span style="overflow: hidden;">).</span><span style="color: #61afef;">onclick</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #c678dd;">function</span><span style="overflow: hidden;">()</span>&nbsp;<span style="overflow: hidden;">{</span>
+							</div>
+							<div>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #61afef;">alert</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">'Hello World!'</span><span style="overflow: hidden;">);</span>
+							</div>
+							<div><span style="overflow: hidden;">}</span></div>
+						</div>
+						<p>Có nhiều cách để gắn sự kiện cho một phần tử. Ở đây ta chọn phần tử HTML, cài đặt thuộc tính
+							xử lý onclick cho nó thành hàm không tên, mang theo đoạn code mà ta muốn sự kiện click event
+							chạy.</p>
+						<p>Hãy nhớ rằng</p>
+						<div
+							style="overflow: hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<span style="color: #e06c75;">document</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">querySelector</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">'html'</span><span style="overflow: hidden;">).</span><span style="color: #61afef;">onclick</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #c678dd;">function</span><span style="overflow: hidden;">()</span>&nbsp;<span style="overflow: hidden;">{};</span>
+						</div>
+						<p>tương tự với</p>
+						<div
+							style="overflow: hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">myHTML</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #e06c75;">document</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">querySelector</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">'html'</span><span style="overflow: hidden;">);</span>
+							</div>
+							<div>
+								<span style="color: #e06c75;">myHTML</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">onclick</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #c678dd;">function</span><span style="overflow: hidden;">()</span>&nbsp;<span style="overflow: hidden;">{};</span>
+							</div>
+						</div>
+					</div>
+					<div class="text-item">
+						<h3>Ví dụ với trang web</h3>
+						<p>Sau khi trải qua JavaScript cơ bản, giờ hãy thêm vài tính năng vào trang web mẫu.</p>
+						<p>Đầu tiên, tạo tệp có định dạng main.js lưu vào thư mục chứa tệp html và css trước đó đã tạo.
+						</p>
+						<p>Tiếp theo, trong tệp basics.html thêm dòng code sau ngay trước thẻ đóng
+							<span style="overflow: hidden;">&lt;/body&gt;</span></p>
+						<div
+							style="overflow: hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">script</span><span style="overflow: hidden;">&nbsp;</span><span style="color: #d19a66;">src</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"main.js"</span><span style="overflow: hidden;">&gt;</span><span style="overflow: hidden;">&lt;</span><span style="overflow: hidden;">/</span><span style="color: #e06c75;">script</span><span style="overflow: hidden;">&gt;</span>
+						</div>
+						<p>Điều này là cơ bản giống như việc thêm đường dẫn phần tử cho CSS - Nó áp dụng JavaScript tới
+							page, vì vậy nó có thể có ảnh hưởng tới tài liệu HTML(cùng với CSS và bất kỳ điều gì khác
+							trên trang).</p>
+						<p>Cũng trong tệp basics.html, thêm dòng code dưới đây ngay sau phần tử
+							<span style="overflow: hidden;">&lt;body&gt;</span>:</p>
+						<div
+							style="overflow:hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">h1</span><span style="overflow: hidden;">&nbsp;</span><span style="color: #d19a66;">class</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"my-title"</span><span style="overflow: hidden;">&gt;</span>Hello&nbsp;World!<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">h1</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">button</span><span style="overflow: hidden;">&gt;</span>Change&nbsp;Title!<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">button</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+						</div>
+						<p>Tiếp theo, thêm đoạn mã sau vào tệp main.js:</p>
+						<div
+							style="overflow:hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">myButton</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #e06c75;">document</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">querySelector</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">"button"</span><span style="overflow: hidden;">);</span>
+							</div>
+							<div>
+								<span style="color: #c678dd;">var</span>&nbsp;<span style="overflow: hidden;">myTitle</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #e06c75;">document</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">querySelector</span><span style="overflow: hidden;">(</span><span style="color: #98c379;">".my-title"</span><span style="overflow: hidden;">);</span>
+							</div>
+						</div>
+						<p>Giờ thêm hàm sau để cài đặt lại lời chào: </p>
+						<div
+							style="overflow:hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #c678dd;">function</span>&nbsp;<span style="color: #61afef;">changeTitle</span><span style="overflow: hidden;">()</span>&nbsp;<span style="overflow: hidden;">{</span>
+							</div>
+							<div>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #e06c75;">myTitle</span><span style="overflow: hidden;">.</span><span style="color: #e06c75;">innerHTML</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #98c379;">"Hello&nbsp;Huy!"</span><span style="overflow: hidden;">;</span>
+							</div>
+							<div><span style="overflow: hidden;">}</span></div>
+						</div>
+						<p>Cuối cùng, đặt bộ xử lý sự kiện onclick sau vào nút bấm. Khi được bấm, hàm changeTitle() sẽ
+							chạy. Điều này cho phép người dùng đặt lời chào mới, nếu họ muốn:</p>
+						<div
+							style="overflow:hidden; overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="color: #e06c75;">myButton</span><span style="overflow: hidden;">.</span><span style="color: #61afef;">onclick</span>&nbsp;<span style="color: #56b6c2;">=</span>&nbsp;<span style="color: #c678dd;">function</span><span style="overflow: hidden;">()</span>&nbsp;<span style="overflow: hidden;">{</span>
+							</div>
+							<div>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #61afef;">changeTitle</span><span style="overflow: hidden;">();</span>
+							</div>
+							<div><span style="overflow: hidden;">};</span></div>
+						</div>
+					</div>
+					<div class="text-item">
+						<h3>Kết luận</h3>
+						<p>Nếu bạn làm theo các hướng dẫn trên, thành quả của bạn sẽ trông như thế này: </p>
+						<p class="codepen" data-height="300" data-theme-id="38146" data-default-tab="result"
+							data-user="huynd2609" data-slug-hash="wvvRRpG"
+							style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+							data-pen-title="wvvRRpG">
+							<span>See the Pen <a href="https://codepen.io/huynd2609/pen/wvvRRpG">
+								wvvRRpG</a> by Nguyễn Đình Huy (<a href="https://codepen.io/huynd2609">@huynd2609</a>)
+								on <a href="https://codepen.io">CodePen</a>.</span>
+						</p>
+						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					</div>
+				</div>
+			</div>
+			<!-- row-fluid / -->
+		</main>
+		<!-- Main /-->
+	</div>
+	<div id="layout_black" class="layout-black"></div>
+	<div id="open-menu" class="open-menu">
+		<div id="sidebar-menu" class="sidebar-menu to-left">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="index.html">Trang chủ</a></li>
+				<li class="list-group-item"><a href="introhtml.html">Giới thiệu HTML</a></li>
+				<li class="list-group-item"><a href="introcss.html">Làm quen với CSS</a></li>
+				<li class="list-group-item active"><a href="introjs.html">JavaScript là gì?</a></li>
+			</ul>
+			<div class="icon-close"></div>
+		</div>
+	</div>
+	<!-- JS -->
+	<script type="text/javascript" src="vendor/js/main.js"></script>
+</body>
+
+</html>

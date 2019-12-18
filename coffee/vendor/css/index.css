@@ -1,0 +1,43 @@
+#giohang .card {
+  border: none;
+}
+
+#giohang #product .product-title {
+  color: black;
+}
+
+#giohang #product .product-title:hover {
+  text-decoration: none;
+  color: #dc8068;
+}
+
+#giohang #price {
+  font-weight: 600;
+}
+
+#other-products #product {
+  color: black;
+  margin-right: 10px;
+}
+
+#other-products #product .card-footer {
+  background: none;
+  border: none;
+}
+
+#other-products #product:hover {
+  cursor: pointer;
+}
+
+#other-products #product:last-child {
+  margin-right: 0;
+}
+
+#other-products #show-products button {
+  cursor: pointer;
+}
+
+#charge .col-sm-4 {
+  padding-right: 0 !important;
+}
+/*# sourceMappingURL=index.css.map */

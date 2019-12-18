@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HaNoi University</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=vietnamese"
+      rel="stylesheet"
+    />
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--TweenMax: Hiệu ứng chuyển động các phần tử khi load trang-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Thư viện Carousel - Swiper -->
+    <link
+      rel="stylesheet"
+      href="vendor/libs/swiper-master/dist/css/swiper.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid" id="wrapper">
+      <header id="banner">
+        <div id="banner-left">
+          <a id="logo" href="index.html" title="Trở về trang chủ"
+            ><img
+              class="img-fluid"
+              src="images/logo_top_Hanu.png"
+              alt="Cổng thông tin HANU"
+          /></a>
+        </div>
+        <div id="banner-center">
+          <a href="index.html"><img class="img-fluid" src="images/logo2.png" alt=""></a>
+        </div>
+        <div id="banner-right">
+          <div class="menuMobile">
+            <button class="menu-toggle" type="button">
+              MENU <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <div class="line1">
+            <span style="float:right">
+              <!-- <a href="#">(+)</a>
+              <span class="textRight">|</span>
+              <a href="#">Liên hệ</a>
+              <span class="textRight">|</span> -->
+              <span class="textRight">Ngôn ngữ: </span>
+              <span class="changeLang">
+                <a href="#"><img src="images/vi.gif"/></a>
+                <a href="#"><img src="images/en.gif"/></a>
+              </span>
+            </span>
+          </div>
+          <div class="line2">
+            <div class="input-group">
+              <input
+                type="text"
+                id="_keywords"
+                placeholder="  Tìm kiếm ..."
+                style="height: 24px; margin-right: 5px;"
+              />
+              <input
+                type="image"
+                src="images/search-icon2.png"
+                title="Tìm kiếm"
+                id="_search"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="menu">
+        <div id="home-button">
+          <a href="index.html"><img src="images/home-button.png"/></a>
+        </div>
+        <div id="home-text">
+          <nav id="navigation" class="sort-pages">
+              <ul>
+                  <li>
+                    <a href="introduce.html">GIỚI THIỆU</a>
+                  </li>
+                  <li>
+                    <a href="educate.html">ĐÀO TẠO</a>
+                  </li>
+                  <li>
+                    <a href="infostudyabroad.html">THÔNG TIN DU HỌC</a>
+                  </li>
+                  <li>
+                    <a href="recruitment.html">TUYỂN DỤNG</a>
+                  </li>
+                  <li>
+                    <a href="student.html">SINH VIÊN</a>
+                  </li>
+                  <li>
+                    <a href="international.html">HỢP TÁC QUỐC TẾ</a>
+                  </li>
+                  <li>
+                    <a href="analysis.html">NGHIÊN CỨU</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">LIÊN HỆ</a>
+                  </li>
+                  <!-- <li>
+                    <a href="">HỎI ĐÁP</a>
+                  </li> -->
+                </ul>
+          </nav>
+        </div>
+        <div id="close-menu"></div>
+      </div>
+      <div id="main-content">
+        <div class="row-fluid hanu-content1">
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="d-block w-100"
+                  src="images/slider4.jpg"
+                  alt="First slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="images/slider3.jpg"
+                  alt="Second slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="images/slider8.jpg"
+                  alt="Third slide"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="main-introduce-content">
+          <div class="introduce-title"></div>
+          <div class="introduce-body">
+            <div class="introduce-body-list">
+              <ul>
+                <li class="introduce-title-active">
+                  <a
+                    href="introduce.html"
+                    rel="Giới thiệu Trường Đại Học Hà Nội"
+                    >Giới thiệu Trường Đại Học Hà Nội</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="introduce2.html"
+                    rel="Tầm nhìn, Sứ mạng & Giá trị cốt lõi"
+                    >Tầm nhìn, Sứ mạng & Giá trị cốt lõi</a
+                  >
+                </li>
+                <li><a href="introduce3.html" rel="Cơ cấu tổ chức">Cơ cấu tổ chức</a></li>
+                <li><a href="introduce4.html" rel="Ba công khai">Ba công khai</a></li>
+                <li><a href="introduce5.html" rel="Đề án tự chủ">Đề án tự chủ</a></li>
+              </ul>
+            </div>
+            <div class="introduce-body-content">
+              <div class="introduce-body-content-img">
+                <img
+                  src="images/hanu-introduce6.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div id="introduce-body-content-text" class="introduce-body-content-text">
+                <div class="introduce-body-content-text-title">
+                  <h5></h5>
+                </div>
+                <div class="introduce-body-content-text-body">
+                  <div class="introduce-body-content-text-body-intro">
+                    Với 11 ngành ngoại ngữ; 9 chuyên ngành khác ngoài ngôn ngữ,
+                    dạy-học hoàn toàn bằng ngoại ngữ; 6 trung tâm đào tạo và hợp
+                    tác quốc tế… Trường Đại học Hà Nội tự hào là cơ sở giáo dục
+                    hàng đầu của cả nước trong đào tạo, nghiên cứu về ngoại ngữ
+                    và chuyên ngành bằng ngoại ngữ. Được thành lập từ năm 1959
+                    với tên gọi ban đầu Trường Đại học Ngoại ngữ, trải qua hơn
+                    nửa thế kỉ hoạt động, Trường đã từng bước khẳng định vị thế
+                    là trường đại học công lập uy tín trong đào tạo ngoại ngữ ở
+                    cả ba cấp độ Cử nhân, Thạc sĩ, Tiến sĩ. Đây cũng là trường
+                    đại học đầu tiên của Việt Nam đào tạo chính quy 08 chương
+                    trình cử nhân chuyên ngành hoàn toàn bằng tiếng Anh và 01
+                    chương trình đào tạo bằng tiếng Pháp.
+                  </div>
+                  <div class="introduce-body-content-text-body-list">
+                    <div class="introduce-body-content-text-body-list1">
+                      <div class="introduce-body-content-text-body-list1-top">
+                        <h5>Đổi mới</h5>
+                        <i class="toggle-icon"></i>
+                      </div>
+                      <div class="introduce-body-content-text-body-list1-bottom">
+                        <p>
+                          Đào tạo nguồn nhân lực chất lượng cao, có khả năng hội
+                          nhập quốc tế dựa trên thế mạnh "ngoại ngữ" là mục tiêu
+                          chiến lược của trường. Chính vì vậy, hình thức đào tạo
+                          chính quy, giảng dạy chuyên ngành bằng tiếng Anh và
+                          tiếng Pháp đã được triển khai tại đây vào năm 2002,
+                          thu hút đông đảo thí sinh dự thi như ngành Quản trị
+                          Kinh doanh, Du lịch, Công nghệ Thông tin, Tài
+                          chính-Ngân hàng, Kế toán, Marketing, Quốc tế học,
+                          Truyền thông đa phương tiện, Truyền thông doanh
+                          nghiệp. Trường đang tích cực mở rộng quy mô, đa dạng
+                          hóa các loại hình đào tạo để tiến tới mở các chuyên
+                          ngành mới giảng dạy bằng tiếng Pháp, tiếng Trung,
+                          tiếng Italia… để đáp ứng nhu cầu hội nhập.
+                          <br />
+                          Về hợp tác quốc tế, Trường cố gắng tối đa phát triển
+                          các chương trình hợp tác song phương để trao đổi giáo
+                          viên, sinh viên và nghiên cứu khoa học. Thế mạnh ngoại
+                          ngữ đã được phát triển tối đa, mỗi sinh viên, giáo
+                          viên của Trường đều có thể là một "đại sứ" quảng bá
+                          cho hình ảnh của Trường ra nước ngoài. Hiện nay,
+                          Trường Đại học Hà Nội đã ký thỏa thuận hợp tác với
+                          trên 70 trường đại học và tổ chức nước ngoài.
+                          <br />
+                          Sinh viên cũng được tiếp cận với trình độ quốc tế
+                          thông qua các chương trình đào tạo liên thông với
+                          nhiều trường đại học danh tiếng của hơn 20 quốc gia:
+                          Anh, Úc, Hoa Kỳ, Niu Di-lân, Canada, Italia, Bỉ, Nga,
+                          Pháp, Đức, Tây Ban Nha, Nhật Bản, Trung Quốc, Hàn
+                          Quốc, Malaysia…
+                          <br />
+                          Kiến thức vững vàng, kỹ năng nghề thành thạo, giao
+                          tiếp tự tin bằng ngoại ngữ và làm chủ công nghệ thông
+                          tin là những điểm mạnh để sinh viên tìm được việc làm
+                          dễ dàng sau khi ra trường.
+                        </p>
+                        <h6>
+                          <span class="float-right">
+                            "Năng động – Tự tin
+                          </span>
+                          <br />
+                          <span class="float-right">
+                            Giỏi ngoại ngữ - Vững chuyên môn"
+                          </span>
+                        </h6>
+                      </div>
+                    </div>
+                    <div class="introduce-body-content-text-body-list1">
+                      <div class="introduce-body-content-text-body-list1-top">
+                        <h5>Giảng dạy và nghiên cứu chất lượng cao</h5>
+                        <i class="toggle-icon"></i>
+                      </div>
+                      <div
+                        class="introduce-body-content-text-body-list1-bottom"
+                      >
+                        <p>
+                          Đội ngũ giáo viên là chìa khóa để có được thành công
+                          trên. 90% số giảng viên được đào tạo chính quy và tu
+                          nghiệp hàng năm tại các trường đại học danh tiếng thế
+                          giới. Đội ngũ cán bộ được đào tạo bài bản, tác phong
+                          nghiêm túc, làm việc hiệu quả.
+                          <br />
+                          Một nhiệm vụ trọng tâm khác của Trường là khuyến khích
+                          giảng viên và sinh viên tham gia nghiên cứu khoa học,
+                          ứng dụng vào thực tiễn. Thế mạnh về nghiên cứu khoa
+                          học ngoại ngữ, trong đó có phương pháp giảng dạy ngoại
+                          ngữ chuyên ngành; nghiên cứu văn hóa-văn minh đã được
+                          khẳng định. Nhà Trường đã và đang thực hiện nhiều dự
+                          án nghiên cứu quốc gia và quốc tế như: Ứng dụng Khung
+                          tham chiếu Ngôn ngữ châu Âu (CEFR), dự án Asia Link
+                          (với Anh, Ai-len, Trung Quốc), Innofle (với Bỉ, Lào)…
+                          Nhà trường là cơ quan chủ quản của "Tạp chí khoa học
+                          ngoại ngữ" - tạp chí chuyên ngành duy nhất hiện nay
+                          của Việt Nam nghiên cứu về khoa học ngoại ngữ.
+                        </p>
+                        <h6>
+                          <span class="float-right">"Ngoại ngữ, chìa khóa</span>
+                          <br />
+                          <span class="float-right">để thành công"</span>
+                        </h6>
+                      </div>
+                    </div>
+                    <div class="introduce-body-content-text-body-list1">
+                      <div class="introduce-body-content-text-body-list1-top">
+                        <h5>Môi trường quốc tế</h5>
+                        <i class="toggle-icon"></i>
+                      </div>
+                      <div
+                        class="introduce-body-content-text-body-list1-bottom"
+                      >
+                        <p>
+                          Cơ hội giao lưu đa văn hóa ngay tại trường cũng là một
+                          yếu tố quan trọng giúp tăng cường khả năng hội nhập
+                          của cán bộ giảng viên và sinh viên. Hàng năm, Trường
+                          Đại học Hà Nội chào đón hàng trăm lượt giáo sư, giảng
+                          viên, chuyên gia quốc tế đến thăm quan, trao đổi kinh
+                          nghiệm và trực tiếp giảng dạy sinh viên.
+                          <br />
+                          Với hàng nghìn sinh viên nước ngoài đến từ 22 quốc
+                          gia, Trường Đại học Hà Nội coi sinh viên quốc tế như
+                          một phần trong cuộc sống thường nhật : chính họ đã đem
+                          đến những sắc màu đa dạng và phong phú hơn cho môi
+                          trường học tập của Trường.
+                        </p>
+                        <h6>
+                          <span class="float-right"
+                            >Môi trường quốc tế ngay tại Việt Nam</span
+                          >
+                          <br />
+                          <span class="float-right"
+                            >giúp sinh viên thích nghi với cuộc sống hội nhập
+                            ngay từ năm đầu tiên vào đại học.</span
+                          >
+                        </h6>
+                      </div>
+                    </div>
+                    <div class="introduce-body-content-text-body-list1">
+                      <div class="introduce-body-content-text-body-list1-top">
+                        <h5>Hiện đại</h5>
+                        <i class="toggle-icon"></i>
+                      </div>
+                      <div
+                        class="introduce-body-content-text-body-list1-bottom"
+                      >
+                        <p>
+                          Công nghệ đóng vai trò quan trọng trong quá trình đổi
+                          mới và phát triển của Trường. Hệ thống cơ sở vật chất,
+                          trang thiết bị phục vụ học tập, nghiên cứu và sinh
+                          hoạt tại trường ngày càng được nâng cấp và hoàn thiện
+                          :
+                          <br />
+                          -Hệ thống 20 phòng máy dạy-học ngoại ngữ, phòng dạy
+                          dịch ca-bin chuyên nghiệp, phòng dạy-học từ xa đạt
+                          tiêu chuẩn châu Âu, đi đầu trong số các trường ngoại
+                          ngữ tại Việt Nam;
+                          <br />
+                          -Hàng chục phòng học đa năng (multimedia) với hàng
+                          trăm máy tính nối mạng, được cài đặt các phần mềm học
+                          ngoại ngữ, chuyên ngành hiện đại;
+                          <br />
+                          -Mạng quản lý điện tử nội bộ với trên 500 máy tính văn
+                          phòng, đăng ký tự chọn môn học, thời gian học trực
+                          tuyến giúp sinh viên chủ động trong việc học tập;
+                          <br />
+                          -Thư viện mở với trên 50.000 đầu sách, 2.000 băng, đĩa
+                          CD, hơn 200 máy tính nối mạng (hoạt động 16/24
+                          giờ/ngày);
+                          <br />
+                          -Hệ thống mạng không dây công nghệ mới phủ sóng toàn
+                          Trường cho phép sinh viên tự học mọi lúc, mọi nơi;
+                          <br />
+                          -Nhà ăn sinh viên sạch sẽ, đảm bảo vệ sinh an toàn
+                          thực phẩm; khu ký túc xá với đáp ứng chỗ ở cho hàng
+                          ngàn sinh viên Việt Nam và nước ngoài; sân vận động
+                          cho nhiều môn thể thao.
+                        </p>
+                        <h6>
+                          <span class="float-right"
+                            >Với cơ sở vật chất hiện đại, môi trường sinh hoạt
+                            thân thiện,</span
+                          >
+                          <br />
+                          <span class="float-right"
+                            >Trường Đại học Hà Nội là địa điểm sống và học tập
+                            lý tưởng.</span
+                          >
+                          <br />
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer" style="width: 100%">
+        <div id="footer-left">
+          <div class="footer-left-title">
+            <h5>MẠNG XÃ HỘI</h5>
+          </div>
+          <div class="footer-left-link">
+            <a href="https://www.facebook.com/hanutuyensinh"
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/101329473648918500501/posts"
+              ><i class="fa fa-google-plus"></i
+            ></a>
+            <a
+              href="http://www.hanu.vn/vn/tin-tuc-su-kien/212-tim-kiem-van-bang-chung-chi/3463-tim-kiem-thong-tin-van-bang-chung-chi.html"
+              ><i
+                class="fa fa-wifi"
+                style="transform: rotateZ(45deg) translateY(10%);"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div id="footer-center">
+          <img class="d-block" src="images/logo.png" alt="" />
+          <div class="text-title-logo">
+            <span style="font-size: 24px;">HANOI</span>
+            <br />
+            <span>UNIVERSITY</span>
+          </div>
+          <div class="text-address">
+            <span>Km 9 Nguyễn Trãi</span>
+            <br />
+            <span>Quận Nam Từ Liêm, Hà Nội</span>
+            <br />
+            <span>Điện thoại: (84-24)38544338</span>
+            <br />
+            <span>Fax: (84-24)38544550</span>
+            <br />
+          </div>
+        </div>
+        <div id="footer-right">
+          <a href="contact.html"><h5>GỬI PHẢN HỒI</h5></a>
+        </div>
+        <div class="footer-copyright">
+          <span>© Copyright - Bản quyền thuộc về Trường Đại học Hà Nội</span>
+        </div>
+      </footer>
+    </div>
+    <!-- JS -->
+    <script src="js/libs/swiper-master/dist/js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

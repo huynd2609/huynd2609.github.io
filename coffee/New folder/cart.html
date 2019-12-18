@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gio Hang</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--TweenMax: Hiệu ứng chuyển động các phần tử khi load trang-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <link rel="stylesheet" href="css/animate.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu-top"></div>
+    </header>
+    <!--Hết header-->
+
+    <main>
+      <div id="giohang" class="container mt-3">
+        <div class="row">
+          <div id="alert-updatecart" class="col-sm-12 pr-sm-0">
+          </div>
+        </div>
+        <!--Hết 1 row-->
+        <div class="row">
+          <div class="col-sm-12">
+            <h5>GIỎ HÀNG <small id="count-quantity"></small></h5>
+          </div>
+        </div>
+        <!--Hết 1 row-->
+        <div class="row mt-3">
+          <div id="products" class="col-sm-9">
+            <div class="card">
+              <div id="productsincart" class="card-body">
+                <!-- <div id="product" class="row mb-sm-5">
+                  <div class="col-sm-2">
+                    <img
+                      src="images/cay-lau-nha.jpg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="col-sm-7">
+                    <a href="" class="product-title"
+                      >Cây lau nhà Xiaomi Deerma Spray</a
+                    >
+                    <p>
+                      <small>Cung cấp bởi <a href="">Tiki Trading</a></small>
+                    </p>
+                    <a href="" class="mr-sm-5"><small>Xóa</small></a>
+                    <a href=""><small>Để dành mua sau</small></a>
+                  </div>
+                  <div class="col-sm-2">
+                    <div id="price" class="float-right">239.000 ₫</div>
+                    <span class="badge badge-primary float-right">-33%</span>
+                  </div>
+                  <div class="col-sm-1 pl-sm-0">
+                    <input
+                      class="amount text-center"
+                      style="width: 100%"
+                      type="number"
+                      name="amount"
+                      id=""
+                      value="1"
+                      min="1"
+                      max="99"
+                    />
+                  </div>
+                </div> -->
+                <!--Hết 1 product-->
+              </div>
+              <!--Hết card-body-->
+            </div>
+            <!--Hết card-->
+            <div id="other-products" class="row mt-5">
+              <div class="col-sm-12">
+                <h5>SẢN PHẨM KHÁC</h5>
+              </div>
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="row">
+                    <div id="show-products" class="card-group col-sm-12">
+                      <!--<div class="col-sm-4">
+                      <div id="product" class="card">
+                        <div class="img-product">
+                          <img
+                            src="images/ban-lam-viec.jpg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="card-body">
+                          <p>
+                            <small
+                              >Bàn làm việc cao cấp 1421 (60 x 40 x 90
+                              cm)</small
+                            >
+                          </p>
+                          <p class="card-text">
+                            <b>399.000 ₫ </b>
+                            <small>-61%</small>
+                          </p>
+                        </div>
+                        <div class="card-footer mx-auto">
+                          <a href="" class="btn btn-outline-primary"
+                            >Thêm vào giỏ hàng</a
+                          >
+                        </div>
+                      </div>
+                      <!--Hết card-->
+                      <!--</div> -->
+                      <!-- Hết col-sm-4 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Hết 1 row-->
+          </div>
+          <!--Hết products-->
+          <div id="pay" class="col-sm-3 px-sm-0">
+            <div id="charge" class="card">
+              <div class="card-body px-sm-3">
+                <div id="temporary-price" class="row">
+                  <div class="left col-sm-4">Tạm tính:</div>
+                  <div class="right col-sm-8 charge"></div>
+                </div>
+                <div id="into-money" class="row pt-5">
+                  <div class="left col-sm-4">Thành tiền:</div>
+                  <div class="right col-sm-8">
+                    <h4 style="color: red" class="charge"></h4>
+                    <small>(Đã bao gồm VAT)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Hết cột tính tiền-->
+            <div id="btn-oder" class="row mt-3 mx-auto">
+              <a href="" class="btn btn-danger col-sm-12">Tiến hành đặt hàng</a>
+            </div>
+            <!--Hết nút order-->
+          </div>
+          <!--Hết cột pay-->
+        </div>
+        <!--Hết 1 row-->
+      </div>
+      <!--Hết giỏ hàng-->
+    </main>
+    <!--Hết main-->
+    <!-- Optional JavaScript -->
+    <script src="js/node_modules/systemjs/dist/system.js"></script>
+    <script>
+      System.import("./js/app.js");
+    </script>
+  </body>
+</html>

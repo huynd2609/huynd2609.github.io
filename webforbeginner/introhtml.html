@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>WEB BEGINNER</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Google Font -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Lora:400,600,700|Montserrat:400,500,600,700,800&display=swap&subset=vietnamese"
+		rel="stylesheet" />
+
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="vendor/js/jquery-3.4.1.js"></script>
+	<script src="vendor/js/popper.min.js"></script>
+	<script src="vendor/js/bootstrap.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="vendor/css/animate.css" />
+	<link rel="stylesheet" href="vendor/css/main.css" />
+</head>
+
+<body>
+	<div class="container-fluid" id="wrapper">
+		<!-- Header -->
+		<header id="header" class="">
+			<div id="sidebar" class="sidebar">
+				<div class="banner">
+					<div class="container">
+						<a class="logo-top" href="index.html"><img src="images/logo-top.png" alt="" /></a>
+						<div id="navbar"><img src="images/icon/navbar.png" alt="" /></div>
+						</div>
+					</div>
+				</div>
+		</header>
+		<!-- Header /-->
+		<!-- Main -->
+		<main id="main" class="main-content">
+			<div class="row-fluid title">
+				<div class="container">
+					<div class="title-header text-center">
+						<h1>TRANG WEB CƠ BẢN VỚI HTML</h1>
+						<em>Những hướng dẫn cơ bản để tạo một trang web cơ bản</em>
+					</div>
+				</div>
+			</div>
+			<!-- row-fluid / -->
+			<div class="row-fluid htmlbasics">
+				<div class="container">
+					<div class="text-item bd1">
+						HTML (Hypertext Markup Language) là mã được dùng để xây dựng nên
+						cấu trúc và nội dung của trang web. Ví dụ, nội dung có thể được
+						cấu thành bởi một loạt các đoạn văn, một danh sách liệt kê, hoặc
+						sử dụng những hình ảnh và bảng biểu. Như tiêu đề, bài viết này sẽ
+						cho bạn những hiểu biết căn bản về HTML và chức năng của nó.
+					</div>
+					<div class="text-item">
+						<h3>Vậy HTML là gì?</h3>
+						<br />
+						<span>HTML không phải là một ngôn ngữ lập trình, nó là một ngôn ngữ
+							đánh dấu (markup language) định hình cấu trúc nội dung của bạn.
+							HTML bao gồm một loạt elements, thứ bạn dùng để đính kèm, hoặc
+							gói các phần khác nhau của nội dung để làm cho chúng xuất hiện
+							hay hoạt động với một cách nhất định. Các tags kèm theo có thể
+							làm một từ hay hình ảnh siêu liên kết từ nơi khác, có thể in
+							nghiêng, làm cho phông chữ lớn hơn hoặc nhỏ hơn...Bằng cách đánh
+							dấu nội dung bằng các thẻ HTML, bạn sẽ cho các trình duyệt biết
+							bạn muốn các thành phần trên web hiển thị như thế nào. Tạo một
+							tài liệu HTML với nội dung được đánh dấu đúng là bước đầu tiên
+							để phát triển một trang web.
+						</span>
+						<img src="images/html/html-markup.png" alt="" />
+						<span>Trong phần này, tôi sẽ hướng dẫn các bạn xây dựng một trang web
+							cơ bản. Nó sẽ trông thô sơ vì không có bất kì một CSS nào đính
+							kèm, nhưng nó sẽ đóng vai trò giới thiệu về các yếu tố mà những
+							nhà phát triển web đang làm việc hằng ngày.</span>
+					</div>
+					<div class="text-item">
+						<h3>Cấu trúc của một trang HTML?</h3>
+						<br />
+						<span>Đầu tiên, bạn tạo một tệp <em>basics.html</em>. Tệp HTML này
+							đại diện cho một trang web duy nhất và đó là nơi chúng ta sẽ đặt
+							tất cả mã.</span>
+						<div
+							style="color: rgb(187, 187, 187); background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<div>
+								<span style="overflow: hidden;">&lt;!</span><span style="color: #e06c75;">DOCTYPE</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">html</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">html</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">lang</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"en"</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">meta</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">charset</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"UTF-8"</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div style="overflow: hidden">
+								&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>Web
+								Basics<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&emsp;<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">body</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								&emsp;<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">body</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+							<div>
+								<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">html</span><span style="overflow: hidden;">&gt;</span>
+							</div>
+						</div>
+						<!-- code / -->
+						<p>Chúng ta có:</p>
+						<ul>
+							<li>
+								<p>Đầu tiên, chúng ta cần nói cho trình duyệt biết đây là trang web HTML5 với dòng
+									<span style="overflow: hidden">&lt;!DOCTYPE html&gt;</span>
+									- loại tài liệu. Đây là một chuỗi đặc biệt mà các trình duyệt tìm kiếm khi cố gắng
+									hiển
+									thị trang web và nó luôn cần trông giống hệt như trên. </p>
+							</li>
+							<li>
+								<p>Sau đó, toàn bộ nội dung trang web của chúng ta cần phải được bọc trong thẻ
+									<span style="overflow: hidden">&lt;html&gt;&lt;/html&gt;</span>.
+									<div class="li-img" style="padding: 0 25%">
+										<img src="images/html/html-tags.png" alt="">
+								</div>
+								</p>
+							</li>
+							<li>
+								<p>Bên trong <span style="overflow: hidden">&lt;html&gt;</span>, chúng ta có thêm hai
+									thành
+									phần <span style="overflow: hidden">&lt;head&gt;</span> và
+									<span style="overflow: hidden">&lt;body&gt;</span>.</p>
+								<div class="li-img" style="padding: 0 25%">
+									<img src="images/html/head-body.png" alt="">
+								</div>
+									<p>Thành phần <span style="overflow: hidden">&lt;head&gt;</span> xác định phần trên
+										cùng
+										của tài liệu, bao gồm mọi thông tin kèm theo về trang. Nội dung bên trong phần
+										tử <span style="overflow: hidden">&lt;head&gt;</span> không được hiển thị trên
+										chính
+										trang web. Phần tử <span style="overflow: hidden">&lt;head&gt;</span> gồm
+										có mã hóa kí tự của trang thông qua
+										<span style="overflow: hidden">&lt;meta  charset="UTF-8"&gt;</span> và tiêu đề
+										của
+										trang thông qua
+										phần tử <span style="overflow: hidden">&lt;title&gt;</span>.
+									</p>
+									<p>Tất cả nội dung mà bạn muốn hiển thị cho người dùng web khi họ truy cập trang của
+										bạn,
+										đó là văn bản, hình ảnh, video, trò chơi,âm thanh có thể phát hoặc bất kỳ nội
+										dung nào khác sẽ nằm trong thành phần
+										<span style="overflow: hidden">&lt;body&gt;</span>.</p>
+									<img src="images/html/title-page.png" alt="">
+							</li>
+						</ul>
+					</div>
+					<div class="text-item">
+						<h3>Văn bản</h3>
+						<p>Phần này sẽ bao gồm một số phần tử HTML cơ bản mà bạn sẽ sử dụng để đánh dấu văn bản.
+						</p>
+						<ul>
+							<li>
+								<h4>Tiêu đề</h4>
+								<p>Thành phần đầu đề cho phép bạn chỉ định các thành phần nhất định của nội dung
+									là tiêu đề chính - hoặc tiêu đề phụ - nội dung của bạn. HTML chứa sáu cấp tiêu đề,
+									và các yếu tố tương ứng là
+									<span style="overflow: hidden">&lt;h1&gt;</span> -
+									<span style="overflow: hidden">&lt;h6&gt;</span>. Số càng cao, tiêu đề càng ít nổi
+									bật.
+								</p>
+								<p>Theo mặc định, trình duyệt hiển thị các tiêu đề ít quan trọng hơn trong các phông chữ
+									nhỏ hơn. Ví dụ: hãy bao gồm một tiêu đề cấp một và một tiêu đề cấp hai, xem điều gì
+									sẽ xảy ra</p>
+								<div
+									style="color: rgb(187, 187, 187); background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="overflow: hidden;">&lt;!</span><span style="color: #e06c75;">DOCTYPE</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">html</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">html</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">lang</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"en"</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">meta</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">charset</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"UTF-8"</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>Web
+										Basics<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">body</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">h1</span><span style="overflow: hidden;">&gt;</span>Làm
+										web rất
+										dễ!<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">h1</span><span style="overflow: hidden;">&gt;</span>
+									</div></br>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">h2</span><span style="overflow: hidden;">&gt;</span>Nó
+										dễ khi bạn có thể hiểu
+										nó.<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">h2</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">body</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">html</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+								</div>
+								<p>Điều này sẽ dẫn đến một trang web trông giống như thế này:</p>
+								<img src="images/html/heading.png" alt="">
+								<p>Tiêu đề là cách chính để bạn đánh dấu các phần khác nhau trong nội dung của mình.
+									Điều này làm cho việc chọn các tiêu đề có liên quan là cần thiết cho một trang web
+									chất lượng cao.</p>
+							</li>
+							<li>
+								<h4>Đoạn văn</h4>
+								<p>Các thành phần <span style="overflow: hidden">&lt;p&gt;</span> chứa các đoạn văn bản,
+									bạn
+									sẽ sử dụng chúng thường xuyên khi
+									đánh dấu nội dung văn bản thông thường. Chúng ta hãy thử thêm vài yếu tố
+									<span style="overflow: hidden">&lt;p&gt;</span>
+									vào phần thân của trang web; </p>
+								<div
+									style="color: rgb(187, 187, 187); background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="overflow: hidden;">&lt;!</span><span style="color: #e06c75;">DOCTYPE</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">html</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">html</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">lang</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"en"</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">meta</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">charset</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"UTF-8"</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>Web
+										Basics<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">title</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">head</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">body</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">h1</span><span style="overflow: hidden;">&gt;</span>Làm
+										web rất
+										dễ!<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">h1</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>Đầu
+										tiên, chúng ta cần phải hiểu những thứ cơ bản của
+										HTML.<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>
+									</div> </br>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">h2</span><span style="overflow: hidden;">&gt;</span>Nó
+										dễ khi bạn có thể hiểu
+										nó.<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">h2</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div style="overflow: hidden">
+										&emsp;&emsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>Vậy
+										muốn hiểu nó chúng ta làm thế
+										nào?<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&emsp;<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">body</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">html</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+								</div>
+								<p>Bây giờ bạn có thể thấy một số nội dung trên trang.</p>
+								<img src="images/html/paragraph.png" alt="">
+							</li>
+							<li>
+								<h4>Danh sách</h4>
+								<p>Rất nhiều nội dung của trang web là danh sách và HTML có các yếu tố đặc biệt cho các
+									danh sách này. Việc đánh dấu danh sách luôn bao gồm ít nhất hai phần tử. Các loại
+									danh sách phổ biến nhất có thứ tự và danh sách không có thứ tự:</p>
+								<ol>
+									<li>
+										<span><strong>Danh sách không theo thứ tự</strong> dành cho các danh sách có thứ tự không quan trọng, như danh sách mua sắm. Chúng được bọc trong phần tử <span style="overflow: hidden">&lt;ul&gt;</span>.</span>
+									</li>
+									<li>
+										<span><strong>Danh sách theo thứ tự</strong> dành cho các danh sách có thứ tự của các vật phẩm, chẳng hạn như công thức. Chúng được bọc trong thành phần <span style="overflow: hidden">&lt;ol&gt;</span>.</span>
+									</li>
+								</ol>
+								<p>Mỗi mục bên trong danh sách được đặt bên trong phần tử
+									<span style="overflow: hidden">&lt;li&gt;</span> (mục danh sách).</p>
+								<p>Ví dụ, chúng ta thêm vào nội dung danh sách sau:</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>Đây
+										là cách thêm danh sách không theo thứ
+										tự<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">ul</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>Đầu
+										tiên, thêm phần tử
+										"ul"<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>Tiếp
+										theo, thêm từng thành phần "li" vào trong
+										nó<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>Và
+										danh sách hiển thị ra không cần đánh dâu thứ
+										tự<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">ul</span><span style="overflow: hidden;">&gt;</span>
+									</div> </br>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>Đây
+										là cách thêm danh sách theo thứ
+										tự<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">ol</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>Đầu
+										tiên, thêm phần tử
+										"ol"<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>Tiếp
+										theo, thêm từng thành phần "li" vào trong
+										nó<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										&nbsp;<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>Và
+										danh sách hiển thị ra theo thứ tự đánh
+										số<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">li</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">ol</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+								</div>
+								<p>Và kết quả hiển thị trên web: </p>
+								<img src="images/html/list.png" alt="">
+							</li>
+							<li>
+								<h4>Yếu tố nhấn mạnh</h4>
+								<p>Nếu bạn muốn nhấn mạnh một phần bất kỳ của văn bản, bạn có thể sử dụng thành phần nội
+									tuyến. Phần tử nội tuyến này sẽ chỉ ảnh hướng đến một đoạn văn bản
+									<em>bên trong</em>. Hãy thử thêm một đoạn văn bản nhấn mạnh vào trang web:
+								</p>
+								<div
+									style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">h2</span><span style="overflow: hidden;">&gt;</span>Yếu
+										tố nhấn
+										mạnh<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">h2</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;&lt;</span><span style="color: #e06c75;">em</span><span style="overflow: hidden;">&gt;</span>Đôi
+										khi,<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">em</span><span style="overflow: hidden;">&gt;</span>
+										bạn cần thu hút sự chú ý cho cả đoạn văn bằng một từ hoặc cụm
+										từ<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+									<div>
+										<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;&lt;</span><span style="color: #e06c75;">strong</span><span style="overflow: hidden;">&gt;</span>Nhưng<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">strong</span><span style="overflow: hidden;">&gt;</span>,
+										nhiều lúc cũng không cần phải làm
+										thế.<span style="overflow: hidden;">&lt;/</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>
+									</div>
+								</div>
+								<p>Bây giờ, chúng ta sẽ tìm hiểu cách các phần tử nội tuyến tác động đến bố cục của
+									trang.</p>
+								<img src="images/html/strong.jpg" alt="">
+							</li>
+						</ul>
+					</div>
+					<div class="text-item">
+						<h3>Hình ảnh</h3>
+						<p>Hình ảnh được hiển thị trong các trang web với thẻ
+							<span style="overflow: hidden">&lt;img/&gt;</span> và trỏ đến tệp hình ảnh bạn muốn hiển thị
+							qua
+							thuộc tính <span style="overflow: hidden">src</span> (source).</p>
+						<p>Hãy thêm đoạn code sau vào dự án của bạn, và xem điều sẽ xảy ra:</p>
+						<div
+							style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+							<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">img</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">src</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"https://huynd2609.github.io/webforbeginner/images/html/tag-img.png"</span><span style="overflow: hidden;">&gt;</span>
+						</div>
+						<img src="https://huynd2609.github.io/webforbeginner/images/html/tag-img.png">
+					</div>
+						<div class="text-item">
+							<h3>Liên kết</h3>
+							<p>Liên kết rất quan trọng - đó là những gì làm cho web trở thành một trang web! Để thêm
+								liên kết, chúng tôi cần sử dụng một thành phần đơn giản -
+								<span style="overflow: hidden">&lt;a&gt;</span> - viết tắt của "anchor". Để làm cho văn
+								bản trong đoạn văn của bạn thành một liên kết.</p>
+							<p>Bây giờ, chúng ta quan tâm đến thuộc tính
+								<span style="overflow: hidden">&lt;href&gt;</span> vì nó xác định người dùng sẽ đi đâu
+								khi họ
+								nhấp vào <span style="overflow: hidden">&lt;a&gt;</span>. Ví dụ thêm đoạn code sau đây
+								vào dự
+								án của bạn:</p>
+							<div
+								style="overflow: hidden; background-color: #eee; font-family: Consolas, 'Courier New', monospace; font-size: 20px; line-height: 19px; padding: 20px 0 20px 30px; margin: 20px 0; border-left: 3px solid gray;line-height: 29px">
+								<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">p</span><span style="overflow: hidden;">&gt;</span>Tìm
+								hiểu chi tiết hơn về HTML
+								<span style="overflow: hidden;">&lt;</span><span style="color: #e06c75;">a</span><span style="overflow: hidden;"> </span><span style="color: #d19a66;">href</span><span style="overflow: hidden;">=</span><span style="color: #98c379;">"</span>https://developer.mozilla.org/vi/docs/Learn<span style="color: rgb(152, 195, 121);">"</span><span style="color: rgb(171, 178, 191);">&gt;</span>tại
+								đây!<span style="color: rgb(171, 178, 191);">&lt;/</span><span style="color: rgb(224, 108, 117);">a</span><span style="color: rgb(171, 178, 191);">&gt;&lt;/</span><span style="color: rgb(224, 108, 117);">p</span><span style="color: rgb(171, 178, 191);">&gt;</span>
+							</div>
+							<p>Với thông tin được cung cấp bởi thuộc tính <span style="overflow: hidden">href</span>, nó
+								sẽ
+								cho trình duyệt biết rằng thẻ <span style="overflow: hidden">&lt;a&gt;</span> bây giờ là
+								một
+								liên kết và nó sẽ hiển thị bằng văn bản màu xanh mặc định.</p>
+							<img src="images/html/link.jpg" alt="">
+					</div>
+							<div class="text-item">
+								<h3>Kết luận</h3>
+								<p>Trong phần này các bạn đã tìm hiểu về một danh sách các yếu tố cơ bản của HTML. HTML
+									là khá đơn giản khi đi thẳng vào nó. Các trang web được tạo thành từ các phần tử
+									HTML, mỗi phần tử thêm một ý nghĩa khác nhau cho văn bản chứa trong đó và các phần
+									tử có thể được lồng vào nhau.</p>
+								<p>Hy vọng rằng, tệp basics.html tôi đã hướng dẫn các bạn tạo trong phần này sẽ đóng vai
+									trò là tài liệu tham khảo nhanh hữu ích về các yếu tố HTML cốt lõi. Và đây là cấu
+									trúc HTML và giao
+									diện của nó:</p>
+								<p class="codepen" data-height="600" data-theme-id="38146" data-default-tab="result"
+									data-user="huynd2609" data-slug-hash="xxxmaam"
+									style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+									data-pen-title="xxxmaam">
+									<span>See the Pen <a href="https://codepen.io/huynd2609/pen/xxxmaam">
+										xxxmaam</a> by Nguyễn Đình Huy (<a href="https://codepen.io/huynd2609">@huynd2609</a>)
+										on <a href="https://codepen.io">CodePen</a>.</span>
+								</p>
+								<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+							</div>
+						</div>
+					</div>
+					<!-- row-fluid / -->
+		</main>
+		<!-- Main /-->
+	</div>
+	<div id="layout_black" class="layout-black"></div>
+	<div id="open-menu" class="open-menu">
+		<div id="sidebar-menu" class="sidebar-menu to-left">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="index.html">Trang chủ</a></li>
+				<li class="list-group-item active">
+					<a href="introhtml.html">Giới thiệu HTML</a>
+				</li>
+				<li class="list-group-item">
+					<a href="introcss.html">Làm quen với CSS</a>
+				</li>
+				<li class="list-group-item">
+					<a href="introjs.html">JavaScript là gì?</a>
+				</li>
+			</ul>
+			<div class="icon-close"></div>
+		</div>
+	</div>
+	<!-- JS -->
+	<script type="text/javascript" src="vendor/js/main.js"></script>
+</body>
+
+</html>

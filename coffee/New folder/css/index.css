@@ -1,0 +1,62 @@
+* {
+  margin: 0, padding 0;
+}
+
+html,
+body {
+  width: 100%;
+  background: rgba(128, 128, 128, 0.05) !important;
+  font-family: segoe ui;
+}
+
+header .menu-top {
+  width: 100%;
+  min-height: 120px;
+  background: url(../images/menuTop.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#giohang .card {
+  border: none;
+}
+
+#giohang #product .product-title {
+  color: black;
+}
+
+#giohang #product .product-title:hover {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#giohang #price {
+  font-weight: 600;
+}
+
+#other-products #product {
+  color: black;
+  margin-right: 10px;
+}
+
+#other-products #product .card-footer {
+  background: none;
+}
+
+#other-products #product:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 17px -7px gray;
+          box-shadow: 0 0 17px -7px gray;
+}
+
+#other-products #product:last-child {
+  margin-right: 0;
+}
+
+#other-products #show-products button {
+  cursor: pointer;
+}
+
+#charge .col-sm-4 {
+  padding-right: 0;
+}
+/*# sourceMappingURL=index.css.map */

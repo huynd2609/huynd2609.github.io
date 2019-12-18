@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HaNoi University</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=vietnamese"
+      rel="stylesheet"
+    />
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--TweenMax: Hiệu ứng chuyển động các phần tử khi load trang-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Thư viện Carousel - Swiper -->
+    <link
+      rel="stylesheet"
+      href="vendor/libs/swiper-master/dist/css/swiper.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid" id="wrapper">
+      <header id="banner">
+        <div id="banner-left">
+          <a id="logo" href="index.html" title="Trở về trang chủ"
+            ><img
+              class="img-fluid"
+              src="images/logo_top_Hanu.png"
+              alt="Cổng thông tin HANU"
+          /></a>
+        </div>
+        <div id="banner-right">
+          <div class="menuMobile">
+            <button class="menu-toggle" type="button">
+              MENU <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <div class="line1">
+            <span style="float:right">
+              <!-- <a href="#">(+)</a>
+              <span class="textRight">|</span>
+              <a href="#">Liên hệ</a>
+              <span class="textRight">|</span> -->
+              <span class="textRight">Ngôn ngữ: </span>
+              <span class="changeLang">
+                <a href="#"><img src="images/vi.gif"/></a>
+                <a href="#"><img src="images/en.gif"/></a>
+              </span>
+            </span>
+          </div>
+          <div class="line2">
+            <div class="input-group">
+              <input
+                type="text"
+                id="_keywords"
+                placeholder="  Tìm kiếm ..."
+                style="height: 24px; margin-right: 5px;"
+              />
+              <input
+                type="image"
+                src="images/search-icon2.png"
+                title="Tìm kiếm"
+                id="_search"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="menu">
+        <div id="home-button">
+          <a href="index.html"><img src="images/home-button.png"/></a>
+        </div>
+        <div id="home-text">
+          <nav id="navigation" class="sort-pages">
+              <ul>
+                  <li>
+                    <a href="introduce.html">GIỚI THIỆU</a>
+                  </li>
+                  <li>
+                    <a href="educate.html">ĐÀO TẠO</a>
+                  </li>
+                  <li>
+                    <a href="infostudyabroad.html">THÔNG TIN DU HỌC</a>
+                  </li>
+                  <li>
+                    <a href="recruitment.html">TUYỂN DỤNG</a>
+                  </li>
+                  <li>
+                    <a href="student.html">SINH VIÊN</a>
+                  </li>
+                  <li>
+                    <a href="international.html">HỢP TÁC QUỐC TẾ</a>
+                  </li>
+                  <li>
+                    <a href="analysis.html">NGHIÊN CỨU</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">LIÊN HỆ</a>
+                  </li>
+                  <!-- <li>
+                    <a href="">HỎI ĐÁP</a>
+                  </li> -->
+                </ul>
+          </nav>
+        </div>
+        <div id="close-menu"></div>
+      </div>
+      <div id="main-content">
+        <div class="row-fluid hanu-content1">
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="d-block w-100"
+                  src="images/slider4.jpg"
+                  alt="First slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="images/slider3.jpg"
+                  alt="Second slide"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="images/slider8.jpg"
+                  alt="Third slide"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="main-introduce-content">
+          <div class="introduce-title"></div>
+          <div class="introduce-body">
+            <div class="introduce-body-list">
+              <ul>
+                <li>
+                  <a
+                    href="introduce.html"
+                    rel="Giới thiệu Trường Đại Học Hà Nội"
+                    >Giới thiệu Trường Đại Học Hà Nội</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="introduce2.html"
+                    rel="Tầm nhìn, Sứ mạng & Giá trị cốt lõi"
+                    >Tầm nhìn, Sứ mạng & Giá trị cốt lõi</a
+                  >
+                </li>
+                <li class="introduce-title-active"><a href="introduce3.html" rel="Cơ cấu tổ chức">Cơ cấu tổ chức</a></li>
+                <li><a href="introduce4.html" rel="Ba công khai">Ba công khai</a></li>
+                <li><a href="introduce5.html" rel="Đề án tự chủ">Đề án tự chủ</a></li>
+              </ul>
+            </div>
+            <div class="introduce-body-content">
+              <div class="introduce-body-content-img">
+                <img
+                  src="images/hanu-introduce6.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="introduce-body-content-text">
+                <div class="introduce-body-content-text-title">
+                  <h5>TẦM NHÌN, SỨ MẠNG & GIÁ TRỊ CỐT LÕI</h5>
+                </div>
+                <div class="introduce-body-content-text-body">
+                  <div class="introduce-body-content-text-body-item">
+                    <div class="introduce-body-content-text-body-item-title">
+                      <b>Tầm nhìn</b>
+                    </div>
+                    <div class="introduce-body-content-text-body-item-body">
+                      <span>
+                        Trường Đại học Hà Nội phấn đấu trở thành trường đại học
+                        ứng dụng có uy tín trong nước và khu vực; chuyên sâu về
+                        đào tạo, nghiên cứu khoa học và chuyển giao công nghệ
+                        trong các lĩnh vực ngôn ngữ-văn hóa, quản trị kinh
+                        doanh, quản lý kinh tế, tài chính-ngân hàng, quản trị du
+                        lịch, nghiên cứu quốc tế, công nghệ thông tin và truyền
+                        thông dựa trên thế mạnh truyền thống về ngoại ngữ.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="introduce-body-content-text-body-item">
+                    <div class="introduce-body-content-text-body-item-title">
+                      <b>Sứ mạng</b>
+                    </div>
+                    <div class="introduce-body-content-text-body-item-body">
+                      <span>
+                        Trường Đại học Hà Nội là cơ sở đào tạo, nghiên cứu và
+                        chuyển giao công nghệ, cung cấp nguồn nhân lực trình độ
+                        đại học, sau đại học chất lượng cao, giỏi chuyên môn,
+                        thành thạo ngoại ngữ và ứng dụng công nghệ thông tin,
+                        đáp ứng nhu cầu ngày càng cao của thị trường lao động
+                        trong nước và quốc tế.
+                      </span>
+                    </div>
+                  </div>
+                  <div class="introduce-body-content-text-body-item">
+                    <div class="introduce-body-content-text-body-item-title">
+                      <b>Giá trị cốt lõi</b>
+                    </div>
+                    <div class="introduce-body-content-text-body-item-body">
+                      <span>
+                        1. Nhiệt huyết và năng động;
+                        <br />
+                        2. Trung thực và trách nhiệm;
+                        <br />
+                        3. Tư duy độc lập và phản biện;
+                        <br />
+                        4. Sáng tạo không ngừng;
+                        <br />
+                        5. Thích ứng môi trường làm việc quốc tế.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer" style="width: 100%">
+        <div id="footer-left">
+          <div class="footer-left-title">
+            <h5>MẠNG XÃ HỘI</h5>
+          </div>
+          <div class="footer-left-link">
+            <a href="https://www.facebook.com/hanutuyensinh"
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/101329473648918500501/posts"
+              ><i class="fa fa-google-plus"></i
+            ></a>
+            <a
+              href="http://www.hanu.vn/vn/tin-tuc-su-kien/212-tim-kiem-van-bang-chung-chi/3463-tim-kiem-thong-tin-van-bang-chung-chi.html"
+              ><i
+                class="fa fa-wifi"
+                style="transform: rotateZ(45deg) translateY(10%);"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div id="footer-center">
+          <img class="d-block" src="images/logo.png" alt="" />
+          <div class="text-title-logo">
+            <span style="font-size: 24px;">HANOI</span>
+            <br />
+            <span>UNIVERSITY</span>
+          </div>
+          <div class="text-address">
+            <span>Km 9 Nguyễn Trãi</span>
+            <br />
+            <span>Quận Nam Từ Liêm, Hà Nội</span>
+            <br />
+            <span>Điện thoại: (84-24)38544338</span>
+            <br />
+            <span>Fax: (84-24)38544550</span>
+            <br />
+          </div>
+        </div>
+        <div id="footer-right">
+          <a href="contact.html"><h5>GỬI PHẢN HỒI</h5></a>
+        </div>
+        <div class="footer-copyright">
+          <span>© Copyright - Bản quyền thuộc về Trường Đại học Hà Nội</span>
+        </div>
+      </footer>
+    </div>
+    <!-- JS -->
+    <script src="js/libs/swiper-master/dist/js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

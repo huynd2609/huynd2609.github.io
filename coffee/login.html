@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Coffee Place</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lora:400,600,700|Montserrat:400,500,600,700,800&display=swap&subset=vietnamese"
+			rel="stylesheet"
+		/>
+		<!-- Font-Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="vendor/js/jquery-3.4.1.js"></script>
+		<script src="vendor/js/popper.min.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" href="vendor/css/animate.css" />
+		<link rel="stylesheet" href="vendor/css/main.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid login" id="wrapper">
+			<a href="index.html" class="logo">
+				<img style="width: 13%; margin: 5px 24px;" src="images/logo-top.png" alt="" />
+			</a>
+			<form action="" class="login-form">
+				<h1>ĐĂNG NHẬP</h1>
+				<div class="login-different text-center">
+					<p>với mạng xã hội của bạn</p>
+					<a href="" class="fb">
+						<i class="fa fa-facebook"></i>
+						FACEBOOK
+					</a>
+					<a href="" class="gg">
+						<i class="fa fa-google-plus"></i>
+						GOOGLE
+					</a>
+				</div>
+				<div class="and text-center">
+					<p>hoặc</p>
+				</div>
+				<div class="txttb">
+					<input id="email_field" type="text" placeholder="" />
+					<label for="">Email / Số điện thoại</label>
+				</div>
+				<div class="txttb">
+					<input id="password_field" type="text" placeholder="" />
+					<label for="">Mật khẩu</label>
+				</div>
+				<button class="logbtn" onclick="login()">Đăng nhập</button>
+				<div class="bottom-text">
+					<p>
+						Chưa có tài khoản?
+						<a href="#">Đăng ký</a>
+					</p>
+				</div>
+			</form>
+			</div>
+		</div>
+
+		<!-- JS -->
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+    	https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyDhf_W56Xrx6mUYX2_dyqeDEeHgBOpbZMM",
+				authDomain: "shopping-df0ba.firebaseapp.com",
+				databaseURL: "https://shopping-df0ba.firebaseio.com",
+				projectId: "shopping-df0ba",
+				storageBucket: "shopping-df0ba.appspot.com",
+				messagingSenderId: "400061121144",
+				appId: "1:400061121144:web:77fa9121d60a7f3d26a38d",
+				measurementId: "G-0HJJG3H0HR"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+		</script>
+		<script type="text/javascript" src="vendor/js/login.js"></script>
+	</body>
+</html>
