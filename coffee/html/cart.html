@@ -1,0 +1,87 @@
+<div class="w1 mtb50 pt50 ngàyTháng">
+	<div class="container pt50 pb25 bbw1s plr0">
+		<div class="df jcsb">
+			<div class="img w50">
+				<img class="w75" src="images/logo-top.png" alt="">
+			</div>
+			<div id="date" class="fw500 ttu fs12 cl07 w50 tar"></div>
+		</div>
+	</div>
+</div>
+<div class="w1 mb50 đơnHàng">
+	<div class="container plr0">
+		<div class="df jcsb mb50">
+			<p class="ttu fs2 fw7">Xác nhận đơn hàng</p>
+			<p class="">Bạn có 1 sản phẩm trong giỏ hàng</p>
+		</div>
+		<ul id="spChọn" class="spChọn">
+			<li class="spSelected relative ofh bgr8 mb15 df jcsb">
+				<div class="spContent w70 df jcsb">
+					<div class="spImg w30">
+						<img class="wh1" src="images/menu/cf1.jpg" alt="">
+					</div>
+					<div class="spName w70 pl25 pt50">
+						<h6 class="fs15 fw7 cl06">Cà Phê Nâu</h6>
+						<div class="spQuanlity mt15">
+							<span>Số lượng: </span>
+							<input type="number" name="Số lượng" id="" min="1" max="100" value="1">
+						</div>
+					</div>
+				</div>
+				<div class="spPrice w30 pt50 tac">
+					<span class="fs2 cl06 fw7">29.000 đ</span>
+				</div>
+				<a href="#" class="cl06 pa" style="top: 15px; right: 15px;"><i class="fa fa-times"></i></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="w1 mb50 thanhToán">
+	<div class="container w1 h200 bgr5 plr0">
+		<div class="df jcsb wh1">
+			<div class="w70 cl01 df jcsc fdc pl50">
+				<p class="ttu fs12 fw5">Tổng tiền hóa đơn của bạn</p>
+				<p class="cl08">Giá đã bao gồm thuế VAT</p>
+			</div>
+			<div class="w30 bgrb df jcsc fdc tac">
+				<span class="fs2 cl01 fw7">29.000 đ</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="w1 mb50 pb50 thôngTin">
+	<div class="container plr0">
+		<div class="mb50">
+			<p class="ttu fs2 fw7">Thông tin của bạn</p>
+		</div>
+		<div>
+			<form>
+				<div class="form-group w50 fl">
+					<input type="name" class="form-control w95" id="exampleInputName1" aria-describedby="nameHelp"
+						placeholder="Tên*" />
+				</div>
+				<div class="form-group w50 fr">
+					<input type="mail" class="form-control w95 fr" id="exampleInputMail1" placeholder="Email*" />
+				</div>
+				<div class="form-group w50 fl">
+					<input type="tel" class="form-control w95" id="exampleInputTel1" aria-describedby="telHelp"
+						placeholder="Số điện thoại*" />
+				</div>
+				<div class="form-group w50 fr">
+					<input type="text" class="form-control w95 fr" id="exampleInputAddress1" placeholder="Địa chỉ*" />
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+						placeholder="Nhập nội dung ghi chú của bạn"></textarea>
+				</div>
+				<button type="submit" class="btn-submit cl01 bgr6 ptb15 plr25 fw500 fs12 fr">Đặt hàng</button>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).off('scroll');
+	var now = new Date();
+	$('#date').append("Thứ " + (now.getDay() + 1), ", ngày " + now.getDate(), " / " + now.getMonth(), " / " + now
+		.getFullYear());
+</script>
