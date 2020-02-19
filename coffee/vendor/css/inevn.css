@@ -796,7 +796,7 @@ html:not(.diĐộng) .oyahi, html:not(.diĐộng) .oxahi { overflow: hidden; }
 .pa5 > .w1a20:not(.w50):not(.w33):not(.w25):not(.w10) { width: calc(100% + 10px); margin-left: -5px; }
 .wa { width: auto; }
 .wai { width: auto!important; }
-.wh1, .h1, .ol, .vamg:before { height: 100%; }
+.wh1, .h1, .ol, .vamg:before, .h1i { height: 100%; }
 .w0, .wh0 { width: 0; }
 .h0, .wh0 { height: 0; }
 .ha, .w1a20, img.wh1 { height: auto; }

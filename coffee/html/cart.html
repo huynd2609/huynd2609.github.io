@@ -82,6 +82,14 @@
 <script>
 	$(document).off('scroll');
 	var now = new Date();
-	$('#date').append("Thứ " + (now.getDay() + 1), ", ngày " + now.getDate(), " / " + now.getMonth(), " / " + now
-		.getFullYear());
+	thu = "Thứ " + (now.getDay() + 1);
+	ngay = ", ngày " + now.getDate();
+	thang = " / " + now.getMonth() + 1;
+	nam = " / " + now.getFullYear();
+	if(thu == "Thứ 1") {
+		thu = "Chủ nhật"
+	}
+	$('#date').append(thu, ngay, thang, nam);
+
+
 </script>

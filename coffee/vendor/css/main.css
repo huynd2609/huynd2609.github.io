@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+.c-cr {
+  color: red;
+}
+
 #wrapper {
   width: 100%;
   height: 100%;
@@ -57,6 +61,10 @@ body {
   color: #ffffff;
 }
 
+#wrapper .cl04 {
+  color: #372727;
+}
+
 #wrapper .cl06 {
   color: #dc8068;
 }
@@ -88,8 +96,16 @@ body {
   top: 0;
 }
 
+#wrapper .w250 {
+  width: 250px;
+}
+
 #wrapper .bgrn {
   background: none;
+}
+
+#wrapper .bgrf {
+  background-color: #ffffff;
 }
 
 #wrapper .bgr5 {
@@ -114,6 +130,15 @@ body {
 
 #wrapper .w95 {
   width: 95%;
+}
+
+#wrapper .dropMenu:hover ul {
+  opacity: 1;
+  visibility: visible !important;
+}
+
+#wrapper .dropMenu:hover ul li a {
+  color: #372727;
 }
 
 #wrapper #header {
@@ -198,7 +223,7 @@ body {
   width: 100%;
 }
 
-#wrapper #header #top-bar .container-fluid .banner-right #menu #home-text #navigation ul li:hover a {
+#wrapper #header #top-bar .container-fluid .banner-right #menu #home-text #navigation ul li:hover > a {
   color: #ffffff;
 }
 
@@ -1517,11 +1542,9 @@ body {
 }
 
 #wrapper #login .login-form,
-#wrapper #login .signin-form {
-  width: 400px;
+#wrapper #login .form__DK {
   background: #ffffff;
-  height: 600px;
-  padding: 80px 60px;
+  padding: 60px;
   border-radius: 10px;
   position: absolute;
   top: 50%;
@@ -1529,18 +1552,13 @@ body {
   transform: translateX(-50%) translateY(-50%);
 }
 
-#wrapper #login .login-form h1,
-#wrapper #login .signin-form h1 {
-  text-align: center;
-}
-
 #wrapper #login .login-form .login-different,
-#wrapper #login .signin-form .login-different {
+#wrapper #login .form__DK .login-different {
   margin-bottom: 40px;
 }
 
 #wrapper #login .login-form .login-different a,
-#wrapper #login .signin-form .login-different a {
+#wrapper #login .form__DK .login-different a {
   padding: 10px 10px;
   color: #ffffff;
   width: 45%;
@@ -1552,33 +1570,33 @@ body {
 }
 
 #wrapper #login .login-form .login-different a i,
-#wrapper #login .signin-form .login-different a i {
+#wrapper #login .form__DK .login-different a i {
   margin-right: 10px;
 }
 
 #wrapper #login .login-form .login-different a:hover,
-#wrapper #login .signin-form .login-different a:hover {
+#wrapper #login .form__DK .login-different a:hover {
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
 #wrapper #login .login-form .login-different a.fb,
-#wrapper #login .signin-form .login-different a.fb {
+#wrapper #login .form__DK .login-different a.fb {
   background: #3B5998;
 }
 
 #wrapper #login .login-form .login-different a.gg,
-#wrapper #login .signin-form .login-different a.gg {
+#wrapper #login .form__DK .login-different a.gg {
   background: #cd1417;
 }
 
 #wrapper #login .login-form .and,
-#wrapper #login .signin-form .and {
+#wrapper #login .form__DK .and {
   position: relative;
 }
 
 #wrapper #login .login-form .and p,
-#wrapper #login .signin-form .and p {
+#wrapper #login .form__DK .and p {
   background: #ffffff;
   width: max-content;
   padding: 0 10px;
@@ -1586,7 +1604,7 @@ body {
 }
 
 #wrapper #login .login-form .and::after,
-#wrapper #login .signin-form .and::after {
+#wrapper #login .form__DK .and::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1600,7 +1618,7 @@ body {
 }
 
 #wrapper #login .login-form .txttb,
-#wrapper #login .signin-form .txttb {
+#wrapper #login .form__DK .txttb {
   border-bottom: 1px solid gray;
   position: relative;
   margin: 30px 0;
@@ -1608,7 +1626,7 @@ body {
 }
 
 #wrapper #login .login-form .txttb input,
-#wrapper #login .signin-form .txttb input {
+#wrapper #login .form__DK .txttb input {
   border: none;
   width: 100%;
   outline: none;
@@ -1616,26 +1634,8 @@ body {
   padding: 5px;
 }
 
-#wrapper #login .login-form .txttb label,
-#wrapper #login .signin-form .txttb label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  pointer-events: none;
-  transition: .5s;
-}
-
-#wrapper #login .login-form .txttb input:focus ~ label,
-#wrapper #login .login-form .txttb input:valid ~ label,
-#wrapper #login .signin-form .txttb input:focus ~ label,
-#wrapper #login .signin-form .txttb input:valid ~ label {
-  top: -25px;
-  left: 0;
-}
-
 #wrapper #login .login-form .logbtn,
-#wrapper #login .signin-form .logbtn {
+#wrapper #login .form__DK .logbtn {
   display: block;
   width: 100%;
   height: 50px;
@@ -1652,25 +1652,49 @@ body {
 }
 
 #wrapper #login .login-form .logbtn:hover,
-#wrapper #login .signin-form .logbtn:hover {
+#wrapper #login .form__DK .logbtn:hover {
   background-position: center;
 }
 
 #wrapper #login .login-form .bottom-text,
-#wrapper #login .signin-form .bottom-text {
+#wrapper #login .form__DK .bottom-text {
   text-align: center;
   font-size: 15px;
 }
 
 #wrapper #login .login-form .bottom-text a,
-#wrapper #login .signin-form .bottom-text a {
+#wrapper #login .form__DK .bottom-text a {
   color: #dc8068;
 }
 
 #wrapper #login .login-form .bottom-text:hover a,
-#wrapper #login .signin-form .bottom-text:hover a {
+#wrapper #login .form__DK .bottom-text:hover a {
   color: #372727;
   text-decoration: none;
+}
+
+#wrapper #login .login-form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+#wrapper #login .login-form input:focus:invalid ~ label,
+#wrapper #login .login-form input:valid ~ label {
+  top: -25px;
+  left: 0;
+}
+
+#wrapper #login .form__DK label {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  padding: 5px;
+  pointer-events: none;
+  transition: .5s;
 }
 
 #wrapper.html-child {

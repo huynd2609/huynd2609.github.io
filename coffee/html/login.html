@@ -3,7 +3,7 @@
 		<img style="width: 13%; margin: 5px 24px;" src="images/logo-top.png" alt="" />
 	</a>
 	<form action="" class="login-form">
-		<h1 class="fs2">ĐĂNG NHẬP</h1>
+		<h1 class="fs2 tac">ĐĂNG NHẬP</h1>
 		<div class="login-different tac">
 			<p class="mb25">với mạng xã hội của bạn</p>
 			<a href="" class="fb">
@@ -19,24 +19,78 @@
 			<p>hoặc</p>
 		</div>
 		<div class="txttb">
-			<input id="email_field" type="email" placeholder="" required />
-			<label for="">Email</label>
+			<input type="text" placeholder="" required />
+			<label for="">Tên tài khoản</label>
 		</div>
 		<div class="txttb">
-			<input id="password_field" type="password" placeholder="" required />
+			<input type="password" placeholder="" required />
 			<label for="">Mật khẩu</label>
 		</div>
 		<button type="button" class="logbtn">Đăng nhập</button>
 		<div class="bottom-text">
 			<p>
 				Chưa có tài khoản?
-				<a href="#">Đăng ký</a>
+				<a href="#" class="signUp">Đăng ký</a>
+			</p>
+		</div>
+	</form>
+
+	<form action="" class="form__DK dn">
+		<h1 class="fs2 mb15 tac">ĐĂNG KÝ</h1>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="text" placeholder=""/>
+			<label for="">Mã tài khoản</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="text" placeholder="" required />
+			<label for=""><small class="c-cr">*</small> Tên tài khoản</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="password" placeholder="" required />
+			<label for=""><small class="c-cr">*</small> Mật khẩu</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="text" placeholder="" required />
+			<label for=""><small class="c-cr">*</small> Họ và tên</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="text" placeholder="" />
+			<label for="">Vai trò</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="text" placeholder=""/>
+			<label for="">Giới tính</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="mail" placeholder="" required />
+			<label for=""><small class="c-cr">*</small> Mail</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="tel" pattern="[0-9]{10}" placeholder="" required />
+			<label for=""><small class="c-cr">*</small> Số điện thoại</label>
+		</div>
+		<div class="txttb w50 plr15 bsbb fl">
+			<input type="text" placeholder=""/>
+			<label for="">Địa chỉ</label>
+		</div>
+		<button type="button" class="logbtn">Đăng ký</button>
+		<div class="bottom-text">
+			<p>
+				<a href="#" class="signIn"><o class="iIcon ffi fwn fs12">keyboard_arrow_left</o> Quay lại trang đăng nhập</a>
 			</p>
 		</div>
 	</form>
 </div>
-</div>
-</div>
 
 <!-- JS -->
+<script>
+	$(document).on("click", ".signUp", function(){
+		$(".login-form").addClass("dn");
+		$(".form__DK").removeClass("dn");
+	})
+	$(document).on("click", ".signIn", function(){
+		$(".form__DK").addClass("dn");
+		$(".login-form").removeClass("dn");
+	})
+</script>
 <script type="text/javascript" src="vendor/js/main.js"></script>

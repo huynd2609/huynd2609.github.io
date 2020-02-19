@@ -219,6 +219,9 @@ body {
     width: 100%;
     height: 100%;
 }
+.c-cr {
+    color: red;
+}
 
 #wrapper {
     width: 100%;
@@ -267,6 +270,9 @@ body {
     .cl01 {
         color: $color01;
     }
+    .cl04 {
+        color: $color04;
+    }
 
     .cl06 {
         color: $color06;
@@ -298,11 +304,15 @@ body {
         position: -webkit-sticky;
         top: 0;
     }
-
+    .w250 {
+        width: 250px;
+    }
     .bgrn {
         background: none;
     }
-
+    .bgrf {
+        background-color: #ffffff;
+    }
     .bgr5 {
         background-color: $color05;
     }
@@ -326,7 +336,13 @@ body {
     .w95 {
         width: 95%;
     }
-
+    .dropMenu:hover ul {
+        opacity: 1;
+        visibility: visible!important;
+        li a{
+            color: $color04;
+        }
+    }
     #header {
         width: 100%;
         height: 100%;
@@ -396,7 +412,7 @@ body {
                                                 width: 100%;
                                             }
 
-                                            a {
+                                            &>a {
                                                 color: $color01;
                                             }
                                         }
@@ -1519,20 +1535,14 @@ body {
         background-size: cover;
 
         .login-form,
-        .signin-form {
-            width: 400px;
+        .form__DK {
             background: $color01;
-            height: 600px;
-            padding: 80px 60px;
+            padding: 60px;
             border-radius: 10px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
-
-            h1 {
-                text-align: center;
-            }
 
             .login-different {
                 margin-bottom: 40px;
@@ -1603,21 +1613,6 @@ body {
                     background: none;
                     padding: 5px;
                 }
-
-                label {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 5px;
-                    pointer-events: none;
-                    transition: .5s;
-                }
-
-                input:focus~label,
-                input:valid~label {
-                    top: -25px;
-                    left: 0;
-                }
             }
 
             .logbtn {
@@ -1652,6 +1647,33 @@ body {
                     color: $color04;
                     text-decoration: none;
                 }
+            }
+        }
+
+        .login-form {
+            label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 5px;
+                pointer-events: none;
+                transition: .5s;
+            }
+
+            input:focus:invalid~label,
+            input:valid~label {
+                top: -25px;
+                left: 0;
+            }
+        }
+        .form__DK {
+            label {
+                position: absolute;
+                top: -25px;
+                left: 0;
+                padding: 5px;
+                pointer-events: none;
+                transition: .5s;
             }
         }
     }

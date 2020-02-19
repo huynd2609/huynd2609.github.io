@@ -15,7 +15,7 @@ $(document).ready(function () {
 		var location = $(this).attr("name");
 		$('li[name="'+location+'"]').addClass('nav-active');
 		$('#main').load("html/" + location, function(){
-		
+			console.log(window.location);
 		});
 	});
 	$('.login').click(function () {
