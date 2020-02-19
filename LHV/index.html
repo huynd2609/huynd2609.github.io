@@ -8,11 +8,8 @@
   <script src="libs/js/jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="libs/css/inevn.css" />
 
-  <!-- <style>
-    body {
-      background-color: green;
-    }
-    .st1 {
+  <style>
+    .st1, .st2, .st3, .st4 {
         /* stroke: red; */
         animation-fill-mode: forwards;
         opacity: 1;
@@ -29,23 +26,8 @@
           transform: scaleY(.4);
         }
     }
-
-    .st2 {
-      transform: scaleY(.4);
-      transform-origin: center 80%;
-      animation: animate2 30s linear;
-    }
-
-    @keyframes animate2 {
-        0% {
-          transform: scaleY(1);
-        }
-        100% {
-          transform: scaleY(.4);
-        }
-    }
   
-  </style> -->
+  </style>
 
 </head>
 <body>
@@ -56,15 +38,15 @@
       </div>
       <div class="pa l0 t0 w1">
         <!-- <img src="lua_khoi_lu.gif" alt=""> -->
-        <div class="pa t0 l0 z3">
+        <div class="pa t0 l0 z3 khoi">
           <img src="khoi_lu.gif" alt="">
         </div>
-        <div class="pa t0 l0 z7">
+        <div class="pa t0 l0 z7 lua">
           <img src="lua_khoi_lu.gif" alt="">
         </div>
       </div>
       <div class="pa l0 t0 z9 w1" style="height: 50%;">
-        <div class="pa l0 t0 z9 khoi">
+        <div class="pa l0 t0 z9">
           <img src="khoi_huong_final.gif" alt="">
         </div>
         <div class="pa z3" style="width: 15px; top: 45%; left: 48.5%;">
@@ -134,12 +116,18 @@
     var path = document.querySelector('path');
     var length = path.getTotalLength();
     console.log(length);
-    // setTimeout(function(){ 
-    //   $("div.z7").addClass("o0");
-    // }, 6000)
-    // setTimeout(function(){ 
-    //   $("div.khoi").addClass("o0");
-    // }, 10000)
+    setTimeout(function(){
+      $("div.lua").addClass("o0");
+    }, 6000)
+    setTimeout(function(){ 
+      $("div.khoi").addClass("o0");
+    }, 10000)
+    
+    var color = "red";
+    setInterval(() => {
+      color = (color === "red") ? "orange" : "red";
+      $(".st2").css("fill", color);
+    }, 500);
   </script>
 </body>
 </html>
