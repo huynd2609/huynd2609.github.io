@@ -39,10 +39,10 @@
       <div class="pa l0 t0 w1">
         <!-- <img src="lua_khoi_lu.gif" alt=""> -->
         <div class="pa t0 l0 z3 khoi">
-          <img src="khoi_lu.gif" alt="">
+          <img src="khoi2.gif" alt="">
         </div>
         <div class="pa t0 l0 z7 lua">
-          <img src="lua_khoi_lu.gif" alt="">
+          <img src="lua4.gif" alt="">
         </div>
       </div>
       <div class="pa l0 t0 z9 w1" style="height: 50%;">
@@ -103,19 +103,14 @@
 		<path class="st2" d="M117,20C117,20,117,20,117,20l-20,0c0,0,0,0,0,0V10c0,0,0,0,0,0h20c0,0,0,0,0,0V20z"/>
 	</g>
 </g>
-</svg>
+        </svg>
       </div>
-      </div>
-      
-      
+      </div>  
     </div>
   </div>
 
   <!-- <img src="lua_khoi.gif" alt=""> -->
   <script>
-    var path = document.querySelector('path');
-    var length = path.getTotalLength();
-    console.log(length);
     setTimeout(function(){
       $("div.lua").addClass("o0");
     }, 6000)
@@ -123,9 +118,9 @@
       $("div.khoi").addClass("o0");
     }, 10000)
     
-    var color = "red";
+    var color = "gold";
     setInterval(() => {
-      color = (color === "red") ? "orange" : "red";
+      color = (color === "gold") ? "orange" : "gold";
       $(".st2").css("fill", color);
     }, 500);
   </script>
