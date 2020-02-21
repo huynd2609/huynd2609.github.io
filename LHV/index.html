@@ -106,9 +106,15 @@
       </div>  
     </div>
   </div>
-
   <!-- <img src="lua_khoi.gif" alt=""> -->
   <script>
+
+    $("body").append(
+      $("<img>", {class:"o0 invisible dn", src: "kh1.gif"}),
+      $("<img>", {class:"o0 invisible dn", src: "khoi4.gif"}),
+      $("<img>", {class:"o0 invisible dn", src: "lua4.gif"})
+    )
+
     $(".bấmTH").click(function(){
       $(this).removeClass("bấmĐc");
       $(".thắpHương").append(
@@ -140,8 +146,6 @@
         $("div.khoi").addClass("o0");
       }, 10000)
     })
-
-    
   </script>
 </body>
 </html>
