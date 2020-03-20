@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại học Văn hóa Hà Nội</title>
+    <link rel="stylesheet" href="css/inevn.css">
+    <link rel="stylesheet" href="css/inevn.css">
+    <script src="https://cdn.inevn.com/js/jquery.main.isj"></script>
+    <script src="https://cdn.inevn.com/js/include.core.isj"></script>
+    <!-- SWIPER-SLIDE -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <style>
+        input {
+            border: none !important;
+            background-color: transparent;
+            outline: 0
+        }
+
+        .swiper-container {
+            /* width: 100%; */
+            height: 50%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-pagination {
+            text-align: end !important;
+            transform: translateX(-15%);
+        }
+
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            opacity: .5;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: darkred !important;
+            opacity: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .vt:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: darkred;
+        }
+
+        .vp:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background-color: darkred;
+            opacity: .5;
+        }
+
+        .nềnĐỏ07::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            background-color: darkred;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        .gạchChâncf::after,
+        .gạchChân::after,
+        .gạchChânMenu::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 50%;
+            height: 2px;
+            transform: translateX(-50%);
+            background-color: darkred;
+        }
+
+        .gạchChânMenu::after {
+            bottom: -3px;
+            width: 0;
+            transition: .2s;
+        }
+
+        .gạchChânMenu:hover::after {
+            bottom: -3px;
+            width: 50%;
+            transition: .2s;
+        }
+
+        .gạchChâncf::after {
+            background-color: #fff;
+        }
+
+        .phủĐỏf::after {
+            opacity: 1 !important;
+        }
+
+        .đóngKhung:after,
+        .đóngKhung::before {
+            content: "L";
+            font-size: 2em;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            transform: rotateX(90deg);
+        }
+
+        .đóngKhung:after {
+            bottom: 0;
+            right: 0;
+            transform: rotateX(-90deg);
+        }
+
+        .phủĐỏf::after,
+        .phủĐỏ::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: -webkit-radial-gradient(rgba(139, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+            z-index: 0;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+
+        .phủĐỏ:hover::after {
+            opacity: 1;
+        }
+
+        .bggrrd {
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(139, 0, 0)), to(rgba(169, 45, 45, .7)));
+            background-image: -webkit-linear-gradient(rgba(139, 0, 0), rgba(169, 45, 45, .7));
+            background-image: -moz-linear-gradientrgba((139, 0, 0), rgba(169, 45, 45, .7));
+            background-image: -ms-linear-gradient(rgba(139, 0, 0), rgba(169, 45, 45, .7));
+            background-image: -o-linear-gradient(rgba(139, 0, 0), rgba(169, 45, 45, .7));
+            background-image: linear-gradient(rgba(139, 0, 0), rgba(169, 45, 45, .7));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper wh1 crd">
+        <div id="banner" class="w1">
+            <div id="btop" class="h40 df aic bgc111A21 cf">
+                <div class="container grid fs15 df aic">
+                    <div class="col-sm-6 w50">Trường Đại học Văn hóa Hà Nội</div>
+                    <div class="col-sm-6 w50 tar df aic" style="justify-content: flex-end;">
+                        <div id="mail" class="dib mlr5 bấmĐc">
+                            <o class="iIcon ffi usn bra3 tac fsn fs1">mail</o>
+                        </div>
+                        <div id="search" class="dib mlr5">
+                            <div class="df aic bw2 bss bcc bra10">
+                                <input class="cf" type="text" placeholder="Tìm kiếm">
+                                <o class="ffi usn mr02 tac fsn bấmĐc fs07">search</o>
+                            </div>
+                        </div>
+                        <div id="login" class="dib mlr15 pa5 bra5 bw2 bss bcc fs06 bấmĐc">Đăng nhập</div>
+                        <div id="language" class="dib">
+                            <div class="bấmĐc df ptb2"><img src=" p1/vi.gif" alt=""></div>
+                                <div class="bấmĐc df ptb2"><img src=" p1/en.gif" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bmid" class="h60 bgcf">
+                        <div class="container df fs12 h1 aic fwb">
+                            <div class="w40 df jcsb">
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Trang chủ</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Giới thiệu</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Tin tức - Sự kiện</div>
+                            </div>
+                            <div class="w20 h1 df jcsc">
+                                <!-- <img src="p1/logohuc.png" alt=""> -->
+                                <div class="wh100 relative bra50 bss bw1 bcc bsrdh logohuc">
+                                    <div class="pa t0 l0 bgrn bgpc bgso wh1 bấmĐc"
+                                        style="background-image: url(./p1/logohuc.png);"></div>
+                                </div>
+                            </div>
+                            <div class="w40 df jcsb">
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Hợp tác quốc tế</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Đào tạo</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Tuyển sinh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bbot" class="h40 df aic bgce07">
+                        <div class="container df fs12">
+                            <div class="w40 df jcsb">
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Sinh viên tương lai</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Phụ huynh</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Đối tác</div>
+                            </div>
+                            <div class="w20"></div>
+                            <div class="w40 df jcsb">
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Sinh viên</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Cựu sinh viên</div>
+                                <div class="bấmĐc ta5 pr gạchChânMenu">Cán bộ nhân viên</div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <div id="slider" class="relative ptb25 bgc111A21">
+            <div class="w1 container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide h50">
+                            <img src="p1/s1.jpg" alt="">
+                            <div class="w50 h50 bgcf8 pa b0 l0 df aic">
+                                <div class="plr15">
+                                    <div class="crd fwb fs14">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15">Hà Nội được biết đến không những là thủ đô của đất
+                                        nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
+                                        còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
+                                        với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
+                                        nhân văn và ý nghĩa sâu sắc.</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc">Xem thêm</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h50">
+                            <img src="p1/s2.jpg" alt="">
+                            <div class="w50 h50 bgcf8 pa b0 l0 df aic">
+                                <div class="plr15">
+                                    <div class="crd fwb fs14">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15">Hà Nội được biết đến không những là thủ đô của đất
+                                        nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
+                                        còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
+                                        với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
+                                        nhân văn và ý nghĩa sâu sắc.</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc">Xem thêm</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h50">
+                            <img src="p1/s3.jpg" alt="">
+                            <div class="w50 h50 bgcf8 pa b0 l0 df aic">
+                                <div class="plr15">
+                                    <div class="crd fwb fs14">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15">Hà Nội được biết đến không những là thủ đô của đất
+                                        nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
+                                        còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
+                                        với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
+                                        nhân văn và ý nghĩa sâu sắc.</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc">Xem thêm</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h50">
+                            <img src="p1/s4.jpg" alt="">
+                            <div class="w50 h50 bgcf8 pa b0 l0 df aic">
+                                <div class="plr15">
+                                    <div class="crd fwb fs14">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15">Hà Nội được biết đến không những là thủ đô của đất
+                                        nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
+                                        còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
+                                        với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
+                                        nhân văn và ý nghĩa sâu sắc.</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc">Xem thêm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+        <div id="tiêuĐiểm" class="cf ptb25">
+            <div class="container">
+                <div class="df aic">
+                    <div class="dib plr10 ptb5 bgcrd fs12 mr15">Tiêu điểm</div>
+                    <div class="dib crd fs12 vt relative">
+                        <div class="df aic ml25">
+                            <o class="iIcon ffi usn bra3 tac fsn fs14">notes</o>
+                            <div class="dib ml5">Tin tức - Sự kiện</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid h500 pt25">
+                    <div class="col-sm-5 h1 plr15">
+                        <div class="h1 bw1 bss bcrd bsbb pa25 nềnĐỏ07 relative bgcf"
+                            style="border-color:darkred">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p1/a1.jpg);">
+                            </div>
+                            <div class="crd ptb15 fwb gạchChân relative dib">14/11/2019</div>
+                            <div class="pt15">
+                                <a href="" class="c0 fs12 fwb crdh">Nữ sinh Đại học Văn hóa Hà Nội giành ngôi vị Á khôi 1 Hoa khôi Thủ đô 2019</a>
+                            </div>
+                            <div class="c0 pt15">Sau hơn 3 tháng tranh tài, Vũ Thị Thảo Ly – sinh viên lớp Luật
+                                2B, Khoa Luật (Trường Đại học Văn hóa Hà Nội) đã giành Ngôi vị Á khôi 1 của cuộc
+                                thi Hoa khôi Thủ đô 2019.</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 h1 df" style="-ms-flex-wrap: wrap; flex-wrap: wrap;">
+                        <div class="col-sm-6 bsbb pa15 h50">
+                            <div class="bsbb plr15 h1 bgsc bgrn bgpc phủĐỏ relative"
+                                style="background-image: url(./p1/a2.jpg);">
+                                <div class="cf pa plr15 pb15 b0 l0 z3">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc">Bổ nhiệm phó hiệu trưởng trường Đại học Văn hóa
+                                        Hà Nội</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 bsbb pa15 h50">
+                            <div class="bsbb plr15 h1 bgsc bgrn bgpc phủĐỏ relative"
+                                style="background-image: url(./p1/a3.jpg);">
+                                <div class="cf pa plr15 pb15 b0 l0 z3">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc">Hội thảo khoa học “Kết nối
+                                        chia sẻ thông tin giữa các thư
+                                        viện điện tử, thực trạng và
+                                        giải pháp”</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 bsbb pa15 h50">
+                            <div class="bsbb plr15 h1 bgsc bgrn bgpc phủĐỏ relative"
+                                style="background-image: url(./p1/a4.jpg);">
+                                <div class="cf pa plr15 pb15 b0 l0 z3">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc">Gặp mặt cán bộ nghỉ hưu
+                                        theo chế độ năm 2019</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 bsbb pa15 h50">
+                            <div class="bsbb plr15 h1 bgsc bgrn bgpc phủĐỏ relative"
+                                style="background-image: url(./p1/a2.jpg);">
+                                <div class="cf pa plr15 pb15 b0 l0 z3">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc">Gặp mặt cán bộ nghỉ hưu
+                                        theo chế độ năm 2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dib plr10 ptb5 bấmĐc bw1 bss brcd mt25 crd">
+                    <div class="df aic">
+                        Xem tất cả
+                        <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="thôngBáo" class="cf ptb15 h450">
+            <div class="container">
+                <div class="grid">
+                    <div class="col-sm-8 vp relative">
+                        <div class="df aic">
+                            <div class="dib plr10 ptb5 bgcrd fs12 mr15">Thông báo</div>
+                        </div>
+                        <div>
+                            <div class="vt relative mtb25">
+                                <div class="c0 plr15 pb10">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc fs12">Thông báo về việc kéo dài kỳ nghỉ của sinh
+                                        viên, học viên để phòng, chống dịch bệnh viêm
+                                        đường hô hấp cấp covid - 19</div>
+                                </div>
+                            </div>
+                            <div class="vt relative mtb25">
+                                <div class="c0 plr15 pb10">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc fs12">Thông báo Tuyển sinh trình độ Đại học hình
+                                        thức vừa làm vừa học năm 2020</div>
+                                </div>
+                            </div>
+                            <div class="vt relative mtb25">
+                                <div class="c0 plr15 pb10">
+                                    <div class="fwb pb10 gạchChân relative dib">16/01/2020</div>
+                                    <div class="fwb pt10 bấmĐc fs12">Thông báo về việc thu học phí Học kì 2 năm
+                                        học 2019-2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                            <div class="df aic">
+                                Xem tất cả
+                                <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bsbb pl25">
+                        <div class="df aic">
+                            <div class="dib plr10 ptb5 bgcrd fs12 mr15">Sự kiện sắp diễn ra</div>
+                        </div>
+                        <div>
+                            <div class="mtb25">
+                                <div class="c0 pb10 df aic">
+                                    <div class="fwb mr10 col-sm-2 bw1 bss bcrd tac">
+                                        <div class="bgcrd w1 cf">Thứ 2</div>
+                                        <div class="ptb5">16/03</div>
+                                    </div>
+                                    <div class="fwb bấmĐc fs12 col-sm-10">Hội nghị Cán bộ, viên chức
+                                        năm học 2019 - 2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                            <div class="df aic">
+                                Xem tất cả
+                                <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="thànhTích" class="ptb15 relative cf bgsc bgrn bgpc mlra"
+            style="background-image: url(./p2/a7.jpg);">
+            <div class="container">
+                <div class="ptb10 df jcsb tac">
+                    <div class="w25 bsbb pa15">
+                        <o class="ffi usn bra3 tac fsn fs3">emoji_events</o>
+                        <div class="fwb fs12">Đại học lớn nhất của Bộ Văn hóa, Thể thao và Du lịch</div>
+                    </div>
+                    <div class="w25 bsbb pa15">
+                        <div class="fs3">22</div>
+                        <div class="fwb fs12">Chuyên ngành đào tạo</div>
+                    </div>
+                    <div class="w25 bsbb pa15">
+                        <div class="fs3">8000</div>
+                        <div class="fwb fs12">Sinh viên</div>
+                    </div>
+                    <div class="w25 bsbb pa15">
+                        <div class="fs3">133</div>
+                        <div class="fwb fs12">Giảng viên</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tuyểnSinh" class="cf ptb15 h400">
+            <div class="container h1">
+                <div class="grid h1">
+                    <div class="col-sm-8 h1 vp relative">
+                        <div class="df aic">
+                            <div class="dib plr10 ptb5 bgcrd fs12 mr15">Tuyển sinh</div>
+                        </div>
+                        <div class="h1">
+                            <div class="col-sm-6 bsbb pr25 ptb15 h1">
+                                <div class="bsbb plr15 h1 bgsc bgrn bgpc phủĐỏf relative "
+                                    style="background-image: url(./p2/a1.jpg);">
+                                    <div
+                                        class="cf pa plr50 t50 l50 tt z3 w1 fwb bấmĐc tac fs14 gạchChâncf ptb15">
+                                        <div class="đóngKhung relative">
+                                            Thông báo tuyển sinh
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 bsbb pr25 ptb15 h1">
+                                <div class="bsbb plr15 h1 bgsc bgrn bgpc phủĐỏf relative "
+                                    style="background-image: url(./p2/a2.jpg);">
+                                    <div
+                                        class="cf pa plr50 t50 l50 tt z3 w1 fwb bấmĐc tac fs14 gạchChâncf ptb15">
+                                        <div class="đóngKhung relative">
+                                            Văn bản hướng dẫn
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                            <div class="df aic">
+                                Xem tất cả
+                                <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bsbb pl25 h1">
+                        <div class="df aic">
+                            <div class="dib plr10 ptb5 bgcrd fs12 mr15">Người thành công</div>
+                        </div>
+                        <div class="h1 ptb15 c0 tac">
+                            <div class="bsbb bgsc bgrn bgpc relative"
+                                style="background-image: url(./p2/a3.jpg); height: 90%;"></div>
+                            <div class="fwb ptb15 fs14">Ca sĩ Lệ Quyên</div>
+                        </div>
+                        <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                            <div class="df aic">
+                                Xem tất cả
+                                <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hoạtĐộng" class="cf ptb25 mt50">
+            <div class="container">
+                <div class="df aic">
+                    <div class="dib plr10 ptb5 bgcrd fs12 mr15">Đời sống sinh viên</div>
+                </div>
+                <div class="w1 h200 pa15 mt25 bgsc bgrn bgpc" style="background-image: url(./p2/a5.jpg);">
+                    <div class="col-sm-4 h1 bgsc bgrn bgpc relative pl15"
+                        style="background-image: url(./p2/a4.jpg);"></div>
+                    <div class="col-sm-8 pr15 pl50 fs12 c0">
+                        <div class="bgsi bgrn bgpt pl35"
+                            style="background-image: url(./p2/black-quote-icon.png);">
+                            Đại học Văn hóa Hà Nội là trường đại học lớn nhất của Bộ Văn hóa, Thể thao và Du
+                            lịch Việt Nam, nơi đã đào tạo được hàng chục ngàn cán bộ văn hóa hiện đang công tác
+                            trên khắp mọi miền đất nước. Ngày đầu tiên bước chân qua cổng trường đại học, tôi
+                            không biết diễn tả cảm xúc khi đó như thế nào. Có một tình cảm yêu thương tựa như
+                            những hạt giống trong tâm hồn cứ tự nhiên mà nảy nở, có nỗi niềm gắn bó và trào
+                            dâng, một chút chờ đợi và hi vọng về mái trường, thầy cô và những người bạn sẽ cùng
+                            tôi gắn bó trong quãng đời đại học.
+                        </div>
+                        <div class="tar fwb crd">
+                            - Nguyễn Diệu Linh, khoa Quản lý Văn hóa -
+                        </div>
+                    </div>
+                </div>
+                <div class="h500 ptb25 row">
+                    <div class="col-sm-4 h1 pa15">
+                        <div class="h1 bsbb pa25 bgcf bsrd15">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p2/a12.jpg);">
+                            </div>
+                            <div class="crd pt15 fwb dib">14/11/2019</div>
+                            <div class="df aic">
+                                <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Đời sống sinh viên</div>
+                            </div>
+                            <div><a href="" class="c0 fs12 fwb crdh">Quy tắc ứng xử văn hóa của
+                        sinh viên, học viên Trường Đại
+                        học Văn hóa Hà Nội</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 h1 pa15">
+                        <div class="h1 bsbb pa25 bgcf bsrd15">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p2/a9.jpg);">
+                            </div>
+                            <div class="crd pt15 fwb dib">14/11/2019</div>
+                            <div class="df aic">
+                                <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Đời sống sinh viên</div>
+                            </div>
+                            <div><a href="" class="c0 fs12 fwb crdh">“Xuân trao yêu thương 2020”:
+                        Văn hóa học “ươm mầm xanh”
+                        yêu thương đến những mảnh
+                        đời bất hạnh vì bệnh phong hủi</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 h1 pa15">
+                        <div class="h1 bsbb pa25 bgcf bsrd15">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p2/a8.jpg);">
+                            </div>
+                            <div class="crd pt15 fwb dib">14/11/2019</div>
+                            <div class="df aic">
+                                <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Đời sống sinh viên</div>
+                            </div>
+                            <div><a href="" class="c0 fs12 fwb crdh">Sinh viên khoa Luật – Đại học
+                        Văn hóa Hà Nội mang yêu
+                        thương đến vùng cao Yên Bái</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 h1 pa15">
+                        <div class="h1 bsbb pa25 bgcf bsrd15">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p2/a11.png);">
+                            </div>
+                            <div class="crd pt15 fwb dib">14/11/2019</div>
+                            <div class="df aic">
+                                <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Đời sống sinh viên</div>
+                            </div>
+                            <div><a href="" class="c0 fs12 fwb crdh">Đoàn TN – Hội SV Trường Đại
+                        học Văn hóa Hà Nội phát động
+                        Cuộc vận động nói không với
+                        rác thải nhựa</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 h1 pa15">
+                        <div class="h1 bsbb pa25 bgcf bsrd15">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p2/a10.jpg);">
+                            </div>
+                            <div class="crd pt15 fwb dib">14/11/2019</div>
+                            <div class="df aic">
+                                <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Đời sống sinh viên</div>
+                            </div>
+                            <div><a href="" class="c0 fs12 fwb crdh">Gala Chào Tân sinh viên khoa
+                        Ngôn ngữ và Văn hóa quốc tế:
+                        “A JOURNEY TO EXCELLENCE”</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 h1 pa15">
+                        <div class="h1 bsbb pa25 bgcf bsrd15">
+                            <div class="w1 h50 bgsc bgrn bgpc" style="background-image: url(./p2/a13.jpg);">
+                            </div>
+                            <div class="crd pt15 fwb dib">14/11/2019</div>
+                            <div class="df aic">
+                                <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Đời sống sinh viên</div>
+                            </div>
+                            <div><a href="" class="c0 fs12 fwb crdh">Ngày hội truyền thống Sinh viên
+                        tình nguyện Trường Đại học
+                        Văn hóa Hà Nội 2019</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                    <div class="df aic">
+                        Xem tất cả
+                        <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide1" class="ptb15 relative h200 bgcg1">
+            <div class="container h1">
+                <div class="h1 pa15 df jcsb cf tac">
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a1.jpg);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a2.jpg);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a4.png);"></div>
+                </div>
+            </div>
+        </div>
+        <div id="khámPhá" class="cf ptb15 h500">
+            <div class="container h1">
+                <div class="grid h1">
+                    <div class="col-sm-8 h1 vp relative">
+                        <div class="df aic">
+                            <div class="dib plr10 ptb5 bgcrd fs12 mr15">Khám phá</div>
+                        </div>
+                        <div class="h400 pr15">
+                            <div class="col-sm-4 h1 pr15 ptb25">
+                                <div class="h1 bsbb pa15 bgcf bsrd15">
+                                    <div class="w1 bgsc bgrn bgpc"
+                                        style="background-image: url(./p3/a5.png); height: 40%;"></div>
+                                    <div class="crd pt15 fwb dib">14/11/2019</div>
+                                    <div class="df aic">
+                                        <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Chuyên đề</div>
+                                    </div>
+                                    <div><a href="" class="c0 fs12 fwb crdh">Lý thuyết trong Nhân học:
+                                Trung tâm và ngoại vi</a></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 h1 pr15 ptb25">
+                                <div class="h1 bsbb pa15 bgcf bsrd15">
+                                    <div class="w1 bgsc bgrn bgpc"
+                                        style="background-image: url(./p3/a11.jpg); height: 40%;"></div>
+                                    <div class="crd pt15 fwb dib">14/11/2019</div>
+                                    <div class="df aic">
+                                        <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Văn hóa</div>
+                                    </div>
+                                    <div><a href="" class="c0 fs12 fwb crdh">Những giá trị nghệ thuật
+                                kiến trúc Đền Trạng
+                                (Hương Khê, Hà Tĩnh)</a></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 h1 pr15 ptb25">
+                                <div class="h1 bsbb pa15 bgcf bsrd15">
+                                    <div class="w1 bgsc bgrn bgpc"
+                                        style="background-image: url(./p3/a12.jpg); height: 40%;"></div>
+                                    <div class="crd pt15 fwb dib">14/11/2019</div>
+                                    <div class="df aic">
+                                        <div class="dib plr10 ptb5 bgc9 fs12 mr15 mtb15">Giáo dục</div>
+                                    </div>
+                                    <div><a href="" class="c0 fs12 fwb crdh">So sánh giáo dục Đại học
+                                Việt - Mỹ</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                            <div class="df aic">
+                                Xem tất cả
+                                <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 bsbb pl25 h1">
+                        <div class="df aic">
+                            <div class="dib plr10 ptb5 bgcrd fs12 mr15">Video nổi bật</div>
+                        </div>
+                        <div class="w1 ptb25 c0 tac">
+                            <iframe class="w1 h200 pb15" src="https://www.youtube.com/embed/oexUP48Exm0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe class="w1 h200" src="https://www.youtube.com/embed/rtFcmsql9x4"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
+                            <div class="df aic">
+                                Xem tất cả
+                                <o class="iIcon ffi usn bra3 tac fsn fs14">keyboard_arrow_right</o>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide2" class="ptb15 relative h200 mt50 bgcg1">
+            <div class="container h1">
+                <div class="h1 pa15 df jcsb cf tac">
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a6.jpg);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a7.png);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a8.png);"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="relative cf bgsc bgrn bgpc mlra" style="background-image: url(./p3/a9.jpg);">
+            <div class="container tac">
+                <div class="h350">
+                    <div class="ptb25 col-sm-3 h1 df aic jcsc">
+                        <div>
+                            <div class="fwb">MẠNG XÃ HỘI</div>
+                            <div class="footer-left-link">
+                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-1" class="at-icon at-icon-facebook" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-facebook-1">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></a>
+                                <a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-gmail-1" class="at-icon at-icon-gmail" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-gmail-1">Gmail</title><g><path opacity=".3" d="M7.03 8h17.94v17H7.03z"></path><path d="M7.225 8h-.41C5.815 8 5 8.84 5 9.876v13.248C5 24.16 5.812 25 6.815 25h.962V12.714L16 19.26l8.223-6.546V25h.962C26.188 25 27 24.16 27 23.124V9.876C27 8.84 26.186 8 25.185 8h-.41L16 15.506 7.225 8z" fill-rule="evenodd"></path></g></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ptb25 col-sm-6">
+                        <div class="wh100 bgso bgrn bgpc mlra" style="background-image: url(./p1/logohuc.png);">
+                        </div>
+                        <div class="text-title-logo ptb15">
+                            <div class="fs15 pb10 gạchChâncf pr mlra" style="width: fit-content;">HANOI</div>
+                            <div class="pt10">UNIVERSITY OF CULTURE</div>
+                        </div>
+                        <div class="text-address lh14">
+                            <div>418 Đường La Thành</div>
+                            <div>Quận Đống Đa - Hà Nội</div>
+                            <div>Điện thoại: (+84) 2438.511.971</div>
+                            <div>Fax: (+84) 2435.141.629</div>
+                        </div>
+                    </div>
+                    <div class="ptb25 col-sm-3 df jcsc aic h1">
+                        <div class="bra10 bgcf w50 ptb10 plr15"><a href="" class="crd fwb">GỬI PHẢN HỒI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        $(document).scroll(function () {
+            var fix = "fixed";
+            $(document).scroll(function () {
+                if ($("html, body").scrollTop() > 0) {
+                    if (fix == "fixed") {
+                        fix = "notFix";
+                        $("#banner").addClass("pf t0 l0 z9m");
+                        $("#bmid").addClass("bóng");
+                        $("#bmid .logohuc").addClass("wh60").removeClass("wh100")
+                        $("#bbot").addClass("dn")
+                    }
+                } else {
+                    if (fix == "notFix") {
+                        fix = "fixed";
+                        $("#banner").removeClass("pf t0 l0 z9m")
+                        $("#bmid").removeClass("bóng")
+                        $("#bmid .logohuc").addClass("wh100").removeClass("wh60")
+                        $("#bbot").removeClass("dn")
+                    }
+                }
+            });
+        })
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    </script>
+</body>
+
+</html>
