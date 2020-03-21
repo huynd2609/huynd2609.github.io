@@ -2012,6 +2012,16 @@ input.c3p:-moz-placeholder {
 }
 @media (max-width: 991px) {
 	.col-md-0 { display: none; }
+	.h400-md { height: 400px; }
+	.fs2-md { font-size: 2em }
+	.fs16-md { font-size: 1.6em }
+	.fs14-md { font-size: 1.4em }
+	.fs11-md { font-size: 1.1em }
+	.fs1-md { font-size: 1em }
+	.fs09-md { font-size: .9em }
+	.fs08-md { font-size: .8em }
+	.fs06-md { font-size: .6em }
+	.h1-md {height: 100%;}
 }
 @media (min-width: 1200px) {
 	.col-lg-a, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
