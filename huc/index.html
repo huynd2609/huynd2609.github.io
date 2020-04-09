@@ -106,7 +106,8 @@
 
         .gạchChâncf::after,
         .gạchChân::after,
-        .gạchChânMenu::after {
+        .gạchChânMenu::after,
+        .gạchChânMenu2::after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -117,13 +118,15 @@
             background-color: darkred;
         }
 
-        .gạchChânMenu::after {
+        .gạchChânMenu::after, .gạchChânMenu2::after {
             bottom: -3px;
             width: 0;
             transition: .2s;
         }
-
-        .gạchChânMenu:hover::after {
+        .gạchChânMenu2::after {
+            background-color: #333;
+        }
+        .gạchChânMenu:hover::after, .gạchChânMenu2:hover::after {
             bottom: -3px;
             width: 50%;
             transition: .2s;
@@ -168,7 +171,12 @@
         }
         
         .bgcgra { background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(255,255,255,.5)),to(rgba(255,255,255,.2))); background-image: -webkit-linear-gradient(left bottom,left top,rgba(255,255,255,.5),rgba(255,255,255,.2)); background-image: -moz-linear-gradient(left bottom,left top,rgba(255,255,255,.5),rgba(255,255,255,.2)); background-image: -ms-linear-gradient(left bottom,left top,rgba(255,255,255,.5),rgba(255,255,255,.2)); background-image: -o-linear-gradient(left bottom,left top,rgba(255,255,255,.5),rgba(255,255,255,.2)); background-image: linear-gradient(left bottom,left top,rgba(255,255,255,.5),rgba(255,255,255,.2)); }
-        
+        .fs095 {
+            font-size: .95em;
+        }
+        .h33{
+            height: 33%;
+        }
         @media (max-width: 479px) {
             .vp:after  {
                 display: none;
@@ -258,79 +266,79 @@
                     </div>
                 </div>
             </div>
-            <div id="bbot" class="h40 df aic bgce07">
-                <div class="container df fs1 fwb">
+            <div id="bbot" class="h40 df aic bgce07 c3">
+                <div class="container df fs095 fwb">
                     <div class="w40 df jcsb">
-                        <div class="bấmĐc ta5 pr gạchChânMenu">Sinh viên tương lai</div>
-                        <div class="bấmĐc ta5 pr gạchChânMenu">Phụ huynh</div>
-                        <div class="bấmĐc ta5 pr gạchChânMenu">Đối tác</div>
+                        <div class="bấmĐc ta5 pr gạchChânMenu2">Sinh viên tương lai</div>
+                        <div class="bấmĐc ta5 pr gạchChânMenu2">Phụ huynh</div>
+                        <div class="bấmĐc ta5 pr gạchChânMenu2">Đối tác</div>
                     </div>
                     <div class="w20"></div>
                     <div class="w40 df jcsb">
-                        <div class="bấmĐc ta5 pr gạchChânMenu">Sinh viên</div>
-                        <div class="bấmĐc ta5 pr gạchChânMenu">Cựu sinh viên</div>
-                        <div class="bấmĐc ta5 pr gạchChânMenu">Cán bộ nhân viên</div>
+                        <div class="bấmĐc ta5 pr gạchChânMenu2">Sinh viên</div>
+                        <div class="bấmĐc ta5 pr gạchChânMenu2">Cựu sinh viên</div>
+                        <div class="bấmĐc ta5 pr gạchChânMenu2">Cán bộ nhân viên</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="slider" class="relative ptb25 bgc111A21">
+        <div id="slider" class="relative ptb25 bgcf">
             <div class="w1 container">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide h50">
                             <img src="p1/s1.jpg" alt="">
-                            <div class="w50 h50 h1-md bgcgra bgcf5h ta2 pa b0 l0 df aic brtr10 w1-xs fs06-xs">
+                            <div class="w45 h33 h1-md bgcgra bgcf5h ta2 pa df aic w1-xs fs06-xs" style= "bottom: 10%; left: 5%">
                                 <div class="plr35">
-                                    <div class="crd fwb fs14 ts1a">Di tích Văn hóa Hà Nội</div>
-                                    <div class="c0 ptb15 ts0e">Hà Nội được biết đến không những là thủ đô của đất
+                                    <div class="crd fwb fs12 ts1a">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15 ts0e fs08 taj">Hà Nội được biết đến không những là thủ đô của đất
                                         nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
                                         còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
                                         với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
                                         nhân văn và ý nghĩa sâu sắc.</div>
-                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a">Xem thêm</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a fs08">Xem thêm</div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide h50">
                             <img src="p1/s2.jpg" alt="">
-                            <div class="w50 h50 h1-md bgcgra bgcf5h ta2 pa b0 l0 df aic brtr10 w1-xs fs06-xs">
+                            <div class="w45 h33 h1-md bgcgra bgcf5h ta2 pa df aic w1-xs fs06-xs" style= "bottom: 10%; left: 5%">
                                 <div class="plr35">
-                                    <div class="crd fwb fs14 ts1a">Di tích Văn hóa Hà Nội</div>
-                                    <div class="c0 ptb15 ts0e">Hà Nội được biết đến không những là thủ đô của đất
+                                    <div class="crd fwb fs12 ts1a">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15 ts0e fs08 taj">Hà Nội được biết đến không những là thủ đô của đất
                                         nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
                                         còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
                                         với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
                                         nhân văn và ý nghĩa sâu sắc.</div>
-                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a">Xem thêm</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a fs08">Xem thêm</div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide h50">
                             <img src="p1/s3.jpg" alt="">
-                            <div class="w50 h50 h1-md bgcgra bgcf5h ta2 pa b0 l0 df aic brtr10 w1-xs fs06-xs">
+                            <div class="w45 h33 h1-md bgcgra bgcf5h ta2 pa df aic w1-xs fs06-xs" style= "bottom: 10%; left: 5%">
                                 <div class="plr35">
-                                    <div class="crd fwb fs14 ts1a">Di tích Văn hóa Hà Nội</div>
-                                    <div class="c0 ptb15 ts0e">Hà Nội được biết đến không những là thủ đô của đất
+                                    <div class="crd fwb fs12 ts1a">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15 ts0e fs08 taj">Hà Nội được biết đến không những là thủ đô của đất
                                         nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
                                         còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
                                         với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
                                         nhân văn và ý nghĩa sâu sắc.</div>
-                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a">Xem thêm</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a fs08">Xem thêm</div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide h50">
                             <img src="p1/s4.jpg" alt="">
-                            <div class="w50 h50 h1-md bgcgra bgcf5h ta2 pa b0 l0 df aic brtr10 w1-xs fs06-xs">
-                                <div class="plr35">
-                                    <div class="crd fwb fs14 ts1a">Di tích Văn hóa Hà Nội</div>
-                                    <div class="c0 ptb15 ts0e">Hà Nội được biết đến không những là thủ đô của đất
+                            <div class="w45 h33 h1-md bgcgra bgcf5h ta2 pa df aic w1-xs fs06-xs" style= "bottom: 10%; left: 5%">
+                                <div class="plr25">
+                                    <div class="crd fwb fs12 ts1a">Di tích Văn hóa Hà Nội</div>
+                                    <div class="c0 ptb15 ts0e fs08 taj">Hà Nội được biết đến không những là thủ đô của đất
                                         nước với sự phát triển vượt bậc về kinh tế chính trị, văn hóa xã hội mà
                                         còn là một điểm đến du lịch sôi động cực kì hấp dẫn, cuốn hút du khách
                                         với những di tích lịch sử ở Hà Nội vô cùng độc đáo, mang nhiều giá trị
                                         nhân văn và ý nghĩa sâu sắc.</div>
-                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a">Xem thêm</div>
+                                    <div class="bw1 bss bcrd crd dib plr10 ptb5 bấmĐc ts1a fs08">Xem thêm</div>
                                 </div>
                             </div>
                         </div>
@@ -557,7 +565,7 @@
                         <div class="h1 ptb15 c0 tac pr khungViền">
                             <div class="bsbb bgsc bgrn bgpc relative h400"
                                 style="background-image: url(./p2/a3.jpg);"></div>
-                            <div class="fwb w1 ptb15 fs14 pa l0 bgc111A21 z9m cf" style="bottom: 15%;">Ca sĩ Lệ Quyên</div>
+                            <div class="fwb w1 ptb15 fs14 pa l0 bgc111A21 z99 cf" style="bottom: 15%;">Ca sĩ Lệ Quyên</div>
                         </div>
                         <div class="dib plr10 ptb5 bấmĐc bw1 bss bcrd crd">
                             <div class="df aic">
@@ -698,10 +706,10 @@
         </div>
         <div id="slide1" class="ptb15 relative h200 bgcg1 dn-xs">
             <div class="container h1">
-                <div class="h1 pa15 df jcsb cf tac">
-                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a1.jpg);"></div>
-                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a2.jpg);"></div>
-                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a4.png);"></div>
+                <div class="h1 ptb15 df jcsb cf tac">
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/6.jpg);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/3.jfif);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/8.jpg);"></div>
                 </div>
             </div>
         </div>
@@ -817,14 +825,14 @@
         </div>
         <div id="slide2" class="ptb15 relative h200 bgcg1 dn-xs">
             <div class="container h1">
-                <div class="h1 pa15 df jcsb cf tac">
-                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a6.jpg);"></div>
-                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a7.png);"></div>
-                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/a8.png);"></div>
+                <div class="h1 ptb15 df jcsb cf tac">
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/4.jpg);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/5.jpg);"></div>
+                    <div class="w30 bsbb pa15 bgsc bgrn bgpc" style="background-image: url(./p3/1.png);"></div>
                 </div>
             </div>
         </div>
-        <div id="footer" class="relative cf bgsc bgrn bgpc mlra" style="background-image: url(./p3/a9.jpg);">
+        <div id="footer" class="relative cf bgsc bgrn bgpc mlra" style="background-image: url(./p3/9.jpg);">
             <div class="container tac">
                 <div class="">
                     <div class="h350 h100-xs ptb25 col-sm-3 h1 df aic jcsc">
